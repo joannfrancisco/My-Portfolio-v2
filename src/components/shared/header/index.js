@@ -1,28 +1,18 @@
 import React, { useState } from "react";
 import ThemeToggle from "./theme-toggle";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const pathname = usePathname(); // current page path
-
-  // Menu items
-  const menuItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Project One", href: "projects/project1" },
-    { label: "Contact", href: "/contact" },
-  ];
+  //  bg-amber-50 sm:bg-amber-100 md:bg-amber-200 lg:bg-amber-400 xl:bg-amber-600
 
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-6 flex items-center justify-between">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-6 flex items-center justify-between ">
           <Link
-            href="/"
+            href="/#home"
             className="text-2xl hover:opacity-80 transition-opacity font-logo"
           >
             {"< ann />"}
@@ -134,23 +124,57 @@ const Menu = () => {
 
       {/* Menu Overlay */}
       <div
-        className={`fixed inset-0 backdrop-blur-lg z-40 transition-all duration-500 ${
+        className={`fixed inset-0 backdrop-blur-3xl z-40 transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
-          {menuItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className={`text-4xl font-bold hover:text-blue-400 transition-colors duration-300 ${
-                pathname === item.href ? "text-blue-400" : ""
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="px-6 md:px-20 lg:px-80 flex flex-col items-start justify-center h-full space-y-6 md:space-y-8">
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
+              <span className="font-wide transition  group-hover:text-(--accent)">
+                H
+              </span>
+              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+                OME
+              </span>
+            </h1>
+          </Link>
+
+          <Link href="/about" onClick={() => setIsOpen(false)}>
+            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
+              A
+              <span className="font-wide transition  group-hover:text-(--accent)">
+                B
+              </span>
+              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+                OUT
+              </span>
+            </h1>
+          </Link>
+
+          <Link href="/projects" onClick={() => setIsOpen(false)}>
+            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
+              PRO
+              <span className="font-wide transition  group-hover:text-(--accent)">
+                J
+              </span>
+              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+                ECTS
+              </span>
+            </h1>
+          </Link>
+
+          <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
+              CO
+              <span className="font-wide transition  group-hover:text-(--accent)">
+                N
+              </span>
+              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+                TACT
+              </span>
+            </h1>
+          </Link>
         </div>
       </div>
     </div>

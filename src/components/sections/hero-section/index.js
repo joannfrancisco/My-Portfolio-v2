@@ -17,7 +17,7 @@ export default function HeroSection() {
   const quotesRef = useRef([]);
 
   const message1 = "Imagination is Power";
-  const message2 = "Scroll for more";
+  const message2 = "Scroll for more...";
   const scrambleChars = "upperAndLowerCase";
 
   const quotes = [
@@ -155,7 +155,6 @@ export default function HeroSection() {
     <div className="relative w-screen h-screen overflow-hidden text-xs font-semibold z-1">
       <div className="max-w-[1536px] mx-auto">
         {/* Center Content */}
-        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-5"> */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-10">
           {/* Headline */}
           <div className="flex flex-col relative">
@@ -187,7 +186,7 @@ export default function HeroSection() {
           </div>
 
           {/* Scramble Box */}
-          <div className="relative w-54 bg-(--light) text-(--dark) border border-(--dark) py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] duration-200">
+          <div className="relative w-54 bg-(--light) text-(--dark) border border-(--dark) py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
             <span
               ref={targetRef}
               className="select-none block w-full text-left"
@@ -197,7 +196,7 @@ export default function HeroSection() {
             <button
               onClick={toggleScramble}
               type="button"
-              className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/85 duration-100 rounded-full text-[10px] scale-95 cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/85 transition rounded-full text-[10px] scale-95 cursor-pointer"
             >
               {isDecoded ? "Encrypt" : "Decrypt"}
             </button>

@@ -1,10 +1,4 @@
-async function getData() {
-  await new Promise((resolve) => setTimeout(resolve, 2000)); // 2 second delay
-  return { content: "About page content" };
-}
-
 const About = async () => {
-  const data = await getData();
   return (
     <div>
       <h1>About</h1>
