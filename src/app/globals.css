@@ -2,12 +2,6 @@
 @import "tw-animate-css";
 
 :root {
-  /* --background: #f3f2f9;
-  --foreground: #606887;
-  --stroke: #606887;
-  --light: #f3f2f9;
-  --dark: #606887; */
-
   --background: #f3f2f9;
   --foreground: #606887;
   --accent: #272834;
@@ -22,15 +16,9 @@
 }
 
 .dark {
-  /* --background: #606887;
-  --foreground: #f3f2f9;
-  --stroke: #aab2d1; */
-
   --background: #272834;
   --foreground: #f3f2f9;
   --accent: #aab2d1;
-  /* 
-  aab2d1 */
 }
 
 body {
@@ -57,7 +45,7 @@ body {
 }
 
 .font-header {
-  font-family: var(--font-inconsolata);
+  font-family: var(--font-inconsolata) !important;
   font-weight: 700;
 }
 

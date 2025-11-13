@@ -152,7 +152,7 @@ const Menu = () => {
             </h1>
           </Link>
 
-          <Link href="/projects" onClick={() => setIsOpen(false)}>
+          <Link href="/#projects" onClick={() => setIsOpen(false)}>
             <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
               PRO
               <span className="font-wide transition  group-hover:text-(--accent)">
@@ -164,7 +164,7 @@ const Menu = () => {
             </h1>
           </Link>
 
-          <Link href="/contact" onClick={() => setIsOpen(false)}>
+          <Link href="/#contact" onClick={() => setIsOpen(false)}>
             <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
               CO
               <span className="font-wide transition  group-hover:text-(--accent)">

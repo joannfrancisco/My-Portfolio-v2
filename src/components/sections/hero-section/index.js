@@ -21,18 +21,29 @@ export default function HeroSection() {
   const scrambleChars = "upperAndLowerCase";
 
   const quotes = [
-    "Thanks for GSAP x NextJS",
-    "Imagination is power",
     "Code is poetry",
-    "Creativity takes courage",
-    "Design is intelligence made visible",
-    "Every pixel has a purpose",
-    "Simplicity is the ultimate sophistication",
-    "Imagination is power",
-    "Code is poetry",
-    "Creativity takes courage",
-    "Design is intelligence made visible",
-    "Every pixel has a purpose",
+    // "Creativity takes courage",
+    // "Design is intelligence made visible",
+    // "Every pixel has a purpose",
+    // "Simplicity is the ultimate sophistication",
+    "Next.js",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "React.js",
+    "Node.js",
+    "UI/UX Design",
+    "HTML + CSS + JavaScript",
+    "Figma",
+    "Adobe Photoshop & Illustrator",
+    "Vercel",
+    "GSAP Animation",
+    "LottieFiles",
+    "ShadCN + Lucide React ",
+    "Express.js",
+    "Firebase",
+    "Typography + Color Palette",
+    "RestAPI",
+    "TypeScript",
   ];
 
   // Helper: Get random position
@@ -155,12 +166,12 @@ export default function HeroSection() {
     <div className="relative w-screen h-screen overflow-hidden text-xs font-semibold z-1">
       <div className="max-w-[1536px] mx-auto">
         {/* Center Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
           {/* Headline */}
           <div className="flex flex-col relative">
             <h1
               ref={h1Ref}
-              className="self-start mb-[-10] sm:mb-[-20] font-hero tracking-wider outline"
+              className="self-start pl-0.5 mb-[-10] font-hero tracking-wider outline"
               style={{ fontSize: "clamp(1rem, 6vw, 2rem)" }}
             >
               FULL-STACK
@@ -168,7 +179,7 @@ export default function HeroSection() {
 
             <h1
               ref={h1Ref}
-              className="font-hero"
+              className="font-hero scale-y-150 "
               style={{
                 fontSize: "clamp(2.4rem, 10vw, 5.8rem)",
               }}
@@ -176,7 +187,7 @@ export default function HeroSection() {
               WEB DEVELOPER
             </h1>
             <h1
-              className="self-end font-cursive absolute top-9/12 md:top-25 right-[-5] md:right-[-45] "
+              className="self-end font-cursive absolute top-10/12 right-[-5] md:right-[-45]"
               style={{
                 fontSize: "clamp(1rem, 6vw, 2.1rem)",
               }}
