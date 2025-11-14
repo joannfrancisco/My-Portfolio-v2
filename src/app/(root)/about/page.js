@@ -1,7 +1,14 @@
+import Aurora from "@/components/Aurora";
+
 const About = async () => {
   return (
-    <div>
-      <h1>About</h1>
+    <div className=" h-screen w-screen">
+      <Aurora
+        colorStops={["#7cfd68", "#b19eef", "#5227ff"]}
+        blend={0.5}
+        amplitude={0.5}
+        speed={0.5}
+      />
     </div>
   );
 };

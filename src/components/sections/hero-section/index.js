@@ -163,7 +163,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden text-xs font-semibold z-1">
+    <div className="relative w-screen h-dvh lg:h-screen overflow-hidden text-xs font-semibold z-1">
       <div className="max-w-[1536px] mx-auto">
         {/* Center Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
@@ -171,7 +171,7 @@ export default function HeroSection() {
           <div className="flex flex-col relative">
             <h1
               ref={h1Ref}
-              className="self-start pl-0.5 mb-[-10] font-hero tracking-wider outline"
+              className="self-start pl-0.5 mb-[-5] md:mb-[-10] font-hero tracking-wider outline"
               style={{ fontSize: "clamp(1rem, 6vw, 2rem)" }}
             >
               FULL-STACK

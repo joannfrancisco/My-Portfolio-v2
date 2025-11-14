@@ -128,7 +128,7 @@ const Menu = () => {
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        <div className="px-6 md:px-20 lg:px-80 flex flex-col items-start justify-center h-full space-y-6 md:space-y-8">
+        <div className="px-6 md:px-20 lg:px-80 flex flex-col items-start justify-center h-dvh lg:h-screen space-y-4 md:space-y-8">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
               <span className="font-wide transition  group-hover:text-(--accent)">

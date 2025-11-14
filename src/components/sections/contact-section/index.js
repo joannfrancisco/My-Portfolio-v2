@@ -3,7 +3,7 @@ import LinkHover from "@/components/shared/link-hover";
 
 const ContactSection = () => {
   return (
-    <div className="w-screen h-screen flex flex-col">
+    <div className="w-screen h-dvh lg:h-screen flex flex-col">
       <div className="h-full flex justify-center items-center">
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-6 flex justify-center items-center">
           <div className="max-w-[850px] flex-1">
