@@ -1,28 +1,36 @@
+import { ArrowRight } from "lucide-react";
+
 const ProjectHover = ({ href, name, desc }) => {
   const nameFormats = {
     moviedux: (
       <>
-        m<span className="font-wide pr-2">o</span>&nbsp;vi
-        <span className="font-wide pr-2">e</span>&nbsp;dux
+        m<span className="font-wide pr-2">o</span>vi
+        <span className="font-wide pr-2">e</span>dux
       </>
     ),
     tidytouch: (
       <>
-        ti<span className="font-wide pr-2">d</span>&nbsp;y&nbsp;&nbsp;t
-        <span className="font-wide pr-2">o</span>&nbsp;uch
+        ti<span className="font-wide pr-2">d</span>yt
+        <span className="font-wide pr-2">o</span>uch
       </>
     ),
     wouldyourather: (
       <>
-        w<span className="font-wide pr-2">o</span>&nbsp;uld&nbsp;&nbsp;y
-        <span className="font-wide pr-2">o</span>&nbsp;u&nbsp;&nbsp;r
-        <span className="font-wide pr-2">a</span>&nbsp;th
-        <span className="font-wide pr-2">e</span>&nbsp;r
+        w<span className="font-wide pr-2">o</span>uld&nbsp;y
+        <span className="font-wide pr-2">o</span>u&nbsp;r
+        <span className="font-wide pr-2">a</span>th
+        <span className="font-wide pr-2">e</span>r
       </>
     ),
     ann: (
       <>
-        <span className="font-wide pr-2">a</span> nn
+        <span className="font-wide pr-2">a</span>nn
+      </>
+    ),
+    gr8nola: (
+      <>
+        gr8n<span className="font-wide pr-2">o</span>l
+        <span className="font-wide pr-2">a</span>
       </>
     ),
   };
@@ -32,9 +40,17 @@ const ProjectHover = ({ href, name, desc }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex justify-between items-center border-b py-4 md:py-6 text-sm md:text-lg"
+      className="flex justify-between items-center border-b py-4 md:py-6 text-sm md:text-lg group"
     >
-      <h2 className="font-bold">{nameFormats[name] || name}</h2>
+      <h2
+        className="font-black text-base md:text-xl inline-flex items-center"
+        style={{ fontFamily: "var(--font-inconsolata)" }}
+      >
+        <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
+        <span className="inline-block transition-transform duration-300 ease-out">
+          {nameFormats[name] || name}
+        </span>
+      </h2>
       <h2>{desc}</h2>
     </a>
   );

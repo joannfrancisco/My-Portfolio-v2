@@ -163,72 +163,69 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-screen h-dvh lg:h-screen overflow-hidden text-xs font-semibold z-1">
-      <div className="max-w-[1536px] mx-auto">
-        {/* Center Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
-          {/* Headline */}
-          <div className="flex flex-col relative">
-            <h1
-              ref={h1Ref}
-              className="self-start pl-0.5 mb-[-5] md:mb-[-10] font-hero tracking-wider outline"
-              style={{ fontSize: "clamp(1rem, 6vw, 2rem)" }}
-            >
-              FULL-STACK
-            </h1>
+    // <div className="relative w-screen h-dvh lg:h-screen overflow-hidden text-xs font-semibold z-1">
+    <div className="max-w-[1536px] mx-auto text-xs font-semibold z-1">
+      {/* Center Content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
+        {/* Headline */}
+        <div className="flex flex-col relative">
+          <h1
+            ref={h1Ref}
+            className="self-start pl-0.5 mb-[-5] md:mb-[-10] font-hero tracking-wider outline"
+            style={{ fontSize: "clamp(1rem, 6vw, 2rem)" }}
+          >
+            FULL-STACK
+          </h1>
 
-            <h1
-              ref={h1Ref}
-              className="font-hero scale-y-150 "
-              style={{
-                fontSize: "clamp(2.4rem, 10vw, 5.8rem)",
-              }}
-            >
-              WEB DEVELOPER
-            </h1>
-            <h1
-              className="self-end font-cursive absolute top-10/12 right-[-5] md:right-[-45]"
-              style={{
-                fontSize: "clamp(1rem, 6vw, 2.1rem)",
-              }}
-            >
-              Jo Ann Francisco
-            </h1>
-          </div>
-
-          {/* Scramble Box */}
-          <div className="relative w-54 bg-(--light) text-(--dark) border border-(--dark) py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
-            <span
-              ref={targetRef}
-              className="select-none block w-full text-left"
-            >
-              *&@#$@$*&$(@#^)
-            </span>
-            <button
-              onClick={toggleScramble}
-              type="button"
-              className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/85 transition rounded-full text-[10px] scale-95 cursor-pointer"
-            >
-              {isDecoded ? "Encrypt" : "Decrypt"}
-            </button>
-          </div>
+          <h1
+            ref={h1Ref}
+            className="font-hero scale-y-150 "
+            style={{
+              fontSize: "clamp(2.4rem, 10vw, 5.8rem)",
+            }}
+          >
+            WEB DEVELOPER
+          </h1>
+          <h1
+            className="self-end font-cursive absolute top-10/12 right-[-5] md:right-[-45]"
+            style={{
+              fontSize: "clamp(1rem, 6vw, 2.1rem)",
+            }}
+          >
+            Jo Ann Francisco
+          </h1>
         </div>
 
-        {/* Floating Quotes */}
-        <div className="opacity-20">
-          {quotes.map((quote, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                quotesRef.current[index] = el;
-              }}
-              className="opacity-0"
-            >
-              {quote}
-            </div>
-          ))}
+        {/* Scramble Box */}
+        <div className="relative w-54 bg-(--light) text-(--dark) border border-(--dark) py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
+          <span ref={targetRef} className="select-none block w-full text-left">
+            *&@#$@$*&$(@#^)
+          </span>
+          <button
+            onClick={toggleScramble}
+            type="button"
+            className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/85 transition rounded-full text-[10px] scale-95 cursor-pointer"
+          >
+            {isDecoded ? "Encrypt" : "Decrypt"}
+          </button>
         </div>
       </div>
+
+      {/* Floating Quotes */}
+      <div className="opacity-20">
+        {quotes.map((quote, index) => (
+          <div
+            key={index}
+            ref={(el) => {
+              quotesRef.current[index] = el;
+            }}
+            className="opacity-0"
+          >
+            {quote}
+          </div>
+        ))}
+      </div>
     </div>
+    // </div>
   );
 }
