@@ -12,7 +12,7 @@ const ContactSection = () => {
             </h1>
             <hr className="mt-2 mb-6 border-t-2 " />
 
-            <div className="flex flex-col lg:flex-row justify-between items-start gap-7 lg:gap-20">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-7 lg:gap-20">
               <div className="flex gap-5 ">
                 <h2 className="font-bold text-base md:text-xl">MAIL</h2>
                 <a
@@ -33,19 +33,19 @@ const ContactSection = () => {
                 <div className="text-base md:text-xl font-light flex flex-col gap-2">
                   <LinkHover
                     href="https://www.linkedin.com/in/joannfrancisco"
-                    label="LinkedIn"
+                    label="linkedIn"
                   />
                   <LinkHover
                     href="https://github.com/joannfrancisco"
-                    label="Github"
+                    label="github"
                   />
                   <LinkHover
                     href="https://www.instagram.com/joannfrancisco.design/"
-                    label="Instagram"
+                    label="instagram"
                   />
                   <LinkHover
                     href="https://www.behance.net/joannvfrancisco"
-                    label="Behance"
+                    label="behance"
                   />
                 </div>
               </div>

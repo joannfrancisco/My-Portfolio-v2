@@ -14,27 +14,16 @@ export default function RootLayout({ children }) {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0 -z-10 opacity-40">
+      <div className="fixed inset-0 -z-10 opacity-40 blur-xs">
         <DotLottieReact
-          src="https://lottie.host/561382fc-e5ab-49ac-ab24-871c9ec990ea/2wxYrP8qI3.lottie"
+          src="https://lottie.host/6b76cbe8-8980-4767-97d4-793df77312ed/n4gsa9vPQ7.lottie"
           loop
           autoplay
           style={{ width: "100%", height: "100%" }}
         />
       </div>
 
-      {/* <div className="absolute inset-0 -z-10">
-        <DotLottieReact
-          src="https://lottie.host/561382fc-e5ab-49ac-ab24-871c9ec990ea/2wxYrP8qI3.lottie"
-          loop
-          autoplay
-          className="w-full h-full"
-        />
-
-        <div className="absolute inset-0  dark:backdrop-blur-sm"></div>
-      </div> */}
-
-      <Noise className="pointer-events-none" />
+      <Noise />
       <Header />
       <main>{children}</main>
     </div>

@@ -67,7 +67,7 @@ body {
 
 .outline {
   color: transparent;
-  -webkit-text-stroke: 1px var(--foreground);
+  -webkit-text-stroke: 2px var(--foreground);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;

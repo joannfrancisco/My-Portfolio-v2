@@ -5,7 +5,7 @@ import LinkHover from "@/components/shared/link-hover";
 const AboutSection = () => {
   return (
     // <div className="w-screen h-dvh lg:h-screen flex justify-center items-center overflow-hidden">
-    <div className="max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-0 w-full">
+    <div className="max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-0 w-full h-full overflow-y-scroll">
       {/* <div className="absolute inset-0 -z-10">
         <DotLottieReact
           src="https://lottie.host/561382fc-e5ab-49ac-ab24-871c9ec990ea/2wxYrP8qI3.lottie"
@@ -35,7 +35,7 @@ const AboutSection = () => {
           </p>
 
           <div className="mt-8 font-semibold text-base md:text-lg">
-            <LinkHover href="/sampleresume.pdf" label=" View Résumé" />
+            <LinkHover href="/sampleresume.pdf" label=" view résumé" />
           </div>
         </div>
 
