@@ -7,7 +7,7 @@ const Noise = ({
   patternScaleX = 2,
   patternScaleY = 2,
   patternRefreshInterval = 2,
-  patternAlpha = 20,
+  patternAlpha = 15,
 }) => {
   const grainRef = useRef(null);
 

@@ -10,6 +10,8 @@
   --dark: #606887;
   --hover: #272834;
 
+  --granola: #702c63;
+
   --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-inconsolata: "Inconsolata", ui-sans-serif, system-ui, sans-serif;
   --font-homemadeapple: "Homemade Apple", ui-sans-serif, system-ui, sans-serif;
@@ -19,6 +21,8 @@
   --background: #272834;
   --foreground: #f3f2f9;
   --accent: #aab2d1;
+
+  --granola: #d954be;
 }
 
 body {
@@ -80,6 +84,18 @@ body {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1) rotate(45deg);
+  }
 }
 
 /* @import "tailwindcss";

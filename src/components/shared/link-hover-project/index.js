@@ -5,33 +5,33 @@ const ProjectHover = ({ href, name, desc, onHover }) => {
   const nameFormats = {
     moviedux: (
       <>
-        m<span className="font-wide pr-2">o</span>vi
-        <span className="font-wide pr-2">e</span>dux
+        m<span className="font-wide">o</span>&nbsp;vi
+        <span className="font-wide">e</span>&nbsp;dux
       </>
     ),
     tidytouch: (
       <>
-        ti<span className="font-wide pr-2">d</span>y&nbsp;t
-        <span className="font-wide pr-2">o</span>uch
+        ti<span className="font-wide">d</span>&nbsp;y&nbsp;t
+        <span className="font-wide">o</span>&nbsp;uch
       </>
     ),
     wouldyourather: (
       <>
-        w<span className="font-wide pr-2">o</span>uld&nbsp;y
-        <span className="font-wide pr-2">o</span>u&nbsp;r
-        <span className="font-wide pr-2">a</span>th
-        <span className="font-wide pr-2">e</span>r?
+        w<span className="font-wide">o</span>&nbsp;uld&nbsp;y
+        <span className="font-wide">o</span>&nbsp;u&nbsp;r
+        <span className="font-wide">a</span>&nbsp;th
+        <span className="font-wide">e</span>&nbsp;r?
       </>
     ),
     ann: (
       <>
-        <span className="font-wide pr-2">a</span>nn
+        <span className="font-wide">a</span>&nbsp;nn
       </>
     ),
     gr8nola: (
       <>
-        gr8n<span className="font-wide pr-2">o</span>l
-        <span className="font-wide pr-2">a</span>
+        gr8n<span className="font-wide">o</span>&nbsp;l
+        <span className="font-wide">a</span>
       </>
     ),
   };

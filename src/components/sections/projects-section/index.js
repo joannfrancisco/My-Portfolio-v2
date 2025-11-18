@@ -10,7 +10,7 @@ const ProjectSection = () => {
   // Define images for each project
   const projectImages = {
     ann: "/images/profilePic.png",
-    gr8nola: "/images/profilePic.png",
+    gr8nola: "/images/projects/granola/granola-cover.png",
     moviedux: "/images/profilePic.png",
     tidytouch: "/images/profilePic.png",
     wouldyourather: "/images/profilePic.png",
@@ -56,31 +56,31 @@ const ProjectSection = () => {
             </h1>
             <hr className="mt-2 border-t-2" />
             <ProjectHover
-              href="/project_ann"
+              href="/project-ann"
               name="ann"
               desc="UI/UX | Web Development"
               onHover={setHoveredProject}
             />
             <ProjectHover
-              href="/project_granola"
+              href="/project-granola"
               name="gr8nola"
               desc="Parallax | Web Development"
               onHover={setHoveredProject}
             />
             <ProjectHover
-              href="/project_moviedux"
+              href="/project-moviedux"
               name="moviedux"
               desc="API | Web Development"
               onHover={setHoveredProject}
             />
             <ProjectHover
-              href="/project_tidy_touch"
+              href="/project-tidy-touch"
               name="tidytouch"
               desc="UI/UX | Webflow"
               onHover={setHoveredProject}
             />
             <ProjectHover
-              href="/project_would_you_rather"
+              href="/project-would-you-rather"
               name="wouldyourather"
               desc="BaaS | Web Development"
               onHover={setHoveredProject}
