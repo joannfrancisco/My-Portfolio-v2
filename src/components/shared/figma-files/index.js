@@ -6,8 +6,8 @@ const FigmaFiles = ({ src, alt }) => {
       <Image
         src={src}
         alt={alt}
-        width={1200}
-        height={600}
+        width={800}
+        height={400}
         className="w-full h-auto"
         priority
       />
