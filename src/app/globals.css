@@ -11,6 +11,8 @@
   --hover: #272834;
 
   --granola: #702c63;
+  --moviedux: #cf6a0d;
+  --tidytouch: #688f4a;
 
   --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-inconsolata: "Inconsolata", ui-sans-serif, system-ui, sans-serif;
@@ -23,6 +25,8 @@
   --accent: #aab2d1;
 
   --granola: #d954be;
+  --moviedux: #ff7a00;
+  --tidytouch: #88be60;
 }
 
 body {

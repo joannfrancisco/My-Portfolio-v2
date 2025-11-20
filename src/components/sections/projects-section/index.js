@@ -11,13 +11,13 @@ const ProjectSection = () => {
   const projectImages = {
     ann: "/images/profilePic.png",
     gr8nola: "/images/projects/granola/granola-cover.png",
-    moviedux: "/images/profilePic.png",
-    tidytouch: "/images/profilePic.png",
+    moviedux: "/images/projects/moviedux/moviedux-cover.png",
+    tidytouch: "/images/projects/tidy-touch/tidy-touch-cover.png",
     wouldyourather: "/images/profilePic.png",
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full h-full relative overflow-y-scroll px-6 md:px-10 lg:px-0">
+    <div className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 overflow-y-scroll">
       {/* Grid Container */}
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:w-[90vw] max-h-5/6 transition gap-5">
         {/* Left Box - 60% with dynamic images */}

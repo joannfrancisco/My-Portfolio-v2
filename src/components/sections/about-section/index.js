@@ -1,4 +1,3 @@
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import LinkHover from "@/components/shared/link-hover";
 
@@ -6,16 +5,7 @@ const AboutSection = () => {
   return (
     // <div className="w-screen h-dvh lg:h-screen flex justify-center items-center overflow-hidden">
     <div className="max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-0 w-full h-full overflow-y-scroll">
-      {/* <div className="absolute inset-0 -z-10">
-        <DotLottieReact
-          src="https://lottie.host/561382fc-e5ab-49ac-ab24-871c9ec990ea/2wxYrP8qI3.lottie"
-          loop
-          autoplay
-          style={{ width: "100%", height: "100%" }}
-        />
-      </div> */}
-
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 xl:gap-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 xl:gap-10 ">
         {/* Text Content - Left Side */}
         <div className=" lg:max-w-2xl xl:max-w-3xl order-1 lg:order-0">
           <h1 className="text-5xl lg:text-6xl font-header">
@@ -40,8 +30,6 @@ const AboutSection = () => {
         </div>
 
         {/* Image - Right Side */}
-        {/* <div className="max-w-2xl z-[-1] lg:max-w-screen-2xl w-full mb-4"> */}
-
         <Image
           src="/images/profilePic.png"
           alt="Profile picture of Jo Ann Francisco"

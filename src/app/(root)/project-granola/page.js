@@ -9,6 +9,7 @@ import LinkHover from "@/components/shared/link-hover";
 import FigmaFiles from "@/components/shared/figma-files";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/shared/footer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -71,9 +72,9 @@ const ProjectGranola = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-10">
             {/* left grid */}
             <div className="">
-              <div className="flex mb-5">
+              <div className="flex items-center mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--granola)"
+                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
@@ -85,18 +86,49 @@ const ProjectGranola = () => {
 
               <div className="flex mb-5 ">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--granola)"
+                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
-                  KEY&nbsp;FEATU<span className="font-wide">R</span>&nbsp;ES
+                  TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
                 <ul className="text-base leading-relaxed pl-1 w-[250px]">
-                  <li>Modern UI Redesign</li>
-                  <li>GSAP Parallax Effects</li>
-                  <li>Fully Responsive</li>
-                  <li>Next.js Performance</li>
-                  <li>Tailwind CSS Styling</li>
-                  <li>Product-Focused Layouts</li>
+                  <li>
+                    Next.js{" "}
+                    <span className="opacity-60 font-light">
+                      - framework & routing
+                    </span>
+                  </li>
+                  <li>
+                    React{" "}
+                    <span className="opacity-60 font-light">
+                      - component structure
+                    </span>
+                  </li>
+                  <li>
+                    Tailwind CSS{" "}
+                    <span className="opacity-60 font-light">
+                      - styling & layout
+                    </span>
+                  </li>
+                  <li>
+                    GSAP{" "}
+                    <span className="opacity-60 font-light">
+                      - animations & parallax
+                    </span>
+                  </li>
+                  <li>
+                    ShadCN{" "}
+                    <span className="opacity-60 font-light">
+                      - UI components
+                    </span>
+                  </li>
+
+                  <li>
+                    Vercel{" "}
+                    <span className="opacity-60 font-light">
+                      - deployment & hosting
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -104,14 +136,14 @@ const ProjectGranola = () => {
             {/* right grid */}
             <div className="">
               <p className="text-base leading-relaxed">
-                Gr8nola is a delicious, low-sugar whole-food granola brand
-                offering a variety of healthy and flavorful options. For this
-                project, I redesigned their homepage to better reflect the
-                quality of their products, drawing inspiration from leading
-                health and wellness brands to create a more engaging experience.
-                The result features refined GSAP parallax effects, smooth
-                animations, and a clean, modern layout that highlights their
-                brand story and encourages visitors to keep exploring.
+                Gr8nola is a delicious, low-sugar whole-food brand offering a
+                variety of healthy and flavorful options. For this project, I
+                redesigned their homepage to better reflect the quality of their
+                products, drawing inspiration from leading health and wellness
+                brands to create a more engaging experience. The result features
+                refined GSAP parallax effects, smooth animations, and a clean,
+                modern, responsive layout that highlights their brand story and
+                encourages visitors to keep exploring.
               </p>
               <div className="mt-8 mb-4 font-semibold text-base">
                 <LinkHover
@@ -150,7 +182,7 @@ const ProjectGranola = () => {
             />
 
             <h1
-              className="w-[170px] mb-3 mt-10 text-xl font-extrabold text-(--granola)"
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--granola)"
               style={{ fontFamily: "var(--font-inconsolata)" }}
             >
               <span className="font-wide">M</span>&nbsp;O
@@ -193,6 +225,7 @@ const ProjectGranola = () => {
               </div>
             </Link>
           </div>
+          <Footer />
         </div>
       </div>
     </div>

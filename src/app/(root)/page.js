@@ -329,26 +329,23 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      ref={scrollerRef}
-      className="h-screen overflow-y-auto overflow-x-hidden"
-    >
-      <section id="home" className="relative w-screen h-screen">
+    <div ref={scrollerRef} className="h-dvh overflow-y-auto overflow-x-hidden">
+      <section id="home" className="relative w-screen h-dvh">
         <HeroSection />
       </section>
 
       <section
         id="about"
-        className="w-screen h-screen flex items-start lg:items-center justify-center relative"
+        className="w-screen h-dvh flex items-start lg:items-center justify-center relative"
       >
         <AboutSection />
       </section>
 
-      <section id="projects" className="w-screen h-screen">
+      <section id="projects" className="w-screen h-dvh">
         <ProjectsSection />
       </section>
 
-      <section id="contact" className="w-screen h-screen">
+      <section id="contact" className="w-screen h-dvh">
         <ContactSection />
       </section>
     </div>
