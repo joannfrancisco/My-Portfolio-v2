@@ -14,17 +14,13 @@
 // const Home = () => {
 //   const scrollerRef = useRef(null);
 //   const isScrolling = useRef(false);
-//   const listenersActive = useRef(false);
 
 //   useEffect(() => {
 //     const scroller = scrollerRef.current;
+//     if (!scroller) return;
+
 //     const sections = gsap.utils.toArray("section");
 //     let currentSection = 0;
-
-//     // Check if mobile landscape (height < width AND height < 500px)
-//     const isMobileLandscape = () => {
-//       return window.innerHeight < window.innerWidth && window.innerHeight < 500;
-//     };
 
 //     const scrollToSection = (index) => {
 //       if (isScrolling.current || !scroller) return;
@@ -60,26 +56,19 @@
 //     // Touch events for mobile swipe
 //     let touchStartY = 0;
 //     let touchStartTime = 0;
-//     let isSwiping = false;
 
 //     const handleTouchStart = (e) => {
+//       // Don't interfere with touches on the canvas or header
+//       if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
+//         return;
+//       }
 //       touchStartY = e.touches[0].clientY;
 //       touchStartTime = Date.now();
-//       isSwiping = true;
-//     };
-
-//     const handleTouchMove = (e) => {
-//       if (!isSwiping) return;
-
-//       // Only prevent if we're actively scrolling between sections
-//       if (isScrolling.current) {
-//         e.preventDefault();
-//       }
 //     };
 
 //     const handleTouchEnd = (e) => {
-//       if (!isSwiping || isScrolling.current) {
-//         isSwiping = false;
+//       if (isScrolling.current) return;
+//       if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
 //         return;
 //       }
 
@@ -88,18 +77,14 @@
 //       const diff = touchStartY - touchEndY;
 //       const timeDiff = touchEndTime - touchStartTime;
 
-//       // Require minimum swipe distance of 30px and maximum time of 500ms
-//       if (Math.abs(diff) > 30 && timeDiff < 500) {
+//       // Lenient thresholds for better mobile experience
+//       if (Math.abs(diff) > 50 && timeDiff < 800) {
 //         if (diff > 0 && currentSection < sections.length - 1) {
-//           e.preventDefault();
 //           scrollToSection(currentSection + 1);
 //         } else if (diff < 0 && currentSection > 0) {
-//           e.preventDefault();
 //           scrollToSection(currentSection - 1);
 //         }
 //       }
-
-//       isSwiping = false;
 //     };
 
 //     // Keyboard navigation
@@ -121,79 +106,43 @@
 //       }
 //     };
 
-//     const addListeners = () => {
-//       if (listenersActive.current) return;
+//     // Add event listeners
+//     scroller.addEventListener("wheel", handleWheel, { passive: false });
+//     scroller.addEventListener("touchstart", handleTouchStart, {
+//       passive: true,
+//     });
+//     scroller.addEventListener("touchend", handleTouchEnd, {
+//       passive: true,
+//     });
+//     window.addEventListener("keydown", handleKeyDown);
 
-//       scroller.addEventListener("wheel", handleWheel, { passive: false });
-//       scroller.addEventListener("touchstart", handleTouchStart, {
-//         passive: true,
-//       });
-//       scroller.addEventListener("touchmove", handleTouchMove, {
-//         passive: false,
-//       });
-//       scroller.addEventListener("touchend", handleTouchEnd, {
-//         passive: false,
-//       });
-//       window.addEventListener("keydown", handleKeyDown);
-
-//       listenersActive.current = true;
-//     };
-
-//     const removeListeners = () => {
-//       if (!listenersActive.current) return;
-
+//     // Cleanup
+//     return () => {
 //       scroller.removeEventListener("wheel", handleWheel);
 //       scroller.removeEventListener("touchstart", handleTouchStart);
-//       scroller.removeEventListener("touchmove", handleTouchMove);
 //       scroller.removeEventListener("touchend", handleTouchEnd);
 //       window.removeEventListener("keydown", handleKeyDown);
-
-//       listenersActive.current = false;
-//     };
-
-//     // Initial setup
-//     if (!isMobileLandscape()) {
-//       addListeners();
-//     }
-
-//     // Handle resize to check if switched to/from landscape
-//     const handleResize = () => {
-//       if (isMobileLandscape()) {
-//         removeListeners();
-//       } else {
-//         addListeners();
-//       }
-//     };
-
-//     window.addEventListener("resize", handleResize);
-
-//     return () => {
-//       removeListeners();
-//       window.removeEventListener("resize", handleResize);
 //     };
 //   }, []);
 
 //   return (
-//     <div
-//       ref={scrollerRef}
-//       className="h-screen overflow-y-auto overflow-x-hidden"
-//     >
-//       <section id="home" className="relative w-screen h-screen">
+//     <div ref={scrollerRef} className="h-dvh overflow-y-auto overflow-x-hidden">
+//       <section id="home" className="relative w-screen h-dvh">
 //         <HeroSection />
 //       </section>
 
 //       <section
 //         id="about"
-//         className="w-screen h-screen flex items-start lg:items-center justify-center relative"
+//         className="w-screen h-dvh flex items-start lg:items-center justify-center relative"
 //       >
 //         <AboutSection />
 //       </section>
 
-//       <section id="projects" className="w-screen h-screen">
+//       <section id="projects" className="w-screen h-dvh">
 //         <ProjectsSection />
 //       </section>
 
-//       <section id="contact" className="w-screen h-screen">
+//       <section id="contact" className="w-screen h-dvh">
 //         <ContactSection />
 //       </section>
 //     </div>
@@ -201,6 +150,7 @@
 // };
 
 // export default Home;
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -217,6 +167,7 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 const Home = () => {
   const scrollerRef = useRef(null);
   const isScrolling = useRef(false);
+  const isMobile = useRef(false);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -225,13 +176,16 @@ const Home = () => {
     const sections = gsap.utils.toArray("section");
     let currentSection = 0;
 
+    // Detect if mobile
+    isMobile.current = window.innerWidth < 768;
+
     const scrollToSection = (index) => {
       if (isScrolling.current || !scroller) return;
       isScrolling.current = true;
 
       gsap.to(scroller, {
         scrollTo: { y: sections[index], autoKill: false },
-        duration: 1,
+        duration: isMobile.current ? 0.8 : 1, // Faster on mobile
         ease: "power2.inOut",
         onComplete: () => {
           currentSection = index;
@@ -240,7 +194,7 @@ const Home = () => {
       });
     };
 
-    // Wheel event for snap scrolling
+    // Wheel event for snap scrolling (Desktop)
     const handleWheel = (e) => {
       if (isScrolling.current) {
         e.preventDefault();
@@ -259,19 +213,44 @@ const Home = () => {
     // Touch events for mobile swipe
     let touchStartY = 0;
     let touchStartTime = 0;
+    let isTouching = false;
 
     const handleTouchStart = (e) => {
-      // Don't interfere with touches on the canvas or header
-      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
+      // Don't interfere with touches on interactive elements
+      if (
+        e.target.tagName === "CANVAS" ||
+        e.target.closest("header") ||
+        e.target.closest("button") ||
+        e.target.closest("a")
+      ) {
         return;
       }
+      isTouching = true;
       touchStartY = e.touches[0].clientY;
       touchStartTime = Date.now();
     };
 
+    const handleTouchMove = (e) => {
+      // Don't prevent default unless actively snapping
+      if (isScrolling.current && isTouching) {
+        e.preventDefault();
+      }
+    };
+
     const handleTouchEnd = (e) => {
-      if (isScrolling.current) return;
-      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
+      if (!isTouching || isScrolling.current) {
+        isTouching = false;
+        return;
+      }
+
+      // Don't interfere with interactive elements
+      if (
+        e.target.tagName === "CANVAS" ||
+        e.target.closest("header") ||
+        e.target.closest("button") ||
+        e.target.closest("a")
+      ) {
+        isTouching = false;
         return;
       }
 
@@ -280,14 +259,17 @@ const Home = () => {
       const diff = touchStartY - touchEndY;
       const timeDiff = touchEndTime - touchStartTime;
 
-      // Lenient thresholds for better mobile experience
-      if (Math.abs(diff) > 50 && timeDiff < 800) {
+      // More lenient for mobile - require faster swipe
+      if (Math.abs(diff) > 80 && timeDiff < 600) {
+        e.preventDefault();
         if (diff > 0 && currentSection < sections.length - 1) {
           scrollToSection(currentSection + 1);
         } else if (diff < 0 && currentSection > 0) {
           scrollToSection(currentSection - 1);
         }
       }
+
+      isTouching = false;
     };
 
     // Keyboard navigation
@@ -314,8 +296,11 @@ const Home = () => {
     scroller.addEventListener("touchstart", handleTouchStart, {
       passive: true,
     });
+    scroller.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
     scroller.addEventListener("touchend", handleTouchEnd, {
-      passive: true,
+      passive: false,
     });
     window.addEventListener("keydown", handleKeyDown);
 
@@ -323,29 +308,33 @@ const Home = () => {
     return () => {
       scroller.removeEventListener("wheel", handleWheel);
       scroller.removeEventListener("touchstart", handleTouchStart);
+      scroller.removeEventListener("touchmove", handleTouchMove);
       scroller.removeEventListener("touchend", handleTouchEnd);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
-    <div ref={scrollerRef} className="h-dvh overflow-y-auto overflow-x-hidden">
-      <section id="home" className="relative w-screen h-dvh">
+    <div
+      ref={scrollerRef}
+      className="h-screen overflow-y-auto overflow-x-hidden"
+    >
+      <section id="home" className="relative w-screen h-screen">
         <HeroSection />
       </section>
 
       <section
         id="about"
-        className="w-screen h-dvh flex items-start lg:items-center justify-center relative"
+        className="w-screen h-screen flex items-start lg:items-center justify-center relative"
       >
         <AboutSection />
       </section>
 
-      <section id="projects" className="w-screen h-dvh">
+      <section id="projects" className="w-screen h-screen">
         <ProjectsSection />
       </section>
 
-      <section id="contact" className="w-screen h-dvh">
+      <section id="contact" className="w-screen h-screen">
         <ContactSection />
       </section>
     </div>
