@@ -179,6 +179,14 @@ const Home = () => {
     // Detect if mobile
     isMobile.current = window.innerWidth < 768;
 
+    // const isMobile = window.innerWidth < 768;
+
+    // Only add GSAP listeners on desktop
+    if (!isMobile) {
+      scroller.addEventListener("wheel", handleWheel, { passive: false });
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
     const scrollToSection = (index) => {
       if (isScrolling.current || !scroller) return;
       isScrolling.current = true;
@@ -317,9 +325,13 @@ const Home = () => {
   return (
     <div
       ref={scrollerRef}
-      className="h-screen overflow-y-auto overflow-x-hidden"
+      className="h-screen overflow-y-auto overflow-x-hidden md:snap-none snap-y snap-mandatory"
     >
-      <section id="home" className="relative w-screen h-screen">
+      {/* snap-start */}
+      <section
+        id="home"
+        className="relative w-screen h-screen md:snap-none snap-start"
+      >
         <HeroSection />
       </section>
 
