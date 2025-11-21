@@ -49,7 +49,7 @@ const ProjectTidyTouch = () => {
       </div>
 
       <div id="smooth-content">
-        <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50">
+        <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50 ">
           <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
             <Image
               src="/images/projects/tidy-touch/tidy-touch-cover.png"
@@ -197,7 +197,7 @@ const ProjectTidyTouch = () => {
                   <span className="font-wide">e</span>&nbsp;r?
                 </h2>
                 <p className="font-light text-sm md:text-base">
-                  Web Development
+                  Web App Development
                 </p>
               </div>
             </Link>

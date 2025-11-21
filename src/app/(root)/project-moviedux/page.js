@@ -63,8 +63,7 @@ const ProjectMoviedux = () => {
           {/* title */}
           <div>
             <h1 className="text-5xl lg:text-6xl font-header text-(--moviedux)">
-              M<span className="font-wide">O</span>&nbsp;VI
-              <span className="font-wide">E</span>&nbsp;DUX
+              M<span className="font-wide">O</span>&nbsp;VIEDUX
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
           </div>
@@ -80,7 +79,7 @@ const ProjectMoviedux = () => {
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
                 </h1>
                 <ul className="text-base leading-relaxed pl-1 w-[250px]">
-                  <li>Web Development</li>
+                  <li>Web App Development</li>
                 </ul>
               </div>
 

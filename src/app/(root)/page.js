@@ -167,7 +167,6 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 const Home = () => {
   const scrollerRef = useRef(null);
   const isScrolling = useRef(false);
-  const isMobile = useRef(false);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -176,24 +175,13 @@ const Home = () => {
     const sections = gsap.utils.toArray("section");
     let currentSection = 0;
 
-    // Detect if mobile
-    isMobile.current = window.innerWidth < 768;
-
-    // const isMobile = window.innerWidth < 768;
-
-    // Only add GSAP listeners on desktop
-    if (!isMobile) {
-      scroller.addEventListener("wheel", handleWheel, { passive: false });
-      window.addEventListener("keydown", handleKeyDown);
-    }
-
     const scrollToSection = (index) => {
       if (isScrolling.current || !scroller) return;
       isScrolling.current = true;
 
       gsap.to(scroller, {
         scrollTo: { y: sections[index], autoKill: false },
-        duration: isMobile.current ? 0.8 : 1, // Faster on mobile
+        duration: 1,
         ease: "power2.inOut",
         onComplete: () => {
           currentSection = index;
@@ -202,7 +190,7 @@ const Home = () => {
       });
     };
 
-    // Wheel event for snap scrolling (Desktop)
+    // Wheel event for snap scrolling
     const handleWheel = (e) => {
       if (isScrolling.current) {
         e.preventDefault();
@@ -221,44 +209,19 @@ const Home = () => {
     // Touch events for mobile swipe
     let touchStartY = 0;
     let touchStartTime = 0;
-    let isTouching = false;
 
     const handleTouchStart = (e) => {
-      // Don't interfere with touches on interactive elements
-      if (
-        e.target.tagName === "CANVAS" ||
-        e.target.closest("header") ||
-        e.target.closest("button") ||
-        e.target.closest("a")
-      ) {
+      // Don't interfere with touches on the canvas or header
+      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
         return;
       }
-      isTouching = true;
       touchStartY = e.touches[0].clientY;
       touchStartTime = Date.now();
     };
 
-    const handleTouchMove = (e) => {
-      // Don't prevent default unless actively snapping
-      if (isScrolling.current && isTouching) {
-        e.preventDefault();
-      }
-    };
-
     const handleTouchEnd = (e) => {
-      if (!isTouching || isScrolling.current) {
-        isTouching = false;
-        return;
-      }
-
-      // Don't interfere with interactive elements
-      if (
-        e.target.tagName === "CANVAS" ||
-        e.target.closest("header") ||
-        e.target.closest("button") ||
-        e.target.closest("a")
-      ) {
-        isTouching = false;
+      if (isScrolling.current) return;
+      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
         return;
       }
 
@@ -267,17 +230,14 @@ const Home = () => {
       const diff = touchStartY - touchEndY;
       const timeDiff = touchEndTime - touchStartTime;
 
-      // More lenient for mobile - require faster swipe
-      if (Math.abs(diff) > 80 && timeDiff < 600) {
-        e.preventDefault();
+      // Lenient thresholds for better mobile experience
+      if (Math.abs(diff) > 20 && timeDiff < 800) {
         if (diff > 0 && currentSection < sections.length - 1) {
           scrollToSection(currentSection + 1);
         } else if (diff < 0 && currentSection > 0) {
           scrollToSection(currentSection - 1);
         }
       }
-
-      isTouching = false;
     };
 
     // Keyboard navigation
@@ -302,9 +262,6 @@ const Home = () => {
     // Add event listeners
     scroller.addEventListener("wheel", handleWheel, { passive: false });
     scroller.addEventListener("touchstart", handleTouchStart, {
-      passive: true,
-    });
-    scroller.addEventListener("touchmove", handleTouchMove, {
       passive: false,
     });
     scroller.addEventListener("touchend", handleTouchEnd, {
@@ -316,7 +273,6 @@ const Home = () => {
     return () => {
       scroller.removeEventListener("wheel", handleWheel);
       scroller.removeEventListener("touchstart", handleTouchStart);
-      scroller.removeEventListener("touchmove", handleTouchMove);
       scroller.removeEventListener("touchend", handleTouchEnd);
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -325,28 +281,24 @@ const Home = () => {
   return (
     <div
       ref={scrollerRef}
-      className="h-screen overflow-y-auto overflow-x-hidden md:snap-none snap-y snap-mandatory"
+      className="h-dvh lg:h-screen overflow-y-auto overflow-x-hidden "
     >
-      {/* snap-start */}
-      <section
-        id="home"
-        className="relative w-screen h-screen md:snap-none snap-start"
-      >
+      <section id="home" className="relative w-screen h-dvh lg:h-screen">
         <HeroSection />
       </section>
 
       <section
         id="about"
-        className="w-screen h-screen flex items-start lg:items-center justify-center relative"
+        className="w-screen h-dvh lg:h-screen flex items-start lg:items-center justify-center relative"
       >
         <AboutSection />
       </section>
 
-      <section id="projects" className="w-screen h-screen">
+      <section id="projects" className="w-screen h-dvh lg:h-screen">
         <ProjectsSection />
       </section>
 
-      <section id="contact" className="w-screen h-screen">
+      <section id="contact" className="w-screen h-dvh lg:h-screen">
         <ContactSection />
       </section>
     </div>

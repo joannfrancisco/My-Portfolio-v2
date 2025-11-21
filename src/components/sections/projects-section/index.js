@@ -13,7 +13,7 @@ const ProjectSection = () => {
     gr8nola: "/images/projects/granola/granola-cover.png",
     moviedux: "/images/projects/moviedux/moviedux-cover.png",
     tidytouch: "/images/projects/tidy-touch/tidy-touch-cover.png",
-    wouldyourather: "/images/profilePic.png",
+    wouldyourather: "/images/projects/wyr/wyr-cover.png",
   };
 
   return (
@@ -70,7 +70,7 @@ const ProjectSection = () => {
             <ProjectHover
               href="/project-moviedux"
               name="moviedux"
-              desc="API | Web Development"
+              desc="API | Web App Development"
               onHover={setHoveredProject}
             />
             <ProjectHover
@@ -82,7 +82,7 @@ const ProjectSection = () => {
             <ProjectHover
               href="/project-would-you-rather"
               name="wouldyourather"
-              desc="BaaS | Web Development"
+              desc="Web App Development"
               onHover={setHoveredProject}
             />
           </div>

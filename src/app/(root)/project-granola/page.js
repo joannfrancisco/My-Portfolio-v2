@@ -220,7 +220,7 @@ const ProjectGranola = () => {
                   <span className="font-wide">e</span>&nbsp;dux
                 </h2>
                 <p className="font-light text-sm md:text-base">
-                  Web Development
+                  Web App Development
                 </p>
               </div>
             </Link>
