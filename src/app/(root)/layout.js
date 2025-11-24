@@ -39,7 +39,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function RootLayout({ children }) {
   return (
-    <div className="relative min-h-dvh overflow-hidden">
+    <div className="min-h-dvh overflow-hidden">
       {/* Lottie Background */}
       {/* <div className="fixed inset-0 -z-10 opacity-40 blur-xs pointer-events-none">
         <DotLottieReact

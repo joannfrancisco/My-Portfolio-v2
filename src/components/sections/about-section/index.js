@@ -4,7 +4,7 @@ import LinkHover from "@/components/shared/link-hover";
 const AboutSection = () => {
   return (
     // <div className="w-screen h-dvh lg:h-screen flex justify-center items-center overflow-hidden">
-    <div className="max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-0 w-full h-full overflow-y-scroll">
+    <div className="max-w-screen-2xl mx-auto px-6 md:px-10 lg:px-0 pb-20 lg:pb-0 w-full h-full ">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 xl:gap-10 ">
         {/* Text Content - Left Side */}
         <div className=" lg:max-w-2xl xl:max-w-3xl order-1 lg:order-0">
@@ -36,7 +36,7 @@ const AboutSection = () => {
           width={500}
           height={500}
           priority
-          className="relative lg:absolute top-0 right-0 z-[-1] mb-4 object-cover opacity-95 rounded-bl-4xl rounded-br-4xl lg:rounded-br-none w-full lg:w-[300px] xl:w-[350px] h-[60vmin]  lg:h-[500px] xl:h-[90vmin]"
+          className="relative lg:absolute top-0 right-0 z-[-1] mb-4 object-cover opacity-95 rounded-4xl lg:rounded-tl-none lg:rounded-tr-none lg:rounded-br-none w-full lg:w-[300px] xl:w-[350px] h-[60vmin]  lg:h-[500px] xl:h-[90vmin]"
         />
 
         <Image

@@ -5,22 +5,18 @@ const ProjectHover = ({ href, name, desc, onHover }) => {
   const nameFormats = {
     moviedux: (
       <>
-        m<span className="font-wide">o</span>&nbsp;vi
-        <span className="font-wide">e</span>&nbsp;dux
+        movi<span className="font-wide">e</span>&nbsp;dux
       </>
     ),
     tidytouch: (
       <>
-        ti<span className="font-wide">d</span>&nbsp;y&nbsp;t
-        <span className="font-wide">o</span>&nbsp;uch
+        ti<span className="font-wide">d</span>&nbsp;y&nbsp;touch
       </>
     ),
     wouldyourather: (
       <>
-        w<span className="font-wide">o</span>&nbsp;uld&nbsp;y
-        <span className="font-wide">o</span>&nbsp;u&nbsp;r
-        <span className="font-wide">a</span>&nbsp;th
-        <span className="font-wide">e</span>&nbsp;r?
+        woul<span className="font-wide">d</span>&nbsp;&nbsp;you&nbsp;r
+        <span className="font-wide">a</span>&nbsp;ther?
       </>
     ),
     ann: (
@@ -30,8 +26,7 @@ const ProjectHover = ({ href, name, desc, onHover }) => {
     ),
     gr8nola: (
       <>
-        gr8n<span className="font-wide">o</span>&nbsp;l
-        <span className="font-wide">a</span>
+        gr8nol<span className="font-wide">a</span>
       </>
     ),
   };
@@ -58,24 +53,3 @@ const ProjectHover = ({ href, name, desc, onHover }) => {
 };
 
 export default ProjectHover;
-
-// **Key features:**
-
-// 1. **"use client"** - Added to ProjectSection since it now uses state
-// 2. **State management** - `hoveredProject` tracks which project is being hovered
-// 3. **Dynamic images** - Each project has its own image that fades in on hover
-// 4. **Smooth transitions** - `duration-500` provides smooth fade effect
-// 5. **Default image** - Profile pic shows when no project is hovered
-// 6. **Prop passing** - `onHover` callback updates parent state
-
-// **Image structure needed:**
-
-// public/
-//   images/
-//     projects/
-//       ann.png
-//       gr8nola.png
-//       moviedux.png
-//       tidytouch.png
-//       wouldyourather.png
-//     profilePic.png

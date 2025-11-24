@@ -17,11 +17,11 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 overflow-y-scroll">
+    <div className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 pb-40 lg:pb-0 ">
       {/* Grid Container */}
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:w-[90vw] max-h-5/6 transition gap-5">
         {/* Left Box - 60% with dynamic images */}
-        <div className="h-[40vh] lg:h-full w-full relative overflow-hidden lg:rounded-tr-4xl rounded-bl-4xl lg:rounded-bl-none rounded-br-4xl lg:rounded-br-none">
+        <div className="h-[40vh] lg:h-full w-full relative overflow-hidden rounded-4xl lg:rounded-tl-none lg:rounded-bl-none lg:rounded-br-none">
           {/* Default Image */}
           <Image
             src="/images/profilePic.png"

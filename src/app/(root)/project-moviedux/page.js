@@ -78,7 +78,7 @@ const ProjectMoviedux = () => {
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>Web App Development</li>
                 </ul>
               </div>
@@ -90,7 +90,7 @@ const ProjectMoviedux = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>
                     React{" "}
                     <span className="opacity-60 font-light">
@@ -211,7 +211,7 @@ const ProjectMoviedux = () => {
                   ti<span className="font-wide">d</span>&nbsp;y&nbsp;t
                   <span className="font-wide">o</span>&nbsp;uch
                 </h2>
-                <p className="font-light text-sm md:text-base">Webflow</p>
+                <p className="font-light text-xs md:text-base">Webflow</p>
               </div>
             </Link>
           </div>

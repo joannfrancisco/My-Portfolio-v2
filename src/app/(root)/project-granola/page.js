@@ -79,7 +79,7 @@ const ProjectGranola = () => {
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>Web Development</li>
                 </ul>
               </div>
@@ -91,7 +91,7 @@ const ProjectGranola = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>
                     Next.js{" "}
                     <span className="opacity-60 font-light">
@@ -219,7 +219,7 @@ const ProjectGranola = () => {
                   m<span className="font-wide">o</span>&nbsp;vi
                   <span className="font-wide">e</span>&nbsp;dux
                 </h2>
-                <p className="font-light text-sm md:text-base">
+                <p className="font-light text-xs md:text-base">
                   Web App Development
                 </p>
               </div>

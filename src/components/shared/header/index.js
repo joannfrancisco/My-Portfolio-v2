@@ -4,12 +4,31 @@ import Link from "next/link";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   //  bg-amber-50 sm:bg-amber-100 md:bg-amber-200 lg:bg-amber-400 xl:bg-amber-600
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-50">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+  ${
+    scrolled
+      ? "backdrop-blur-lg bg-white/40 dark:bg-black/40 shadow-md"
+      : "bg-transparent"
+  }
+  md:bg-transparent md:backdrop-blur-0 md:shadow-none
+`}
+      >
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-6 flex items-center justify-between ">
           <Link
             href="/#home"

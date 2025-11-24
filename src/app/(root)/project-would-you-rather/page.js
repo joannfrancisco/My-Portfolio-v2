@@ -73,14 +73,14 @@ const ProjectWouldYouRather = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-10">
             {/* left grid */}
             <div className="">
-              <div className="flex items-center mb-5">
+              <div className="flex mb-5">
                 <h1
                   className="w-40 text-xl font-extrabold text-(--wyr) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px] text-left">
                   <li>Web App Development</li>
                 </ul>
               </div>
@@ -92,7 +92,7 @@ const ProjectWouldYouRather = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 lg:w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px] ">
                   <li>
                     React{" "}
                     <span className="opacity-60 font-light">
@@ -196,7 +196,7 @@ const ProjectWouldYouRather = () => {
                 >
                   <span className="font-wide">a</span>&nbsp;nn
                 </h2>
-                <p className="font-light text-sm md:text-base">
+                <p className="font-light text-xs md:text-base">
                   Web Development
                 </p>
               </div>

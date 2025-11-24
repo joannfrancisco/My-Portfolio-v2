@@ -4,16 +4,16 @@ import Footer from "@/components/shared/footer";
 
 const ContactSection = () => {
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col ">
       <div className="h-full flex justify-center items-center">
-        <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-6 flex justify-center items-center">
+        <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10  flex justify-center items-center">
           <div className="max-w-[850px] flex-1">
             <h1 className="text-5xl md:text-6xl font-header">
               CO<span className="font-wide">N</span>&nbsp;TACT
             </h1>
             <hr className="mt-2 mb-6 border-t-2 " />
 
-            <div className="flex flex-col md:flex-row justify-between items-start gap-7 lg:gap-20">
+            <div className="flex flex-col lg:flex-row justify-between items-start gap-7 lg:gap-20">
               <div className="flex gap-5 ">
                 <h2 className="font-bold text-base md:text-xl">MAIL</h2>
                 <a

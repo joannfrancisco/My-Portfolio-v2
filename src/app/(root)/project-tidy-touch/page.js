@@ -79,7 +79,7 @@ const ProjectTidyTouch = () => {
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>Webflow</li>
                   <li>UI/UX Design</li>
                 </ul>
@@ -92,7 +92,7 @@ const ProjectTidyTouch = () => {
                 >
                   <span className="font-wide">T</span>&nbsp;OOLS
                 </h1>
-                <ul className="text-base leading-relaxed pl-1 lg:w-[250px]">
+                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>
                     Webflow{" "}
                     <span className="opacity-60 font-light">
@@ -196,7 +196,7 @@ const ProjectTidyTouch = () => {
                   <span className="font-wide">a</span>&nbsp;th
                   <span className="font-wide">e</span>&nbsp;r?
                 </h2>
-                <p className="font-light text-sm md:text-base">
+                <p className="font-light text-xs md:text-base">
                   Web App Development
                 </p>
               </div>

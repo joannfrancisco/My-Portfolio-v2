@@ -78,7 +78,7 @@
 //       const timeDiff = touchEndTime - touchStartTime;
 
 //       // Lenient thresholds for better mobile experience
-//       if (Math.abs(diff) > 50 && timeDiff < 800) {
+//       if (Math.abs(diff) > 20 && timeDiff < 800) {
 //         if (diff > 0 && currentSection < sections.length - 1) {
 //           scrollToSection(currentSection + 1);
 //         } else if (diff < 0 && currentSection > 0) {
@@ -109,10 +109,10 @@
 //     // Add event listeners
 //     scroller.addEventListener("wheel", handleWheel, { passive: false });
 //     scroller.addEventListener("touchstart", handleTouchStart, {
-//       passive: true,
+//       passive: false,
 //     });
 //     scroller.addEventListener("touchend", handleTouchEnd, {
-//       passive: true,
+//       passive: false,
 //     });
 //     window.addEventListener("keydown", handleKeyDown);
 
@@ -126,23 +126,26 @@
 //   }, []);
 
 //   return (
-//     <div ref={scrollerRef} className="h-dvh overflow-y-auto overflow-x-hidden">
-//       <section id="home" className="relative w-screen h-dvh">
+//     <div
+//       ref={scrollerRef}
+//       className="h-dvh lg:h-screen overflow-y-auto overflow-x-hidden "
+//     >
+//       <section id="home" className="relative w-screen h-dvh lg:h-screen">
 //         <HeroSection />
 //       </section>
 
 //       <section
 //         id="about"
-//         className="w-screen h-dvh flex items-start lg:items-center justify-center relative"
+//         className="w-screen h-dvh lg:h-screen flex items-start lg:items-center justify-center relative"
 //       >
 //         <AboutSection />
 //       </section>
 
-//       <section id="projects" className="w-screen h-dvh">
+//       <section id="projects" className="w-screen h-dvh lg:h-screen">
 //         <ProjectsSection />
 //       </section>
 
-//       <section id="contact" className="w-screen h-dvh">
+//       <section id="contact" className="w-screen h-dvh lg:h-screen">
 //         <ContactSection />
 //       </section>
 //     </div>
@@ -150,7 +153,6 @@
 // };
 
 // export default Home;
-
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -161,6 +163,7 @@ import AboutSection from "../../components/sections/about-section";
 import ProjectsSection from "../../components/sections/projects-section";
 import ContactSection from "../../components/sections/contact-section";
 import HeroSection from "@/components/sections/hero-section";
+import Background from "@/components/shared/background";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -174,6 +177,7 @@ const Home = () => {
 
     const sections = gsap.utils.toArray("section");
     let currentSection = 0;
+    const isLargeScreen = window.innerWidth >= 1024;
 
     const scrollToSection = (index) => {
       if (isScrolling.current || !scroller) return;
@@ -190,8 +194,10 @@ const Home = () => {
       });
     };
 
-    // Wheel event for snap scrolling
+    // Wheel event for snap scrolling (large screens only)
     const handleWheel = (e) => {
+      if (!isLargeScreen) return; // Allow native scroll on small screens
+
       if (isScrolling.current) {
         e.preventDefault();
         return;
@@ -206,42 +212,9 @@ const Home = () => {
       }
     };
 
-    // Touch events for mobile swipe
-    let touchStartY = 0;
-    let touchStartTime = 0;
-
-    const handleTouchStart = (e) => {
-      // Don't interfere with touches on the canvas or header
-      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
-        return;
-      }
-      touchStartY = e.touches[0].clientY;
-      touchStartTime = Date.now();
-    };
-
-    const handleTouchEnd = (e) => {
-      if (isScrolling.current) return;
-      if (e.target.tagName === "CANVAS" || e.target.closest("header")) {
-        return;
-      }
-
-      const touchEndY = e.changedTouches[0].clientY;
-      const touchEndTime = Date.now();
-      const diff = touchStartY - touchEndY;
-      const timeDiff = touchEndTime - touchStartTime;
-
-      // Lenient thresholds for better mobile experience
-      if (Math.abs(diff) > 20 && timeDiff < 800) {
-        if (diff > 0 && currentSection < sections.length - 1) {
-          scrollToSection(currentSection + 1);
-        } else if (diff < 0 && currentSection > 0) {
-          scrollToSection(currentSection - 1);
-        }
-      }
-    };
-
-    // Keyboard navigation
+    // Keyboard navigation (large screens only)
     const handleKeyDown = (e) => {
+      if (!isLargeScreen) return; // Allow native scroll on small screens
       if (isScrolling.current) return;
 
       if (
@@ -261,19 +234,11 @@ const Home = () => {
 
     // Add event listeners
     scroller.addEventListener("wheel", handleWheel, { passive: false });
-    scroller.addEventListener("touchstart", handleTouchStart, {
-      passive: false,
-    });
-    scroller.addEventListener("touchend", handleTouchEnd, {
-      passive: false,
-    });
     window.addEventListener("keydown", handleKeyDown);
 
     // Cleanup
     return () => {
       scroller.removeEventListener("wheel", handleWheel);
-      scroller.removeEventListener("touchstart", handleTouchStart);
-      scroller.removeEventListener("touchend", handleTouchEnd);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
@@ -281,20 +246,21 @@ const Home = () => {
   return (
     <div
       ref={scrollerRef}
-      className="h-dvh lg:h-screen overflow-y-auto overflow-x-hidden "
+      className="h-dvh lg:h-screen overflow-y-auto overflow-x-hidden scroll-smooth"
     >
+      {/* <Background /> */}
       <section id="home" className="relative w-screen h-dvh lg:h-screen">
         <HeroSection />
       </section>
 
       <section
         id="about"
-        className="w-screen h-dvh lg:h-screen flex items-start lg:items-center justify-center relative"
+        className="w-screen h-auto lg:h-screen flex items-start lg:items-center justify-center relative"
       >
         <AboutSection />
       </section>
 
-      <section id="projects" className="w-screen h-dvh lg:h-screen">
+      <section id="projects" className="w-screen h-auto lg:h-screen">
         <ProjectsSection />
       </section>
 
