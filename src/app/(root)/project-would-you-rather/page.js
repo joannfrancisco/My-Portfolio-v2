@@ -92,36 +92,9 @@ const ProjectWouldYouRather = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base pl-1 w-[75vw] lg:w-[250px] ">
-                  <li>
-                    React{" "}
-                    <span className="opacity-60 font-light">
-                      - UI components & state management
-                    </span>
-                  </li>
-                  <li>
-                    Firebase (Firestore + Auth){" "}
-                    <span className="opacity-60 font-light">
-                      - real-time votes & optional Google login
-                    </span>
-                  </li>
-                  <li>
-                    Node.js{" "}
-                    <span className="opacity-60 font-light">
-                      - development environment
-                    </span>
-                  </li>
-                  <li>
-                    Vanilla CSS{" "}
-                    <span className="opacity-60 font-light">- styling</span>
-                  </li>
-                  <li>
-                    GitHub Pages{" "}
-                    <span className="opacity-60 font-light">
-                      - project hosting
-                    </span>
-                  </li>
-                </ul>
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  React | Node | Firebase | Vanilla CSS | GitHub Pages
+                </h1>
               </div>
             </div>
 

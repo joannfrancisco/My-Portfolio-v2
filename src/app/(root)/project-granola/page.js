@@ -91,7 +91,10 @@ const ProjectGranola = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  Next.js | React | GSAP | Tailwind CSS | ShadCN | Vercel
+                </h1>
+                {/* <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>
                     Next.js{" "}
                     <span className="opacity-60 font-light">
@@ -129,7 +132,7 @@ const ProjectGranola = () => {
                       - deployment & hosting
                     </span>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
 

@@ -15,6 +15,7 @@ export default function HeroSection() {
   const targetRef = useRef(null);
   const h1Ref = useRef(null);
   const quotesRef = useRef([]);
+  const textRef = useRef(null);
 
   const message1 = "Imagination is Power";
   const message2 = "Scroll for more...";
@@ -22,10 +23,6 @@ export default function HeroSection() {
 
   const quotes = [
     "Code is poetry",
-    // "Creativity takes courage",
-    // "Design is intelligence made visible",
-    // "Every pixel has a purpose",
-    // "Simplicity is the ultimate sophistication",
     "Next.js",
     "Tailwind CSS",
     "PostgreSQL",
@@ -126,6 +123,31 @@ export default function HeroSection() {
   };
 
   useEffect(() => {
+    const letters = textRef.current.querySelectorAll("span");
+    gsap.fromTo(
+      letters,
+      {
+        opacity: 0,
+        x: 50, // from right
+        y: -50, // from top
+        rotate: 10, // optional slight rotation
+      },
+      {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        rotate: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          once: true,
+        },
+      }
+    );
+
     // Init scramble box
     if (targetRef.current) {
       gsap.set(targetRef.current, {
@@ -163,48 +185,56 @@ export default function HeroSection() {
   }, []);
 
   return (
-    // <div className="relative w-screen h-dvh lg:h-screen overflow-hidden text-xs font-semibold z-1">
     <div className="max-w-screen-2xl mx-auto text-xs font-semibold">
       {/* Center Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
         {/* Headline */}
         <div className="flex flex-col relative">
           <h1
-            ref={h1Ref}
-            className="self-start pl-0.5 mb-[-5] md:mb-[-10] font-hero tracking-wider "
-            style={{ fontSize: "clamp(1rem, 6vw, 2rem)" }}
+            // ref={h1Ref}
+            className="self-start pl-0.5 mb-[-5] md:mb-[-10] font-extrabold tracking-tight chrome-text text-shadow-2xs"
+            style={{
+              fontSize: "clamp(1rem, 6vw, 2rem)",
+              fontFamily: "var(--font-inconsolata)",
+            }}
           >
-            FULL-STACK
+            f<span className="font-wide chrome-text">u</span>&nbsp;ll-st
+            <span className="font-wide chrome-text">a</span>&nbsp;ck
           </h1>
 
           <h1
-            ref={h1Ref}
-            className="font-hero scale-y-150 outline"
+            className="font-black scale-y-150 chrome-text text-shadow-2xs"
             style={{
               fontSize: "clamp(2.4rem, 10vw, 5.8rem)",
             }}
           >
             WEB DEVELOPER
           </h1>
+
           <h1
-            className="self-end font-cursive absolute top-10/12 right-[-5] md:right-[-45]"
+            ref={textRef}
+            className="self-end absolute top-10/12 right-[-5] md:right-[-45] font-cursive text-shadow-lg"
             style={{
               fontSize: "clamp(1rem, 6vw, 2.1rem)",
             }}
           >
-            Jo Ann Francisco
+            {"Jo Ann Francisco".split("").map((char, i) => (
+              <span key={`future-${i}`} className="inline-block">
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
           </h1>
         </div>
 
         {/* Scramble Box */}
-        <div className="relative w-54 bg-(--light) text-(--dark) border border-(--dark) py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
+        <div className="opacity-90 relative w-54 bg-(--light) text-(--dark) border border-(--dark)/40 py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
           <span ref={targetRef} className="select-none block w-full text-left">
             *&@#$@$*&$(@#^)
           </span>
           <button
             onClick={toggleScramble}
             type="button"
-            className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/85 transition rounded-full text-[10px] scale-95 cursor-pointer"
+            className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/90 transition rounded-full text-[10px] scale-95 cursor-pointer"
           >
             {isDecoded ? "Encrypt" : "Decrypt"}
           </button>
@@ -226,6 +256,5 @@ export default function HeroSection() {
         ))}
       </div>
     </div>
-    // </div>
   );
 }

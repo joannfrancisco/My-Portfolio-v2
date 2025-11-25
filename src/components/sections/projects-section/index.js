@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import ProjectHover from "@/components/shared/link-hover-project";
 
 const ProjectSection = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  // Define images for each project
   const projectImages = {
     ann: "/images/profilePic.png",
     gr8nola: "/images/projects/granola/granola-cover.png",
@@ -17,12 +17,16 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 pb-40 lg:pb-0 ">
-      {/* Grid Container */}
+    <motion.div
+      initial={{ opacity: 0, x: 80 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:w-[90vw] max-h-5/6 transition gap-5">
-        {/* Left Box - 60% with dynamic images */}
-        <div className="h-[40vh] lg:h-full w-full relative overflow-hidden rounded-4xl lg:rounded-tl-none lg:rounded-bl-none lg:rounded-br-none">
-          {/* Default Image */}
+        {/* Left Image Box */}
+        <div className="h-[40vh] lg:h-full ml-12 md:ml-18 lg:ml-0 w-screen lg:w-full relative overflow-hidden rounded-4xl lg:rounded-tl-none lg:rounded-bl-none lg:rounded-br-none">
           <Image
             src="/images/profilePic.png"
             alt="Profile picture of Jo Ann Francisco"
@@ -33,7 +37,6 @@ const ProjectSection = () => {
             }`}
           />
 
-          {/* Project Images */}
           {Object.entries(projectImages).map(([projectName, imageSrc]) => (
             <Image
               key={projectName}
@@ -47,7 +50,7 @@ const ProjectSection = () => {
           ))}
         </div>
 
-        {/* Right Box - 40% */}
+        {/* Right Box */}
         <div className="h-[60vh] lg:h-full w-full">
           <div className="flex flex-col">
             <h1 className="text-5xl lg:text-6xl font-header">
@@ -55,6 +58,7 @@ const ProjectSection = () => {
               <span className="font-wide">E</span>&nbsp;CTS
             </h1>
             <hr className="mt-2 border-t-2" />
+
             <ProjectHover
               href="/project-ann"
               name="ann"
@@ -88,7 +92,7 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

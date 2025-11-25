@@ -91,32 +91,21 @@ const ProjectAnn = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
-                  <li>
-                    Next.js{" "}
-                    <span className="opacity-60 font-light">
-                      - framework, routing & SEO
-                    </span>
-                  </li>
-                  <li>
-                    Tailwind CSS{" "}
-                    <span className="opacity-60 font-light">
-                      - styling & responsive layout
-                    </span>
-                  </li>
-                  <li>
-                    GSAP{" "}
-                    <span className="opacity-60 font-light">
-                      - smooth animations & scroll effects
-                    </span>
-                  </li>
-                  <li>
-                    Vercel{" "}
-                    <span className="opacity-60 font-light">
-                      - deployment & hosting
-                    </span>
-                  </li>
-                </ul>
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  Next.js | GSAP | Tailwind CSS | Vercel
+                </h1>
+              </div>
+
+              <div className="flex mb-5 items-center">
+                <h1
+                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                >
+                  DESI<span className="font-wide">G</span>&nbsp;N TOOLS
+                </h1>
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  Figma | Adobe Photoshop
+                </h1>
               </div>
             </div>
 

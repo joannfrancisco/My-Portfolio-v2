@@ -14,7 +14,7 @@ const NotFound = () => {
         className="h-[40vmin]"
       />
 
-      <div className="font-semibold text-base md:text-lg text-center">
+      <div className="font-semibold text-base md:text-lg text-center px-4">
         <h1>
           Sorry, the page that you&apos;re looking for doesn&apos;t exist.
         </h1>

@@ -85,27 +85,16 @@ const ProjectTidyTouch = () => {
                 </ul>
               </div>
 
-              <div className="flex mb-5 ">
+              <div className="flex mb-5 items-center">
                 <h1
                   className="w-40 text-xl font-extrabold text-(--tidytouch) pr-1 md:pr-0 "
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   <span className="font-wide">T</span>&nbsp;OOLS
                 </h1>
-                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
-                  <li>
-                    Webflow{" "}
-                    <span className="opacity-60 font-light">
-                      - no-code website builder
-                    </span>
-                  </li>
-                  <li>
-                    Figma{" "}
-                    <span className="opacity-60 font-light">
-                      - ui/ux design platform
-                    </span>
-                  </li>
-                </ul>
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  Webflow | Figma
+                </h1>
               </div>
             </div>
 

@@ -4,7 +4,7 @@
 :root {
   --background: #f3f2f9;
   --foreground: #606887;
-  --accent: #272834;
+  --accent: #ff9c45;
 
   --light: #f3f2f9;
   --dark: #606887;
@@ -23,7 +23,7 @@
 .dark {
   --background: #272834;
   --foreground: #f3f2f9;
-  --accent: #aab2d1;
+  --accent: #ff9c45;
 
   --granola: #d954be;
   --moviedux: #ff7a00;
@@ -50,7 +50,6 @@ body {
 
 .font-cursive {
   font-family: var(--font-homemadeapple) !important;
-  font-weight: 400;
   color: var(--accent);
 }
 
@@ -115,4 +114,52 @@ body {
 
 .animate-rotate {
   animation: rotate 20s linear infinite;
+}
+
+/* Light mode chrome gradient */
+:root {
+  --chrome-gradient: linear-gradient(
+    110deg,
+    #605b75,
+    #4b465c,
+    #7a7393,
+    #3a3448,
+    #6a6480,
+    #605b75
+  );
+}
+
+/* Dark mode chrome gradient */
+.dark {
+  --chrome-gradient: linear-gradient(
+    110deg,
+    #e1dff0,
+    #c6c1d8,
+    #f2f0fa,
+    #a7a1c3,
+    #d1ccdf,
+    #e1dff0
+  );
+}
+
+.chrome-text {
+  background: var(--chrome-gradient);
+  background-size: 300% 300%;
+  animation: chromeMove 6s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(1.2) contrast(1.2);
+}
+
+@keyframes chromeMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

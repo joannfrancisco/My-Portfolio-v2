@@ -1,25 +1,34 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import LinkHover from "@/components/shared/link-hover";
 import Footer from "@/components/shared/footer";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   return (
-    <div className="h-full flex flex-col ">
-      <div className="h-full flex justify-center items-center">
-        <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10  flex justify-center items-center">
+    <div className="h-full flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="h-full flex justify-center items-center"
+      >
+        <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 flex justify-center items-center">
           <div className="max-w-[850px] flex-1">
             <h1 className="text-5xl md:text-6xl font-header">
               CO<span className="font-wide">N</span>&nbsp;TACT
             </h1>
-            <hr className="mt-2 mb-6 border-t-2 " />
+            <hr className="mt-2 mb-6 border-t-2" />
 
             <div className="flex flex-col lg:flex-row justify-between items-start gap-7 lg:gap-20">
-              <div className="flex gap-5 ">
+              <div className="flex gap-5">
                 <h2 className="font-bold text-base md:text-xl">MAIL</h2>
                 <a
                   href="mailto:joannfrancisco.dev@gmail.com"
                   aria-label="Email Jo Ann Francisco"
-                  className="text-base md:text-xl font-light inline-flex w-fit items-center relative group "
+                  className="text-base md:text-xl font-light inline-flex w-fit items-center relative group"
                 >
                   <ArrowUpRight className="w-5 h-5 mr-1" />
                   joannfrancisco.dev@gmail.com
@@ -27,7 +36,7 @@ const ContactSection = () => {
                 </a>
               </div>
 
-              <div className="flex  gap-5">
+              <div className="flex gap-5">
                 <h2 className="font-bold text-base md:text-xl">
                   ONLINE PROFILES
                 </h2>
@@ -53,7 +62,7 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <Footer />
     </div>

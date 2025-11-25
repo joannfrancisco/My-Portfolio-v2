@@ -90,42 +90,9 @@ const ProjectMoviedux = () => {
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
-                <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
-                  <li>
-                    React{" "}
-                    <span className="opacity-60 font-light">
-                      - component structure
-                    </span>
-                  </li>
-                  <li>
-                    TMDb API{" "}
-                    <span className="opacity-60 font-light">
-                      - movie database
-                    </span>
-                  </li>
-                  <li>
-                    Node.js{" "}
-                    <span className="opacity-60 font-light">
-                      - backend runtime
-                    </span>
-                  </li>
-                  <li>
-                    CSS{" "}
-                    <span className="opacity-60 font-light">
-                      - responsive layout
-                    </span>
-                  </li>
-                  <li>
-                    Local Storage{" "}
-                    <span className="opacity-60 font-light">- watchlist</span>
-                  </li>
-                  <li>
-                    GitHub Pages{" "}
-                    <span className="opacity-60 font-light">
-                      - deployment & hosting
-                    </span>
-                  </li>
-                </ul>
+                <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
+                  React | Node | TMDb API | Vanilla CSS | GitHub Pages
+                </h1>
               </div>
             </div>
 

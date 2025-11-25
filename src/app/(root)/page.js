@@ -248,14 +248,14 @@ const Home = () => {
       ref={scrollerRef}
       className="h-dvh lg:h-screen overflow-y-auto overflow-x-hidden scroll-smooth"
     >
-      {/* <Background /> */}
+      <Background />
       <section id="home" className="relative w-screen h-dvh lg:h-screen">
         <HeroSection />
       </section>
 
       <section
         id="about"
-        className="w-screen h-auto lg:h-screen flex items-start lg:items-center justify-center relative"
+        className="w-screen h-auto lg:h-screen flex items-start lg:items-center justify-center"
       >
         <AboutSection />
       </section>
