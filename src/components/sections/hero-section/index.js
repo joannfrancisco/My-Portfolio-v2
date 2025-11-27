@@ -29,16 +29,11 @@ export default function HeroSection() {
     "React.js",
     "Node.js",
     "UI/UX Design",
-    "HTML + CSS + JavaScript",
     "Figma",
-    "Adobe Photoshop & Illustrator",
     "Vercel",
     "GSAP Animation",
-    "LottieFiles",
-    "ShadCN + Lucide React ",
     "Express.js",
     "Firebase",
-    "Typography + Color Palette",
     "RestAPI",
     "TypeScript",
   ];
@@ -187,7 +182,7 @@ export default function HeroSection() {
   return (
     <div className="max-w-screen-2xl mx-auto text-xs font-semibold">
       {/* Center Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15 ">
         {/* Headline */}
         <div className="flex flex-col relative">
           <h1
@@ -227,14 +222,14 @@ export default function HeroSection() {
         </div>
 
         {/* Scramble Box */}
-        <div className="opacity-90 relative w-54 bg-(--light) text-(--dark) border border-(--dark)/40 py-3.5 md:py-5 px-4 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
+        <div className="chrome-text text-[10px] relative w-45 bg-(--light) text-(--dark) border border-(--dark)/40 py-4 px-3 rounded-4xl overflow-hidden scale-150 hover:scale-[1.6] transition">
           <span ref={targetRef} className="select-none block w-full text-left">
             *&@#$@$*&$(@#^)
           </span>
           <button
             onClick={toggleScramble}
             type="button"
-            className="absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark) h-full aspect-square bg-(--dark) text-(--light) hover:bg-(--hover)/90 transition rounded-full text-[10px] scale-95 cursor-pointer"
+            className=" absolute top-1/2 -translate-y-1/2 right-0 border border-(--dark)/40 h-full text-[8px] aspect-square bg-(--dark)/40 text-(--light) hover:bg-(--hover)/90 transition rounded-full scale-95 cursor-pointer"
           >
             {isDecoded ? "Encrypt" : "Decrypt"}
           </button>

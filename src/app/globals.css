@@ -4,7 +4,7 @@
 :root {
   --background: #f3f2f9;
   --foreground: #606887;
-  --accent: #ff9c45;
+  --accent: #ea8322;
 
   --light: #f3f2f9;
   --dark: #606887;
@@ -13,7 +13,7 @@
   --granola: #702c63;
   --moviedux: #cf6a0d;
   --tidytouch: #688f4a;
-  --wyr: #4a60ab;
+  --wyr: #00829f;
 
   --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-inconsolata: "Inconsolata", ui-sans-serif, system-ui, sans-serif;
@@ -23,12 +23,12 @@
 .dark {
   --background: #272834;
   --foreground: #f3f2f9;
-  --accent: #ff9c45;
+  --accent: #f99417;
 
-  --granola: #d954be;
+  --granola: #ca4bb3;
   --moviedux: #ff7a00;
   --tidytouch: #88be60;
-  --wyr: #6f8ae1;
+  --wyr: #01a6ca;
 }
 
 body {

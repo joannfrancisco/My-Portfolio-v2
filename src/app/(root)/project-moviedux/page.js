@@ -42,7 +42,7 @@ const ProjectMoviedux = () => {
           className="absolute top-1/2 left-1/2 w-[900px] h-[450px] -translate-x-1/2 -translate-y-1/2 rotate-45 opacity-60 blur-3xl animate-pulse"
           style={{
             background:
-              "radial-gradient(ellipse at center, #F59E0B66 0%, #FCD34D33 60%, transparent 70%)",
+              "radial-gradient(ellipse at center, #F59E0B66 0%, #FCD34D33 40%, transparent 70%)",
             animation: "pulse 8s ease-in-out infinite",
           }}
         />

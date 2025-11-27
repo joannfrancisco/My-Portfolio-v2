@@ -66,7 +66,7 @@ const AboutSection = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
       // amount: 0.2 = animation starts when 20% of the div is visible
-      className="max-w-screen-2xl mx-auto  pb-50 lg:pb-0 w-full h-full relative"
+      className="max-w-screen-2xl mx-auto py-16 xl:py-0 w-full h-full relative"
     >
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 xl:gap-10">
         <div className="lg:max-w-2xl xl:max-w-3xl order-1 lg:order-0 px-6 md:px-10 lg:px-0">
@@ -95,7 +95,7 @@ const AboutSection = () => {
           width={500}
           height={500}
           priority
-          className="relative lg:absolute lg:top-0 lg:right-0 z-[-1] mb-4 object-cover opacity-95 rounded-tr-4xl lg:rounded-tr-none rounded-br-4xl lg:rounded-br-none lg:rounded-bl-4xl  w-full lg:w-[300px] xl:w-[350px] h-[40vh] lg:h-[500px] xl:h-[90vmin] -ml-12 md:-ml-20 lg:ml-0"
+          className="relative lg:absolute lg:top-0 lg:right-0 z-[-1] mb-4 object-cover opacity-95 rounded-tr-4xl lg:rounded-tr-none rounded-br-4xl lg:rounded-br-none lg:rounded-bl-4xl  w-full lg:w-[300px] xl:w-[350px] min-h-[200px] h-[40vh] lg:h-[500px] xl:h-[90vmin] -ml-12 md:-ml-20 lg:ml-0"
         />
 
         <Image
