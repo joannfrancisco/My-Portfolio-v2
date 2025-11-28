@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const ProjectGranola = () => {
   useEffect(() => {
-    // initialize smoother
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -25,15 +24,6 @@ const ProjectGranola = () => {
 
     return () => smoother.kill();
   }, []);
-
-  // For blue theme
-  // background: 'radial-gradient(ellipse at center, #3B82F666 0%, #93C5FD33 40%, transparent 70%)'
-
-  // For green theme
-  // background: 'radial-gradient(ellipse at center, #22C55E66 0%, #86EFAC33 40%, transparent 70%)'
-
-  // For purple theme
-  // background: 'radial-gradient(ellipse at center, #A855F766 0%, #C4B5FD33 40%, transparent 70%)'
 
   return (
     <div id="smooth-wrapper" className="relative">
@@ -94,45 +84,6 @@ const ProjectGranola = () => {
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   Next.js | React | GSAP | Tailwind CSS | ShadCN | Vercel
                 </h1>
-                {/* <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
-                  <li>
-                    Next.js{" "}
-                    <span className="opacity-60 font-light">
-                      - framework & routing
-                    </span>
-                  </li>
-                  <li>
-                    React{" "}
-                    <span className="opacity-60 font-light">
-                      - component structure
-                    </span>
-                  </li>
-                  <li>
-                    Tailwind CSS{" "}
-                    <span className="opacity-60 font-light">
-                      - styling & layout
-                    </span>
-                  </li>
-                  <li>
-                    GSAP{" "}
-                    <span className="opacity-60 font-light">
-                      - animations & parallax
-                    </span>
-                  </li>
-                  <li>
-                    ShadCN{" "}
-                    <span className="opacity-60 font-light">
-                      - UI components
-                    </span>
-                  </li>
-
-                  <li>
-                    Vercel{" "}
-                    <span className="opacity-60 font-light">
-                      - deployment & hosting
-                    </span>
-                  </li>
-                </ul> */}
               </div>
             </div>
 
@@ -198,7 +149,7 @@ const ProjectGranola = () => {
           </div>
 
           {/* next project */}
-          <div className="pb-10">
+          <div className="pb-5">
             <hr className="mt-5 border-t-2" />
             <Link
               href="/project-moviedux"

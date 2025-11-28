@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const ProjectAnn = () => {
   useEffect(() => {
-    // initialize smoother
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -25,15 +24,6 @@ const ProjectAnn = () => {
 
     return () => smoother.kill();
   }, []);
-
-  // For blue theme
-  // background: 'radial-gradient(ellipse at center, #3B82F666 0%, #93C5FD33 40%, transparent 70%)'
-
-  // For green theme
-  // background: 'radial-gradient(ellipse at center, #22C55E66 0%, #86EFAC33 40%, transparent 70%)'
-
-  // For purple theme
-  // background: 'radial-gradient(ellipse at center, #A855F766 0%, #C4B5FD33 40%, transparent 70%)'
 
   return (
     <div id="smooth-wrapper" className="relative">
@@ -52,8 +42,8 @@ const ProjectAnn = () => {
         <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50">
           <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
             <Image
-              src="/images/projects/granola/granola-cover.png"
-              alt="Granola Cover"
+              src="/images/projects/ann/ann-cover.png"
+              alt="Ann Cover"
               fill
               priority
               className="object-cover"
@@ -62,7 +52,7 @@ const ProjectAnn = () => {
 
           {/* title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-header text-(--granola)">
+            <h1 className="text-5xl lg:text-6xl font-header text-(--ann)">
               <span className="font-wide">ANN</span>&nbsp;
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
@@ -73,7 +63,7 @@ const ProjectAnn = () => {
             <div className="">
               <div className="flex mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
+                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   CATEGO<span className="font-wide">R</span>&nbsp;Y
@@ -86,19 +76,19 @@ const ProjectAnn = () => {
 
               <div className="flex mb-5 ">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
+                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   TEC<span className="font-wide">H</span>&nbsp; STACK
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
-                  Next.js | GSAP | Tailwind CSS | Vercel
+                  Next.js | GSAP | Framer Motion | Tailwind CSS | Vercel
                 </h1>
               </div>
 
               <div className="flex mb-5 items-center">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--granola) pr-1 md:pr-0"
+                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-inconsolata)" }}
                 >
                   DESI<span className="font-wide">G</span>&nbsp;N TOOLS
@@ -129,45 +119,46 @@ const ProjectAnn = () => {
           {/* figma files */}
           <div className="mt-5">
             <h1
-              className="w-[170px] mb-3 text-xl font-extrabold text-(--granola)"
+              className="w-[170px] mb-3 text-xl font-extrabold text-(--ann)"
               style={{ fontFamily: "var(--font-inconsolata)" }}
             >
-              <span className="font-wide">H</span>&nbsp;OME
-              <span className="font-wide">P</span>&nbsp;AGE
+              TY<span className="font-wide">P</span>&nbsp;OG
+              <span className="font-wide">R</span>&nbsp;A
+              <span className="font-wide">P</span>&nbsp;HY
             </h1>
             <FigmaFiles
-              src="/images/projects/granola/hero.png"
-              alt="hero section"
+              src="/images/projects/ann/typo1.png"
+              alt="typography section"
             />
             <FigmaFiles
-              src="/images/projects/granola/story.png"
-              alt="story section"
+              src="/images/projects/ann/typo2.png"
+              alt="typography section"
             />
 
             <FigmaFiles
-              src="/images/projects/granola/product.png"
-              alt="product section"
+              src="/images/projects/ann/typo3.png"
+              alt="typography section"
             />
             <FigmaFiles
-              src="/images/projects/granola/subscription.png"
-              alt="subscribe section"
+              src="/images/projects/ann/typo4.png"
+              alt="typography section"
             />
 
             <h1
-              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--granola)"
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--ann)"
               style={{ fontFamily: "var(--font-inconsolata)" }}
             >
-              <span className="font-wide">M</span>&nbsp;O
-              <span className="font-wide">B</span>&nbsp;ILE
+              COLO<span className="font-wide">R</span>&nbsp;&nbsp;
+              <span className="font-wide">P</span>&nbsp;ALETTE
             </h1>
             <FigmaFiles
-              src="/images/projects/granola/mobile.png"
-              alt="mobile responsiveness"
+              src="/images/projects/ann/color.png"
+              alt="color palette section"
             />
           </div>
 
           {/* next project */}
-          <div className="pb-10">
+          <div className="pb-5">
             <hr className="mt-5 border-t-2" />
             <Link
               href="/project-granola"

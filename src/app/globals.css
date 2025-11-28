@@ -14,6 +14,7 @@
   --moviedux: #cf6a0d;
   --tidytouch: #688f4a;
   --wyr: #00829f;
+  --ann: #4e1563;
 
   --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-inconsolata: "Inconsolata", ui-sans-serif, system-ui, sans-serif;
@@ -29,6 +30,7 @@
   --moviedux: #ff7a00;
   --tidytouch: #88be60;
   --wyr: #01a6ca;
+  --ann: #cc7be9;
 }
 
 body {

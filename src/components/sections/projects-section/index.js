@@ -9,7 +9,7 @@ const ProjectSection = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const projectImages = {
-    ann: "/images/profilePic.png",
+    ann: "/images/projects/ann/ann-cover.png",
     gr8nola: "/images/projects/granola/granola-cover.png",
     moviedux: "/images/projects/moviedux/moviedux-cover.png",
     tidytouch: "/images/projects/tidy-touch/tidy-touch-cover.png",
@@ -28,7 +28,7 @@ const ProjectSection = () => {
         {/* Left Image Box */}
         <div className="min-h-[200px] h-[40vh] lg:h-full ml-12 md:ml-18 lg:ml-0 w-screen lg:w-full relative overflow-hidden rounded-4xl lg:rounded-tl-none lg:rounded-bl-none lg:rounded-br-none">
           <Image
-            src="/images/profilePic.png"
+            src="/images/projects/ann/ann-cover.png"
             alt="Profile picture of Jo Ann Francisco"
             fill
             priority
@@ -54,8 +54,7 @@ const ProjectSection = () => {
         <div className="h-[60vh] lg:h-full w-full">
           <div className="flex flex-col">
             <h1 className="text-5xl lg:text-6xl font-header">
-              P<span className="font-wide">R</span>&nbsp;OJ
-              <span className="font-wide">E</span>&nbsp;CTS
+              P<span className="font-wide">R</span>&nbsp;OJECTS
             </h1>
             <hr className="mt-2 border-t-2" />
 

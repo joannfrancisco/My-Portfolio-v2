@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const ProjectTidyTouch = () => {
   useEffect(() => {
-    // initialize smoother
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -25,15 +24,6 @@ const ProjectTidyTouch = () => {
 
     return () => smoother.kill();
   }, []);
-
-  // For blue theme
-  // background: 'radial-gradient(ellipse at center, #3B82F666 0%, #93C5FD33 40%, transparent 70%)'
-
-  // For green theme
-  // background: 'radial-gradient(ellipse at center, #22C55E66 0%, #86EFAC33 40%, transparent 70%)'
-
-  // For purple theme
-  // background: 'radial-gradient(ellipse at center, #A855F766 0%, #C4B5FD33 40%, transparent 70%)'
 
   return (
     <div id="smooth-wrapper" className="relative">
@@ -53,7 +43,7 @@ const ProjectTidyTouch = () => {
           <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
             <Image
               src="/images/projects/tidy-touch/tidy-touch-cover.png"
-              alt="Moviedux Cover"
+              alt="Tidy Touch Cover"
               fill
               priority
               className="object-cover"
@@ -159,7 +149,7 @@ const ProjectTidyTouch = () => {
           </div>
 
           {/* next project */}
-          <div className="pb-10">
+          <div className="pb-5">
             <hr className="mt-5 border-t-2" />
             <Link
               href="/project-would-you-rather"

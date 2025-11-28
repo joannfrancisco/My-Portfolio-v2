@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const ProjectWouldYouRather = () => {
   useEffect(() => {
-    // initialize smoother
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -25,15 +24,6 @@ const ProjectWouldYouRather = () => {
 
     return () => smoother.kill();
   }, []);
-
-  // For blue theme
-  // background: 'radial-gradient(ellipse at center, #3B82F666 0%, #93C5FD33 40%, transparent 70%)'
-
-  // For green theme
-  // background: 'radial-gradient(ellipse at center, #22C55E66 0%, #86EFAC33 40%, transparent 70%)'
-
-  // For purple theme
-  // background: 'radial-gradient(ellipse at center, #A855F766 0%, #C4B5FD33 40%, transparent 70%)'
 
   return (
     <div id="smooth-wrapper" className="relative">
@@ -146,7 +136,7 @@ const ProjectWouldYouRather = () => {
           </div>
 
           {/* next project */}
-          <div className="pb-10">
+          <div className="pb-5">
             <hr className="mt-5 border-t-2" />
             <Link
               href="/project-ann"
