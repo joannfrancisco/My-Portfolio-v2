@@ -27,7 +27,7 @@ const Landscape = () => {
     <>
       {/* Landscape Warning Overlay */}
       {isLandscape && (
-        <div className="fixed inset-0 z-9999 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center text-center px-6">
+        <div className="fixed inset-0 z-9999 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center text-center px-6 h-dvh">
           <div className="animate-bounce mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"

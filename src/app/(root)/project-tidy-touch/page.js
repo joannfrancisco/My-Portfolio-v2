@@ -40,7 +40,7 @@ const ProjectTidyTouch = () => {
 
       <div id="smooth-content">
         <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50 ">
-          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
+          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
             <Image
               src="/images/projects/tidy-touch/tidy-touch-cover.png"
               alt="Tidy Touch Cover"
@@ -90,7 +90,7 @@ const ProjectTidyTouch = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed">
+              <p className="text-base leading-relaxed text-justify">
                 Tidy Touch is a cleaning service website built in Webflow,
                 designed to demonstrate a clean, modern, and user-friendly
                 layout. It highlights services, FAQs, reviews, and customer

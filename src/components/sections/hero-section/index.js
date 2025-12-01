@@ -180,9 +180,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="max-w-screen-2xl mx-auto text-xs font-semibold">
+    <div className="max-w-screen-2xl mx-auto text-xs font-semibold  ">
       {/* Center Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15 ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 max-w-[800pxx] mx-auto px-4 gap-15 border-b lg:border-0 border-(--foreground)/15">
         {/* Headline */}
         <div className="flex flex-col relative">
           <h1

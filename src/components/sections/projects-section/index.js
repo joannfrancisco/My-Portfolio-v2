@@ -22,9 +22,9 @@ const ProjectSection = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0"
+      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0 border-b lg:border-0 border-(--foreground)/15"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:w-[90vw] max-h-5/6 transition gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:pr-[10vw] max-h-5/6 transition gap-5">
         {/* Left Image Box */}
         <div className="min-h-[200px] h-[40vh] lg:h-full ml-12 md:ml-18 lg:ml-0 w-screen lg:w-full relative overflow-hidden rounded-4xl lg:rounded-tl-none lg:rounded-bl-none lg:rounded-br-none">
           <Image
@@ -51,7 +51,7 @@ const ProjectSection = () => {
         </div>
 
         {/* Right Box */}
-        <div className="h-[60vh] lg:h-full w-full">
+        <div className="h-full w-full">
           <div className="flex flex-col">
             <h1 className="text-5xl lg:text-6xl font-header">
               P<span className="font-wide">R</span>&nbsp;OJECTS

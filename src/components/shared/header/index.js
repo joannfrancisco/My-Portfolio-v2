@@ -127,7 +127,7 @@ const Menu = () => {
 
       {/* Menu Overlay */}
       <div
-        className={`fixed inset-0 backdrop-blur-3xl z-40 bg-(--background) transition-all duration-500 ${
+        className={`max-w-screen-2xl mx-auto fixed inset-0 backdrop-blur-3xl z-40 bg-(--background) transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

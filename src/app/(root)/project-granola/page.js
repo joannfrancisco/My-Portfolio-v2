@@ -32,7 +32,7 @@ const ProjectGranola = () => {
           className="absolute top-1/2 left-1/2 w-[900px] h-[450px] -translate-x-1/2 -translate-y-1/2 rotate-45 opacity-60 blur-3xl animate-pulse"
           style={{
             background:
-              "radial-gradient(ellipse at center, #4f214a88 0%, #702c6355 40%, transparent 70%)",
+              "radial-gradient(ellipse at center, #7a2e6e88 0%, #b84a9a55 40%, transparent 70%)",
             animation: "pulse 8s ease-in-out infinite",
           }}
         />
@@ -40,7 +40,7 @@ const ProjectGranola = () => {
 
       <div id="smooth-content">
         <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50">
-          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
+          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
             <Image
               src="/images/projects/granola/granola-cover.png"
               alt="Granola Cover"
@@ -89,7 +89,7 @@ const ProjectGranola = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed">
+              <p className="text-base leading-relaxed text-justify">
                 Gr8nola is a delicious, low-sugar whole-food brand offering a
                 variety of healthy and flavorful options. For this project, I
                 redesigned their homepage to better reflect the quality of their

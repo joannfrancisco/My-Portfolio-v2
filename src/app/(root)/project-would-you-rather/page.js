@@ -40,7 +40,7 @@ const ProjectWouldYouRather = () => {
 
       <div id="smooth-content">
         <div className="w-screen max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-15 lg:px-30 xl:px-50">
-          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden">
+          <div className="h-[300px] md:h-[400px] w-full mt-20 md:mt-0 mb-10 rounded-4xl md:rounded-tl-none md:rounded-tr-none relative overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
             <Image
               src="/images/projects/wyr/wyr-cover.png"
               alt="Would You Rather? Cover"
@@ -90,7 +90,7 @@ const ProjectWouldYouRather = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed">
+              <p className="text-base leading-relaxed text-justify">
                 Would You Rather? is an interactive web app built with React and
                 Firebase that lets users create playful polls, vote on choices,
                 and see real-time results. Users can sign in with Google to
