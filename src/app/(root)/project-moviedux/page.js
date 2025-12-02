@@ -88,7 +88,7 @@ const ProjectMoviedux = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed text-justify">
+              <p className="text-base leading-relaxed text-left">
                 Moviedux is a movie discovery and watchlist web app built with
                 the React framework and the TMDb API. It allows users to explore
                 trending films, search the full TMDb catalog, and build a

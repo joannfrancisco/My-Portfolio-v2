@@ -90,7 +90,7 @@ const ProjectTidyTouch = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed text-justify">
+              <p className="text-base leading-relaxed text-left">
                 Tidy Touch is a cleaning service website built in Webflow,
                 designed to demonstrate a clean, modern, and user-friendly
                 layout. It highlights services, FAQs, reviews, and customer

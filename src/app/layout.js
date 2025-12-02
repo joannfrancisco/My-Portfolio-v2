@@ -1,6 +1,7 @@
 import { Poppins, Inconsolata, Homemade_Apple } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "900"],
@@ -107,6 +108,8 @@ export default function RootLayout({ children }) {
         >
           {children}
         </ThemeProvider>
+        {/* GA4 Script */}
+        <GoogleAnalytics gaId="G-EB6GXHJXE5" />
       </body>
     </html>
   );

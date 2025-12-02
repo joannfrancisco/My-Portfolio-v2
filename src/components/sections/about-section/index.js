@@ -20,11 +20,11 @@ const AboutSection = () => {
           </h1>
           <hr className="mt-2 mb-6 border-t-2" />
 
-          <p className="text-base md:text-lg font-light text-justify leading-relaxed">
+          <p className="text-base md:text-lg font-light text-left leading-relaxed">
             Hello! I&apos;m <span className="font-bold">Jo Ann Francisco</span>,
             but you can call me Ann.{" "}
           </p>
-          <p className="text-base md:text-lg font-light text-justify leading-relaxed mt-3">
+          <p className="text-base md:text-lg font-light text-left leading-relaxed mt-5">
             I&apos;m an aspiring full-stack web developer with a strong focus on
             frontend technologies. I enjoy creating modern, visually appealing,
             and user-centered interfaces while listening to music and enjoying

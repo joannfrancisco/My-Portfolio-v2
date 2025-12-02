@@ -90,7 +90,7 @@ const ProjectWouldYouRather = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed text-justify">
+              <p className="text-base leading-relaxed text-left">
                 Would You Rather? is an interactive web app built with React and
                 Firebase that lets users create playful polls, vote on choices,
                 and see real-time results. Users can sign in with Google to

@@ -101,7 +101,7 @@ const ProjectAnn = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed text-justify">
+              <p className="text-base leading-relaxed text-left">
                 I designed and developed my personal portfolio to showcase my
                 capabilities in UI/UX design, and interactive front-end
                 experiences. Through UX research and competitive analysis, I
@@ -117,7 +117,7 @@ const ProjectAnn = () => {
           </div>
 
           {/* figma files */}
-          <div className="mt-5">
+          <div className="mt-8">
             <h1
               className="w-[170px] mb-3 text-xl font-extrabold text-(--ann)"
               style={{ fontFamily: "var(--font-inconsolata)" }}

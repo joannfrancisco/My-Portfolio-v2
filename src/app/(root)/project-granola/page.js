@@ -89,7 +89,7 @@ const ProjectGranola = () => {
 
             {/* right grid */}
             <div className="">
-              <p className="text-base leading-relaxed text-justify">
+              <p className="text-base leading-relaxed text-left">
                 Gr8nola is a delicious, low-sugar whole-food brand offering a
                 variety of healthy and flavorful options. For this project, I
                 redesigned their homepage to better reflect the quality of their
