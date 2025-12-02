@@ -50,7 +50,7 @@ const ContactSection = () => {
                     label="github"
                   />
                   <LinkHover
-                    href="https://www.instagram.com/joannfrancisco.design/"
+                    href="https://www.instagram.com/joannfrancisco.dev/"
                     label="instagram"
                   />
                   <LinkHover

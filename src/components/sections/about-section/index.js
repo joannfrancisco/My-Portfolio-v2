@@ -34,24 +34,24 @@ const AboutSection = () => {
           </p>
 
           <div className="mt-8 font-semibold text-base md:text-lg">
-            <LinkHover href="/sampleresume.pdf" label=" view résumé" />
+            <LinkHover href="/JFranciscoResume.pdf" label=" view résumé" />
           </div>
         </div>
 
         <Image
-          src="/images/profilePic.png"
-          alt="Profile picture of Jo Ann Francisco"
+          src="/images/AboutImage.png"
+          alt="Image of Jo Ann Francisco in black and white"
           width={500}
-          height={500}
+          height={700}
           priority
           className="relative lg:absolute lg:top-0 lg:right-0 mb-4 object-cover opacity-95 rounded-tr-4xl lg:rounded-tr-none rounded-br-4xl lg:rounded-br-none lg:rounded-bl-4xl  w-full lg:w-[300px] xl:w-[350px] min-h-[200px] h-[40vh] lg:h-[500px] xl:h-[90vmin] -ml-12 md:-ml-20 lg:ml-0"
         />
 
         <Image
-          src="/images/profilePic.png"
-          alt="Profile picture of Jo Ann Francisco"
+          src="/images/AboutImage.png"
+          alt="Image of Jo Ann Francisco"
           width={500}
-          height={500}
+          height={700}
           priority
           className="z-[-1] mb-4 object-cover opacity-0 hidden lg:block w-screen lg:w-[300px] xl:w-[350px] h-[60vmin] lg:h-[500px] xl:h-[90vmin]"
         />
