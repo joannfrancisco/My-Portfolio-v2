@@ -31,6 +31,7 @@ export const metadata = {
   metadataBase: new URL("https://joannfrancisco.com"),
   keywords: [
     "Web Developer",
+    "Web Designer",
     "Full-Stack Developer",
     "Frontend Developer",
     "Philippines Web Developer",
