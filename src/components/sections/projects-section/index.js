@@ -22,7 +22,7 @@ const ProjectSection = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0 border-b lg:border-0 border-(--foreground)/15"
+      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0 pt-25 "
     >
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:pr-[10vw] max-h-5/6 transition gap-5">
         {/* Left Image Box */}
