@@ -191,8 +191,8 @@ const ProjectAnn = () => {
               </div>
             </Link>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -130,33 +130,33 @@ import Testimonials from "@/components/sections/testimonial-section";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <Background />
       <div>
-        <section id="home" className="relative w-screen h-dvh lg:h-screen">
+        <section className="relative w-screen h-dvh lg:h-screen">
           <HeroSection />
         </section>
 
         <section
           id="about"
-          className="w-screen h-auto flex items-start lg:items-center justify-center"
+          className="w-screen  flex items-start lg:items-center justify-center"
         >
           <AboutSection />
         </section>
 
-        <section id="projects" className="w-screen h-auto lg:h-[600px] ">
+        <section id="projects" className="w-screen  lg:h-[600px] ">
           <ProjectsSection />
         </section>
 
-        {/* <section id="testimonials" className="w-screen h-auto ">
+        {/* <section id="testimonials" className="w-screen  ">
           <Testimonials />
         </section> */}
 
-        <section id="faq" className="w-screen h-auto ">
+        <section id="faq" className="w-screen  ">
           <FaqSection />
         </section>
 
-        <section id="contact" className="w-screen h-auto">
+        <section id="contact" className="w-screen o">
           <ContactSection />
         </section>
       </div>

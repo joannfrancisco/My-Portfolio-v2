@@ -11,12 +11,12 @@ const AboutSection = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="max-w-screen-2xl mx-auto py-16 xl:py-0 w-full h-full relative border-b border-(--foreground)/15 bg-(--section)/20"
+      className="max-w-screen-2xl mx-auto py-16 xl:py-0 w-full h-full relative border-y border-(--foreground)/15 "
     >
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 pt-5  lg:pb-10 ">
         <div className="lg:max-w-2xl xl:max-w-5xl order-1 lg:order-0 px-6 md:px-10 xl:pl-40">
-          <h1 className="text-5xl lg:text-6xl font-header">
-            A<span className="font-wide">B</span>&nbsp;OUT
+          <h1 className="text-5xl lg:text-6xl font-header chrome-text">
+            A<span className="font-wide chrome-text">B</span>&nbsp;OUT
           </h1>
           <hr className="mt-2 mb-6 border-t-2" />
 
@@ -26,14 +26,12 @@ const AboutSection = () => {
             call me Ann.{" "}
           </p>
           <p className="text-base md:text-lg font-light text-left leading-relaxed mt-5  text-(--foreground)/80">
-            I specialize in helping small businesses level up. I don&apos;t just
-            build websites; I create fast, credible &quot;online homes&quot;
-            that turn casual visitors into real leads. Whether you’ve been
-            relying solely on social media or are struggling with a slow,
-            outdated site, I&apos;m here to build a professional platform you
-            can actually rely on. My goal is simple: to create a
-            high-performance tool that moves the needle for your business and
-            gives you the competitive edge you deserve.
+            I help small businesses level up with fast, credible &quot;online
+            homes.&quot; Whether you are outgrowing social media or struggling
+            with an outdated site, I build professional platforms that turn
+            casual visitors into real leads. My mission is simple: to give your
+            business a high-performance tool that moves the needle and gives you
+            the competitive edge you deserve.
           </p>
 
           {/* <div className="mt-8 font-semibold text-base md:text-lg">

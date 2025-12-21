@@ -13,10 +13,10 @@ const Menu = () => {
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 ">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-2 lg:py-6 flex items-center justify-between  backdrop-blur-xs">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-2 lg:py-3 flex items-center justify-between  backdrop-blur-xs">
           <Link
-            href="/#home"
-            className="text-2xl hover:opacity-80 transition-opacity font-logo"
+            href="/"
+            className="text-2xl hover:opacity-80 transition-opacity font-logo "
           >
             {"< ann />"}
           </Link>
@@ -127,15 +127,15 @@ const Menu = () => {
 
       {/* Menu Overlay */}
       <div
-        className={`max-w-screen-2xl mx-auto fixed inset-0 backdrop-blur-3xl z-40 bg-(--background) transition-all duration-500 ${
+        className={`h-dvh max-w-screen-2xl mx-auto fixed inset-0 backdrop-blur-3xl z-40 bg-(--background) transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
         <Background />
         <div className="px-6 md:px-20 lg:px-80 flex flex-col items-start justify-center h-dvh lg:h-screen space-y-4 md:space-y-2">
-          <Link href="/#home" onClick={handleLinkClick}>
-            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
-              <span className="font-wide transition  group-hover:text-(--accent)">
+          <Link href="/" onClick={handleLinkClick}>
+            <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group ">
+              <span className="font-wide transition  group-hover:text-(--accent) ">
                 H
               </span>
               <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">

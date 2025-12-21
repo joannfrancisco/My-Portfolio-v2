@@ -31,8 +31,8 @@ const ContactSection = () => {
       >
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
           <div className="max-w-4xl flex-1">
-            <h1 className="text-5xl md:text-6xl font-header ">
-              CO<span className="font-wide">N</span>&nbsp;TACT
+            <h1 className="text-5xl md:text-6xl font-header chrome-text">
+              CO<span className="font-wide chrome-text">N</span>&nbsp;TACT
             </h1>
             <hr className="mt-2 mb-6 border-t-2 " />
 
@@ -45,11 +45,10 @@ const ContactSection = () => {
                   Let&apos;s Connect!
                 </h2>
                 <p className="text-base md:text-lg font-light text-left leading-relaxed text-(--foreground)/80">
-                  I&apos;m always down for a chat. If you ever want to grab a
-                  cup of coffee or bubble tea (virtually!) or just want to talk
-                  about how to grow your business, you can find me on my
-                  profiles below or send me a message right here. I&apos;d love
-                  to hear from you!
+                  Make an unforgettable first impression. Just because your
+                  business is small doesn&apos;t mean your website should be. I
+                  design with purpose and performance to ensure you stand out.
+                  Ready to level up? Let&apos;s talk.
                 </p>
               </div>
 

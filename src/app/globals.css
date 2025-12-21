@@ -4,7 +4,7 @@
 :root {
   --background: #f3f2f9;
   --foreground: #606887;
-  --accent: #ea8322;
+  --accent: #6332d7;
   --section: #ffffff;
 
   --light: #f3f2f9;
@@ -25,7 +25,7 @@
 .dark {
   --background: #272834;
   --foreground: #f3f2f9;
-  --accent: #f99417;
+  --accent: #a591ff;
   --section: #000000;
 
   --granola: #ca4bb3;
@@ -43,7 +43,7 @@ body {
 
 .font-logo {
   font-family: var(--font-homemadeapple) !important;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .font-hero {
@@ -124,10 +124,10 @@ body {
 :root {
   --chrome-gradient: linear-gradient(
     110deg,
-    #605b75,
+    #605490,
     #4b465c,
     #7a7393,
-    #3a3448,
+    #381d76,
     #6a6480,
     #605b75
   );
@@ -137,12 +137,12 @@ body {
 .dark {
   --chrome-gradient: linear-gradient(
     110deg,
-    #e1dff0,
-    #c6c1d8,
-    #f2f0fa,
-    #a7a1c3,
+    #b3aaf4,
+    #b4a6e4,
+    #dcd6f7,
+    #5e4cb1,
     #d1ccdf,
-    #e1dff0
+    #b2a7ff
   );
 }
 

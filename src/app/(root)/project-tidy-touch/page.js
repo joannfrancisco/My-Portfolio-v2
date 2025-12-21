@@ -181,8 +181,8 @@ const ProjectTidyTouch = () => {
               </div>
             </Link>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );

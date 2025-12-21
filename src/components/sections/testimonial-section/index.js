@@ -49,8 +49,8 @@ const Testimonials = () => {
       >
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
           <div className="max-w-4xl flex-1">
-            <h1 className="text-5xl md:text-6xl font-header">
-              TESTIMO<span className="font-wide">N</span>&nbsp;IALS
+            <h1 className="text-5xl lg:text-6xl font-header chrome-text">
+              TESTIMO<span className="font-wide chrome-text">N</span>&nbsp;IALS
             </h1>
             <hr className="mt-2 mb-6 border-t-2" />
 

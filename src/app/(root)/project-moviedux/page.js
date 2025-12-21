@@ -172,8 +172,8 @@ const ProjectMoviedux = () => {
               </div>
             </Link>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );

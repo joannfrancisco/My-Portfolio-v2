@@ -25,11 +25,12 @@ const homemadeapple = Homemade_Apple({
 });
 
 export const metadata = {
-  title: "Jo Ann Francisco | Web Developer Portfolio",
+  title: "Web Design & Development | Jo Ann Francisco",
   description:
-    "Building Modern, User-Centered Web Experiences. Full-Stack Developer from the Philippines.",
+    "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
   metadataBase: new URL("https://joannfrancisco.com"),
   keywords: [
+    "Freelance",
     "Web Developer",
     "Web Designer",
     "Full-Stack Developer",
@@ -45,11 +46,11 @@ export const metadata = {
     "Responsive Web Design",
   ],
   openGraph: {
-    title: "Jo Ann Francisco | Web Developer Portfolio",
+    title: "Web Design & Development | Jo Ann Francisco",
     description:
-      "Building Modern, User-Centered Web Experiences. Full-Stack Developer from the Philippines.",
+      "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
     url: "https://joannfrancisco.com",
-    siteName: "Jo Ann Francisco Portfolio",
+    siteName: "Jo Ann Francisco",
     images: [
       {
         url: "/og-image.png",
@@ -61,9 +62,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jo Ann Francisco | Web Developer Portfolio",
+    title: "Web Design & Development | Jo Ann Francisco",
     description:
-      "Building Modern, User-Centered Web Experiences. Full-Stack Developer from the Philippines.",
+      "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -76,7 +77,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Jo Ann Francisco",
-    jobTitle: "Web Developer",
+    jobTitle: "Web Designer & Developer",
     url: "https://joannfrancisco.com",
     sameAs: [
       "https://www.linkedin.com/in/joannfrancisco",

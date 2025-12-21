@@ -22,7 +22,7 @@ const ProjectSection = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0 pt-25 "
+      className="max-w-screen-2xl mx-auto w-full h-full relative px-6 md:px-10 lg:px-0 py-16 lg:py-0 pt-25 bg-(--section)/20"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] place-items-center relative lg:absolute bottom-0 left-0 w-full lg:pr-[10vw] max-h-5/6 transition gap-5">
         {/* Left Image Box */}
@@ -53,8 +53,8 @@ const ProjectSection = () => {
         {/* Right Box */}
         <div className="h-full w-full">
           <div className="flex flex-col">
-            <h1 className="text-5xl lg:text-6xl font-header">
-              P<span className="font-wide">R</span>&nbsp;OJECTS
+            <h1 className="text-5xl lg:text-6xl font-header chrome-text">
+              P<span className="font-wide chrome-text">R</span>&nbsp;OJECTS
             </h1>
             <hr className="mt-2 border-t-2" />
 
