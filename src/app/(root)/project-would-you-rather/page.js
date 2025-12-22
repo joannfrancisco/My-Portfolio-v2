@@ -15,6 +15,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const ProjectWouldYouRather = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",

@@ -441,12 +441,12 @@ export default function HeroSection() {
         }
       `}</style>
 
-      <section className="relative min-h-screen max-w-screen-2xl mx-auto flex items-center justify-center overflow-hidden bg-(--section)/20 px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-dvh max-w-screen-2xl mx-auto flex items-center justify-center overflow-hidden bg-(--section)/20 px-4 sm:px-6 lg:px-8">
         {/* Animated Purple Background Gradients */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Main gradient orb - bottom left */}
           <div
-            className="hero-float-1 absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full blur-3xl opacity-20"
+            className="hero-float-1 absolute -bottom-1/4 -left-1/4 w-[300px] md:w-[600px] h-[300px]  md:h-[600px] rounded-full blur-3xl opacity-20"
             style={{
               background:
                 "radial-gradient(circle, #7c3aed 0%, #6b21a8 50%, transparent 70%)",
@@ -455,7 +455,7 @@ export default function HeroSection() {
 
           {/* Secondary gradient orb - top right */}
           <div
-            className="hero-float-2 absolute -top-1/4 -right-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-15"
+            className="hero-float-2 absolute -top-1/4 -right-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] rounded-full blur-3xl opacity-15"
             style={{
               background:
                 "radial-gradient(circle, #a855f7 0%, #7c3aed 50%, transparent 70%)",
@@ -464,7 +464,7 @@ export default function HeroSection() {
 
           {/* Accent gradient orb - center */}
           <div
-            className="hero-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-3xl opacity-10"
+            className="hero-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[400px] h-[250px] md:h-[400px] rounded-full blur-3xl opacity-10"
             style={{
               background:
                 "radial-gradient(circle, #c084fc 0%, #a855f7 50%, transparent 70%)",
@@ -529,7 +529,7 @@ export default function HeroSection() {
           {/* Sub-headline */}
           <p
             ref={subheadlineRef}
-            className="text-lg text-(--foreground)/70 mb-10 max-w-lg lg:max-w-4xl mx-auto"
+            className="text-(--foreground)/70 mb-10 max-w-lg lg:max-w-4xl mx-auto "
           >
             High-performance websites built to strengthen your brand and drive
             measurable growth.
@@ -546,7 +546,7 @@ export default function HeroSection() {
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-(--foreground)/60 text-xs sm:text-sm">
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-5 sm:gap-8 text-(--foreground)/60 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-(--foreground) rounded-full animate-pulse" />
               <span>Custom Designs</span>

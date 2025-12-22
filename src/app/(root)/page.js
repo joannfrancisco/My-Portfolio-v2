@@ -148,15 +148,15 @@ const Home = () => {
           <ProjectsSection />
         </section>
 
-        {/* <section id="testimonials" className="w-screen  ">
+        <section id="testimonials" className="w-screen  ">
           <Testimonials />
-        </section> */}
+        </section>
 
-        <section id="faq" className="w-screen  ">
+        <section id="faq" className="w-screen">
           <FaqSection />
         </section>
 
-        <section id="contact" className="w-screen o">
+        <section id="contact" className="w-screen">
           <ContactSection />
         </section>
       </div>

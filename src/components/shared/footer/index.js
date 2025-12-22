@@ -27,7 +27,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="max-w-screen-2xl mx-auto w-full border-t border-(--foreground)/10 px-6 md:px-10 py-4 md:py-6 bg-(--section)/20">
+    <footer className="max-w-screen-2xl mx-auto w-full border-t border-(--foreground)/10 px-6 md:px-10 py-4 md:py-6">
       {/* Social Icons */}
       <div className="mb-3 flex justify-center gap-5">
         {socialLinks.map(({ src, href, alt }, index) => (

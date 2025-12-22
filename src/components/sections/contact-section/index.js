@@ -1,15 +1,50 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import toast, { Toaster } from "react-hot-toast";
 import Footer from "@/components/shared/footer";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const EMAIL = "info@joannfrancisco.com";
 
 const ContactSection = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [copied, setCopied] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    // GSAP animation - converts Framer Motion's whileInView
+    gsap.fromTo(
+      section,
+      {
+        opacity: 0,
+        x: 80,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%", // When top of element hits 80% of viewport
+          once: true, // Only animate once (viewport: { once: true })
+        },
+      }
+    );
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(EMAIL);
@@ -22,11 +57,8 @@ const ContactSection = () => {
       {/* Toast container */}
       <Toaster position="bottom-center" reverseOrder={false} />
 
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
+      <div
+        ref={sectionRef}
         className="h-full flex justify-center items-center "
       >
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
@@ -158,7 +190,7 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
       <Footer />
     </div>
   );

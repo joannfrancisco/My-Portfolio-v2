@@ -168,7 +168,7 @@ const Menu = () => {
             </h1>
           </Link>
 
-          {/* <Link href="/#testimonials" onClick={handleLinkClick}>
+          <Link href="/#testimonials" onClick={handleLinkClick}>
             <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">
               TESTIMO
               <span className="font-wide transition  group-hover:text-(--accent)">
@@ -178,7 +178,7 @@ const Menu = () => {
                 IALS
               </span>
             </h1>
-          </Link> */}
+          </Link>
 
           <Link href="/#faq" onClick={handleLinkClick}>
             <h1 className="text-4xl md:text-6xl font-header font-parent cursor-pointer inline-flex items-center group">

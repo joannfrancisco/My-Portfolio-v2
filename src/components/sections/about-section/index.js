@@ -1,16 +1,50 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 const AboutSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    // GSAP animation - converts Framer Motion's whileInView
+    gsap.fromTo(
+      section,
+      {
+        opacity: 0,
+        x: 80,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%", // When top of element hits 80% of viewport
+          once: true, // Only animate once (viewport: { once: true })
+        },
+      }
+    );
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -80 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
+    <div
+      ref={sectionRef}
       className="max-w-screen-2xl mx-auto py-16 xl:py-0 w-full h-full relative border-y border-(--foreground)/15 "
     >
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 pt-5  lg:pb-10 ">
@@ -62,7 +96,7 @@ const AboutSection = () => {
           className="z-[-1] mb-4 object-cover opacity-0 hidden lg:block w-screen lg:w-[300px] xl:w-[350px] h-[60vmin] lg:h-[500px]"
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
