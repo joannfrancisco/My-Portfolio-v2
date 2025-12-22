@@ -42,8 +42,11 @@ const FaqSection = () => {
   }, []);
 
   return (
-    <div className="h-full flex flex-col border-y border-(--foreground)/15 max-w-screen-2xl mx-auto w-full">
-      <div ref={sectionRef} className="h-full flex justify-center items-center">
+    <div
+      // ref={sectionRef}
+      className="border-y border-(--foreground)/15 h-auto  max-w-screen-2xl mx-auto w-full"
+    >
+      <div className="flex flex-col justify-center items-center min-h-screen">
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center bg-(--section)/20">
           <div className="max-w-4xl flex-1">
             <h1 className="text-5xl lg:text-6xl font-header chrome-text">

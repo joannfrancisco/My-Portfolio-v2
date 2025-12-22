@@ -44,7 +44,7 @@ const AboutSection = () => {
 
   return (
     <div
-      ref={sectionRef}
+      // ref={sectionRef}
       className="max-w-screen-2xl mx-auto py-16 xl:py-0 w-full h-full relative border-y border-(--foreground)/15 "
     >
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-5 pt-5  lg:pb-10 ">

@@ -53,14 +53,12 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="h-full flex flex-col">
+    // <div ref={sectionRef} className=" flex flex-col">
+    <div className=" flex flex-col">
       {/* Toast container */}
       <Toaster position="bottom-center" reverseOrder={false} />
 
-      <div
-        ref={sectionRef}
-        className="h-full flex justify-center items-center "
-      >
+      <div className="min-h-screen flex justify-center items-center ">
         <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
           <div className="max-w-4xl flex-1">
             <h1 className="text-5xl md:text-6xl font-header chrome-text">

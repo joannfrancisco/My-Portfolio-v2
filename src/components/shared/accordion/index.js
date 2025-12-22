@@ -85,7 +85,7 @@ export default function Accordion() {
             return (
               <div
                 key={item.id}
-                className="mt-4 mb-4 w-fit border border-(--foreground)] text-sm transition-all hover:text-background disabled:opacity-50 shadow-[4px_4px_0_0_var(--foreground)] hover:shadow-[8px_8px_0_0_var(--foreground)] active:shadow-[2px_2px_0_0_var(--foreground)]"
+                className="mt-4 mb-4 w-fit border border-(--foreground)] text-sm transition-all hover:text-background disabled:opacity-50 shadow-[4px_4px_0_0_var(--foreground)]/90 hover:shadow-[8px_8px_0_0_var(--foreground)]/90 active:shadow-[2px_2px_0_0_var(--foreground)/90]"
                 style={{
                   animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`,
                 }}

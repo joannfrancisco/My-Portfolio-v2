@@ -199,7 +199,7 @@ export default function TestimonialSlider() {
 
   return (
     <section
-      ref={sectionRef}
+      // ref={sectionRef}
       className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center border-t border-(--foreground)/15"
     >
       <div className="max-w-4xl flex-1">
