@@ -54,10 +54,12 @@ const ProjectWouldYouRather = () => {
 
           {/* title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-header text-(--wyr) ">
-              W<span className="font-wide">O</span>&nbsp;ULD Y
-              <span className="font-wide">O</span>&nbsp;U RATH
-              <span className="font-wide">E</span>&nbsp;R?
+            <h1 className="text-4xl lg:text-6xl font-header text-(--wyr) ">
+              W<span className="font-wide">O</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;ULD&nbsp; Y
+              <span className="font-wide">O</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;U&nbsp; RATH
+              <span className="font-wide">E</span>&nbsp;&nbsp;&nbsp;R?
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
           </div>
@@ -67,10 +69,10 @@ const ProjectWouldYouRather = () => {
             <div className="">
               <div className="flex mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--wyr) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--wyr) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  CATEGO<span className="font-wide">R</span>&nbsp;Y
+                  CATEGO<span className="font-wide">R</span>&nbsp;&nbsp;&nbsp;Y
                 </h1>
                 <ul className="text-base pl-1 w-[75vw] lg:w-[250px] text-left">
                   <li>Web App Development</li>
@@ -79,10 +81,11 @@ const ProjectWouldYouRather = () => {
 
               <div className="flex mb-5 ">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--wyr) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--wyr) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  TEC<span className="font-wide">H</span>&nbsp; STACK
+                  TEC<span className="font-wide">H</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; STACK
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   React | Node | Firebase | Vanilla CSS | GitHub Pages
@@ -112,19 +115,20 @@ const ProjectWouldYouRather = () => {
           {/* figma files */}
           <div className="mt-5">
             <h1
-              className="w-[170px] mb-3 text-xl font-extrabold text-(--wyr)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 text-lg font-extrabold text-(--wyr)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">H</span>&nbsp;OME
-              <span className="font-wide">P</span>&nbsp;AGE
+              <span className="font-wide">H</span>&nbsp;&nbsp;&nbsp;OME&nbsp;
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;AGE
             </h1>
             <FigmaFiles src="/images/projects/wyr/home.png" alt="homepage" />
             <h1
-              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--wyr)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-lg font-extrabold text-(--wyr)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">P</span>&nbsp;OLL&nbsp;
-              <span className="font-wide">P</span>&nbsp;AGE
+              <span className="font-wide">P</span>
+              &nbsp;&nbsp;&nbsp;OLL&nbsp;&nbsp;&nbsp;
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;AGE
             </h1>
             <FigmaFiles
               src="/images/projects/wyr/poll-google.png"
@@ -141,25 +145,27 @@ const ProjectWouldYouRather = () => {
           <div className="pb-5">
             <hr className="mt-5 border-t-2" />
             <Link
-              href="/project-ann"
+              href="/project-pawikan"
               className="flex justify-between items-center py-4 md:py-6 text-sm md:text-lg group"
             >
               <h2
                 className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                style={{ fontFamily: "var(--font-inconsolata)" }}
+                style={{ fontFamily: "var(--font-archivo)" }}
               >
                 <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
                 <span className="inline-block transition-transform duration-300 ease-out">
-                  <span className="font-wide">n</span>&nbsp;ext&nbsp;
-                  <span className="font-wide">p</span>&nbsp;roject
+                  <span className="font-wide">n</span>
+                  &nbsp;&nbsp;&nbsp;ext&nbsp;&nbsp;&nbsp;
+                  <span className="font-wide">p</span>&nbsp;&nbsp;&nbsp;roject
                 </span>
               </h2>
               <div className="text-right">
                 <h2
                   className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  <span className="font-wide">a</span>&nbsp;nn
+                  p<span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;wik
+                  <span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;n
                 </h2>
                 <p className="font-light text-xs md:text-base">
                   Web Development

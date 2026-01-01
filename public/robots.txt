@@ -1,0 +1,19 @@
+# robots.txt for joannfrancisco.com
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of private/admin areas (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://joannfrancisco.com/sitemap.xml
+
+# Crawl-delay for aggressive bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

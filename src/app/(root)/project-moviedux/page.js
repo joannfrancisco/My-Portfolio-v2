@@ -64,7 +64,7 @@
 //               <div className="flex items-center mb-5">
 //                 <h1
 //                   className="w-40 text-xl font-extrabold text-(--moviedux) pr-1 md:pr-0"
-//                   style={{ fontFamily: "var(--font-inconsolata)" }}
+//                   style={{ fontFamily: "var(--font-archivo)" }}
 //                 >
 //                   CATEGO<span className="font-wide">R</span>&nbsp;Y
 //                 </h1>
@@ -76,7 +76,7 @@
 //               <div className="flex mb-5 ">
 //                 <h1
 //                   className="w-40 text-xl font-extrabold text-(--moviedux) pr-1 md:pr-0 "
-//                   style={{ fontFamily: "var(--font-inconsolata)" }}
+//                   style={{ fontFamily: "var(--font-archivo)" }}
 //                 >
 //                   TEC<span className="font-wide">H</span>&nbsp; STACK
 //                 </h1>
@@ -111,7 +111,7 @@
 //           <div className="mt-5">
 //             <h1
 //               className="w-[170px] mb-3 text-xl font-extrabold text-(--moviedux)"
-//               style={{ fontFamily: "var(--font-inconsolata)" }}
+//               style={{ fontFamily: "var(--font-archivo)" }}
 //             >
 //               <span className="font-wide">H</span>&nbsp;OME
 //               <span className="font-wide">P</span>&nbsp;AGE
@@ -237,8 +237,8 @@ const ProjectMoviedux = () => {
 
           {/* title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-header text-(--moviedux)">
-              M<span className="font-wide">O</span>&nbsp;VIEDUX
+            <h1 className="text-4xl lg:text-6xl font-header text-(--moviedux)">
+              M<span className="font-wide">O</span>&nbsp;&nbsp;&nbsp;VIEDUX
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
           </div>
@@ -248,10 +248,10 @@ const ProjectMoviedux = () => {
             <div className="">
               <div className="flex items-center mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--moviedux) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--moviedux) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  CATEGO<span className="font-wide">R</span>&nbsp;Y
+                  CATEGO<span className="font-wide">R</span>&nbsp;&nbsp;&nbsp;Y
                 </h1>
                 <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>Web App Development</li>
@@ -260,10 +260,11 @@ const ProjectMoviedux = () => {
 
               <div className="flex mb-5 ">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--moviedux) pr-1 md:pr-0 "
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--moviedux) pr-1 md:pr-0 "
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  TEC<span className="font-wide">H</span>&nbsp; STACK
+                  TEC<span className="font-wide">H</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; STACK
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   React | Node | TMDb API | Vanilla CSS | GitHub Pages
@@ -295,11 +296,11 @@ const ProjectMoviedux = () => {
           {/* figma files */}
           <div className="mt-5">
             <h1
-              className="w-[170px] mb-3 text-xl font-extrabold text-(--moviedux)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 text-lg font-extrabold text-(--moviedux)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">H</span>&nbsp;OME
-              <span className="font-wide">P</span>&nbsp;AGE
+              <span className="font-wide">H</span>&nbsp;&nbsp;&nbsp;OME&nbsp;
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;AGE
             </h1>
             <FigmaFiles
               src="/images/projects/moviedux/hero.png"
@@ -316,11 +317,11 @@ const ProjectMoviedux = () => {
             />
 
             <h1
-              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--moviedux)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-lg font-extrabold text-(--moviedux)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">M</span>&nbsp;O
-              <span className="font-wide">B</span>&nbsp;ILE
+              <span className="font-wide">M</span>&nbsp;&nbsp;&nbsp;&nbsp;O
+              <span className="font-wide">B</span>&nbsp;&nbsp;&nbsp;ILE
             </h1>
             <FigmaFiles
               src="/images/projects/moviedux/mobile.png"
@@ -337,21 +338,23 @@ const ProjectMoviedux = () => {
             >
               <h2
                 className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                style={{ fontFamily: "var(--font-inconsolata)" }}
+                style={{ fontFamily: "var(--font-archivo)" }}
               >
                 <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
                 <span className="inline-block transition-transform duration-300 ease-out">
-                  <span className="font-wide">n</span>&nbsp;ext&nbsp;
-                  <span className="font-wide">p</span>&nbsp;roject
+                  <span className="font-wide">n</span>
+                  &nbsp;&nbsp;&nbsp;ext&nbsp;
+                  <span className="font-wide">p</span>&nbsp;&nbsp;&nbsp;roject
                 </span>
               </h2>
               <div className="text-right">
                 <h2
                   className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  ti<span className="font-wide">d</span>&nbsp;y&nbsp;t
-                  <span className="font-wide">o</span>&nbsp;uch
+                  ti<span className="font-wide">d</span>
+                  &nbsp;&nbsp;&nbsp;y&nbsp;&nbsp; t
+                  <span className="font-wide">o</span>&nbsp;&nbsp;&nbsp;uch
                 </h2>
                 <p className="font-light text-xs md:text-base">Webflow</p>
               </div>

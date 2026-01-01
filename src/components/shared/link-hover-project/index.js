@@ -3,25 +3,32 @@ import Link from "next/link";
 
 const ProjectHover = ({ href, name, desc, onHover }) => {
   const nameFormats = {
+    pawikan: (
+      <>
+        p<span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;wik
+        <span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;n
+      </>
+    ),
     moviedux: (
       <>
-        movi<span className="font-wide">e</span>&nbsp;dux
+        movi<span className="font-wide">e</span>&nbsp;&nbsp;&nbsp;dux
       </>
     ),
     tidytouch: (
       <>
-        ti<span className="font-wide">d</span>&nbsp;y&nbsp;touch
+        ti<span className="font-wide">d</span>
+        &nbsp;&nbsp;&nbsp;y&nbsp;&nbsp;touch
       </>
     ),
     wouldyourather: (
       <>
-        woul<span className="font-wide">d</span>&nbsp;&nbsp;you&nbsp;r
-        <span className="font-wide">a</span>&nbsp;ther?
+        wy<span className="font-wide">d</span>
+        &nbsp;&nbsp;&nbsp;?
       </>
     ),
     ann: (
       <>
-        <span className="font-wide">a</span>&nbsp;nn
+        <span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;nn
       </>
     ),
     gr8nola: (
@@ -36,18 +43,18 @@ const ProjectHover = ({ href, name, desc, onHover }) => {
       href={href}
       onMouseEnter={() => onHover(name)}
       onMouseLeave={() => onHover(null)}
-      className="flex justify-between items-center border-b py-4 md:py-6 text-sm md:text-lg group"
+      className="flex justify-between items-center border-b py-4 md:py-4 text-sm md:text-lg group"
     >
       <h2
         className="font-black text-base md:text-xl inline-flex items-center text-left"
-        style={{ fontFamily: "var(--font-inconsolata)" }}
+        style={{ fontFamily: "var(--font-archivo)" }}
       >
         <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
         <span className="inline-block transition-transform duration-300 ease-out">
           {nameFormats[name] || name}
         </span>
       </h2>
-      <p className="text-right">{desc}</p>
+      <p className="text-right text-(--foreground)/75">{desc}</p>
     </Link>
   );
 };

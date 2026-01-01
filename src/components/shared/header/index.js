@@ -138,7 +138,7 @@ const Menu = () => {
               <span className="font-wide transition  group-hover:text-(--accent) ">
                 H
               </span>
-              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+              <span className=" transition  ml-6 md:ml-9 group-hover:ml-0 ">
                 OME
               </span>
             </h1>
@@ -150,7 +150,7 @@ const Menu = () => {
               <span className="font-wide transition  group-hover:text-(--accent)">
                 B
               </span>
-              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+              <span className=" transition  ml-6 md:ml-9 group-hover:ml-0 ">
                 OUT
               </span>
             </h1>
@@ -162,7 +162,7 @@ const Menu = () => {
               <span className="font-wide transition  group-hover:text-(--accent)">
                 J
               </span>
-              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+              <span className=" transition  ml-6 md:ml-9 group-hover:ml-0 ">
                 ECTS
               </span>
             </h1>
@@ -174,7 +174,7 @@ const Menu = () => {
               <span className="font-wide transition  group-hover:text-(--accent)">
                 N
               </span>
-              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+              <span className=" transition  ml-6 md:ml-9 group-hover:ml-0 ">
                 IALS
               </span>
             </h1>
@@ -195,7 +195,7 @@ const Menu = () => {
               <span className="font-wide transition  group-hover:text-(--accent)">
                 N
               </span>
-              <span className=" transition  ml-4 md:ml-7 group-hover:ml-0 ">
+              <span className=" transition   ml-6 md:ml-9 group-hover:ml-0 ">
                 TACT
               </span>
             </h1>

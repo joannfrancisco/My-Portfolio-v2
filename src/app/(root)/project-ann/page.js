@@ -54,7 +54,7 @@ const ProjectAnn = () => {
 
           {/* title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-header text-(--ann)">
+            <h1 className="text-4xl lg:text-6xl font-header text-(--ann)">
               <span className="font-wide">ANN</span>&nbsp;
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
@@ -65,10 +65,10 @@ const ProjectAnn = () => {
             <div className="">
               <div className="flex mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--ann) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  CATEGO<span className="font-wide">R</span>&nbsp;Y
+                  CATEGO<span className="font-wide">R</span>&nbsp;&nbsp;&nbsp;Y
                 </h1>
                 <ul className="text-base pl-1 w-[75vw] lg:w-[250px] text-left">
                   <li>Web Development</li>
@@ -78,10 +78,11 @@ const ProjectAnn = () => {
 
               <div className="flex mb-5 ">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--ann) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  TEC<span className="font-wide">H</span>&nbsp; STACK
+                  TEC<span className="font-wide">H</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STACK
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   Next.js | GSAP | Framer Motion | Tailwind CSS | Vercel
@@ -90,10 +91,11 @@ const ProjectAnn = () => {
 
               <div className="flex mb-5 items-center">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--ann) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--ann) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  DESI<span className="font-wide">G</span>&nbsp;N TOOLS
+                  DESI<span className="font-wide">G</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;N &nbsp;&nbsp; TOOLS
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   Figma | Adobe Photoshop
@@ -121,12 +123,12 @@ const ProjectAnn = () => {
           {/* figma files */}
           <div className="mt-8">
             <h1
-              className="w-[170px] mb-3 text-xl font-extrabold text-(--ann)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="mb-3 text-lg font-extrabold text-(--ann)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              TY<span className="font-wide">P</span>&nbsp;OG
-              <span className="font-wide">R</span>&nbsp;A
-              <span className="font-wide">P</span>&nbsp;HY
+              TY<span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;&nbsp;OG
+              <span className="font-wide">R</span>&nbsp;&nbsp;&nbsp;&nbsp;A
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;&nbsp;HY
             </h1>
             <FigmaFiles
               src="/images/projects/ann/typo1.png"
@@ -147,11 +149,12 @@ const ProjectAnn = () => {
             />
 
             <h1
-              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--ann)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className=" mb-3 mt-5 lg:mt-10 text-lg font-extrabold text-(--ann)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              COLO<span className="font-wide">R</span>&nbsp;&nbsp;
-              <span className="font-wide">P</span>&nbsp;ALETTE
+              COLO<span className="font-wide">R</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;ALETTE
             </h1>
             <FigmaFiles
               src="/images/projects/ann/color.png"
@@ -172,20 +175,21 @@ const ProjectAnn = () => {
             >
               <h2
                 className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                style={{ fontFamily: "var(--font-inconsolata)" }}
+                style={{ fontFamily: "var(--font-archivo)" }}
               >
                 <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
                 <span className="inline-block transition-transform duration-300 ease-out">
-                  <span className="font-wide">n</span>&nbsp;ext&nbsp;
-                  <span className="font-wide">p</span>&nbsp;roject
+                  <span className="font-wide">n</span>
+                  &nbsp;&nbsp;&nbsp;ext&nbsp;&nbsp;
+                  <span className="font-wide">p</span>&nbsp;&nbsp;&nbsp;roject
                 </span>
               </h2>
               <div className="text-right">
                 <h2
                   className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  gr8n<span className="font-wide">o</span>&nbsp;la
+                  gr8n<span className="font-wide">o</span>&nbsp;&nbsp;&nbsp;la
                 </h2>
                 <p className="font-light text-xs md:text-base">
                   Web App Development

@@ -6,14 +6,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
 const testimonials = [
   {
     id: 1,
-    text: "Ann didn't just redesign our site, she made it easier and more enjoyable to use. She simplified everything while keeping it visually clean. We couldn't be happier.",
+    text: "Working with Ann was so easy. She didn't just redesign our site, she made it easier and more enjoyable to use. She simplified everything while keeping it visually clean. We couldn't be happier.",
     author: "Jeiann Ermac",
     position: "Systems Administrator",
     company: "KK Solutions",
@@ -200,11 +196,13 @@ export default function TestimonialSlider() {
   return (
     <section
       // ref={sectionRef}
+      id="testimonials"
       className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center border-t border-(--foreground)/15"
     >
       <div className="max-w-4xl flex-1">
-        <h1 className="text-5xl lg:text-6xl font-header chrome-text">
-          TESTIMO<span className="font-wide chrome-text">N</span>&nbsp;IALS
+        <h1 className="text-4xl lg:text-6xl font-header chrome-text">
+          TESTIMO<span className="font-wide chrome-text">N</span>
+          &nbsp;&nbsp;&nbsp;IALS
         </h1>
         <hr className="mt-2 mb-6 border-t-2" />
         <p>

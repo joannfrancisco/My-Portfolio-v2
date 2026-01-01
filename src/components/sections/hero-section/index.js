@@ -257,318 +257,177 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Zap, Award, TrendingUp } from "lucide-react";
 import gsap from "gsap";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-
-// Register GSAP plugins
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrambleTextPlugin);
-}
+import Background from "@/components/shared/background";
 
 export default function HeroSection() {
-  const targetRef = useRef(null);
+  const heroRef = useRef(null);
+  const badgeRef = useRef(null);
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
+  const statsRef = useRef(null);
   const ctaRef = useRef(null);
-  const quotesRef = useRef([]);
-
-  const message1 = "Imagination is Power";
-  const message2 = "Scroll for more...";
-  const scrambleChars = "upperAndLowerCase";
-
-  const quotes = [
-    "Code is poetry",
-    "Next.js",
-    "Tailwind CSS",
-    "PostgreSQL",
-    "React.js",
-    "Node.js",
-    "UI/UX Design",
-    "Figma",
-    "Vercel",
-    "GSAP Animation",
-    "Express.js",
-    "Firebase",
-    "RestAPI",
-    "TypeScript",
-  ];
-
-  // Helper: Get random position
-  const getRandomPosition = () => {
-    const x = Math.random() * (window.innerWidth - 200);
-    const y = Math.random() * (window.innerHeight - 100);
-    return { x, y };
-  };
-
-  // Helper: Scramble quote animation
-  const scrambleQuote = (quote, text) => {
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-    tl.call(() => {
-      const { x, y } = getRandomPosition();
-      gsap.set(quote, { x, y });
-    })
-      .to(quote, {
-        delay: Math.random() * 5,
-        duration: 1,
-        opacity: 1,
-        scrambleText: {
-          text,
-          chars: scrambleChars,
-          revealDelay: 0.5,
-          speed: 1,
-        },
-        ease: "power2.out",
-      })
-      .to(quote, {
-        delay: 0.5,
-        duration: 1,
-        scrambleText: { text: "", chars: scrambleChars },
-        opacity: 0,
-        ease: "power2.in",
-      });
-  };
+  const trustRef = useRef(null);
 
   useEffect(() => {
-    // Reset elements to initial hidden state
-    gsap.set([headlineRef.current, subheadlineRef.current, ctaRef.current], {
-      clearProps: "all",
-    });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    // Timeline for sequential animations
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    // Headline animation
-    if (headlineRef.current) {
-      tl.from(headlineRef.current, {
-        y: 100,
+      tl.from(badgeRef.current, {
         opacity: 0,
-        duration: 1,
-        delay: 0.3,
-      });
-    }
+        y: 20,
+        duration: 0.6,
+        delay: 0.4,
+      })
+        .from(
+          headlineRef.current,
+          {
+            opacity: 0,
+            y: 50,
+            duration: 0.9,
+          },
+          "-=0.3"
+        )
+        .from(
+          subheadlineRef.current,
+          {
+            opacity: 0,
+            y: 30,
+            duration: 0.7,
+          },
+          "-=0.5"
+        )
+        .from(
+          statsRef.current?.children || [],
+          {
+            opacity: 0,
+            y: 25,
+            duration: 0.6,
+            stagger: 0.15,
+          },
+          "-=0.4"
+        )
+        .from(
+          ctaRef.current,
+          {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.6,
+          },
+          "-=0.3"
+        )
+        .from(
+          trustRef.current?.children || [],
+          {
+            opacity: 0,
+            scale: 0.9,
+            duration: 0.5,
+            stagger: 0.1,
+          },
+          "-=0.3"
+        );
+    }, heroRef);
 
-    // Subheadline animation
-    if (subheadlineRef.current) {
-      tl.from(
-        subheadlineRef.current,
-        {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-        },
-        "-=0.5"
-      );
-    }
-
-    // CTA button animation
-    if (ctaRef.current) {
-      tl.from(
-        ctaRef.current,
-        {
-          scale: 0,
-          opacity: 0,
-          duration: 0.6,
-          ease: "back.out(1.7)",
-        },
-        "-=0.3"
-      );
-    }
-
-    // Init quotes
-    quotesRef.current.forEach((quote) => {
-      if (quote) {
-        gsap.set(quote, {
-          position: "absolute",
-          opacity: 0,
-          whiteSpace: "nowrap",
-        });
-        scrambleQuote(quote, quote.textContent);
-      }
-    });
-
-    // Cleanup
-    return () => {
-      tl.kill();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
-    <>
-      <style>{`
-        @keyframes hero-float {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.05);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.95);
-          }
-        }
+    <section
+      ref={heroRef}
+      className="max-w-screen-2xl mx-auto relative h-dvh sm:h-full sm:min-h-[800px] flex items-center justify-center overflow-hidden px-4 sm:px-6 py-16 lg:py-25  bg-(--section)/20"
+    >
+      {/* Main Content */}
+      <div className="hero-container relative z-10 text-center max-w-4xl w-full ">
+        {/* Badge */}
+        {/* <div ref={badgeRef} className="mb-10">
+          <span className="hero-badge">
+            <Zap className="w-4 h-4" />
+            <span>Transform Your Online Presence</span>
+          </span>
+        </div> */}
 
-        @keyframes hero-pulse {
-          0%, 100% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.1;
-          }
-          50% {
-            transform: translate(-50%, -50%) scale(1.1);
-            opacity: 0.15;
-          }
-        }
+        {/* Headline */}
+        <h1 ref={headlineRef} className="hero-headline mb-6">
+          Small Business <br />
+          <span className="chrome-text">Web Designer</span>
+        </h1>
 
-        .hero-float-1 {
-          animation: hero-float 20s ease-in-out infinite;
-        }
+        {/* Subheadline */}
+        <p
+          ref={subheadlineRef}
+          className="hero-subheadline max-w-lg lg:max-w-3xl mx-auto mb-10 "
+        >
+          Transform your vision into a high-performance website that turns
+          visitors into customers.
+        </p>
 
-        .hero-float-2 {
-          animation: hero-float 25s ease-in-out infinite reverse;
-        }
-
-        .hero-float-3 {
-          animation: hero-float 18s ease-in-out infinite;
-        }
-
-        .hero-float-4 {
-          animation: hero-float 22s ease-in-out infinite reverse;
-        }
-
-        .hero-pulse {
-          animation: hero-pulse 15s ease-in-out infinite;
-        }
-      `}</style>
-
-      <section className="relative min-h-dvh max-w-screen-2xl mx-auto flex items-center justify-center overflow-hidden bg-(--section)/20 px-4 sm:px-6 lg:px-8">
-        {/* Animated Purple Background Gradients */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Main gradient orb - bottom left */}
-          <div
-            className="hero-float-1 absolute -bottom-1/4 -left-1/4 w-[300px] md:w-[600px] h-[300px]  md:h-[600px] rounded-full blur-3xl opacity-20"
-            style={{
-              background:
-                "radial-gradient(circle, #7c3aed 0%, #6b21a8 50%, transparent 70%)",
-            }}
-          />
-
-          {/* Secondary gradient orb - top right */}
-          <div
-            className="hero-float-2 absolute -top-1/4 -right-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] rounded-full blur-3xl opacity-15"
-            style={{
-              background:
-                "radial-gradient(circle, #a855f7 0%, #7c3aed 50%, transparent 70%)",
-            }}
-          />
-
-          {/* Accent gradient orb - center */}
-          <div
-            className="hero-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[400px] h-[250px] md:h-[400px] rounded-full blur-3xl opacity-10"
-            style={{
-              background:
-                "radial-gradient(circle, #c084fc 0%, #a855f7 50%, transparent 70%)",
-            }}
-          />
-
-          {/* Small floating particles */}
-          <div
-            className="hero-float-3 absolute top-1/4 left-1/3 w-32 h-32 rounded-full blur-2xl opacity-10"
-            style={{
-              background:
-                "radial-gradient(circle, #d946ef 0%, transparent 70%)",
-            }}
-          />
-
-          <div
-            className="hero-float-4 absolute bottom-1/3 right-1/4 w-40 h-40 rounded-full blur-2xl opacity-10"
-            style={{
-              background:
-                "radial-gradient(circle, #8b5cf6 0%, transparent 70%)",
-            }}
-          />
-        </div>
-
-        {/* Floating Quotes Background */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10 z-10">
-          {quotes.map((quote, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                quotesRef.current[index] = el;
-              }}
-              className="text-(--foreground) text-xs font-semibold whitespace-nowrap opacity-0"
-            >
-              {quote}
-            </div>
-          ))}
-        </div>
-
-        {/* Main content */}
-        <div className="relative z-20 max-w-5xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-(--foreground)/10 backdrop-blur-sm border border-(--foreground)/20 rounded-full text-(--foreground) text-sm">
-            <Sparkles className="w-4 h-4" />
-            <span>Crafting Digital Excellence</span>
+        {/* Stats */}
+        <div
+          ref={statsRef}
+          className="flex flex-wrap items-center justify-center gap-5 md:gap-12 mb-12"
+        >
+          <div className="text-center">
+            <div className="hero-stat-number mb-1">3x</div>
+            <div className="hero-stat-label">Faster Loading</div>
           </div>
 
-          {/* Headline */}
-          <h1
-            ref={headlineRef}
-            className="text-4xl md:text-6xl font-bold text-(--foreground) mb-4 leading-tight"
-          >
-            Small Business{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 text-transparent chrome-text">
-                Web Designer
-              </span>
-              <span className="absolute inset-0 bg-(--foreground)/10 blur-xl" />
-            </span>
-          </h1>
+          <div className="stat-divider hidden sm:block" />
 
-          {/* Sub-headline */}
-          <p
-            ref={subheadlineRef}
-            className="text-(--foreground)/70 mb-10 max-w-lg lg:max-w-4xl mx-auto "
-          >
-            High-performance websites built to strengthen your brand and drive
-            measurable growth.
-          </p>
-
-          {/* CTA Button */}
-          <div ref={ctaRef}>
-            <a href="#contact">
-              <button className="group inline-flex items-center gap-3 px-8 py-4 border border-(--foreground) text-(--foreground) text-lg font-semibold transition-all duration-300 shadow-[4px_4px_0_0_var(--foreground)] hover:shadow-[8px_8px_0_0_var(--foreground)] active:shadow-[2px_2px_0_0_var(--foreground)]">
-                <span className="chrome-text">start your project</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-            </a>
+          <div className="text-center">
+            <div className="hero-stat-number mb-1">2-4</div>
+            <div className="hero-stat-label">Week Delivery</div>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-5 sm:gap-8 text-(--foreground)/60 text-xs sm:text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-(--foreground) rounded-full animate-pulse" />
-              <span>Custom Designs</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-(--foreground) rounded-full animate-pulse" />
-              <span>SEO Optimized</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-(--foreground) rounded-full animate-pulse" />
-              <span>Mobile First</span>
-            </div>
+          <div className="stat-divider hidden sm:block" />
+
+          <div className="text-center">
+            <div className="hero-stat-number mb-1">100%</div>
+            <div className="hero-stat-label">Custom-Coded</div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
-          <div className="w-6 h-10 border-2 border-(--foreground)/30 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-(--foreground)/50 rounded-full animate-pulse" />
+        {/* CTA */}
+        <div ref={ctaRef} className="mb-4">
+          <a href="#contact">
+            <button className="hero-cta group ">
+              <span>Start Your Project</span>
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </button>
+          </a>
+          {/* <p className="hero-reassurance mt-5">
+            Free consultation • No commitments • Quick response
+          </p> */}
+        </div>
+
+        {/* Trust Indicators */}
+        <div
+          ref={trustRef}
+          className="mt-12 flex flex-wrap items-center justify-center gap-8"
+        >
+          <div className="flex items-center gap-2.5">
+            <Award className="w-5 h-5 opacity-70" />
+            <span className="trust-label">No Templates</span>
+          </div>
+
+          <div className="flex items-center gap-2.5">
+            <TrendingUp className="w-5 h-5 opacity-70" />
+            <span className="trust-label">SEO Optimized</span>
+          </div>
+
+          <div className="flex items-center gap-2.5">
+            <Zap className="w-5 h-5 opacity-70" />
+            <span className="trust-label">Mobile-First</span>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="scroll-indicator">
+        <div className="scroll-indicator-inner">
+          <div className="scroll-dot" />
+        </div>
+      </div>
+    </section>
   );
 }

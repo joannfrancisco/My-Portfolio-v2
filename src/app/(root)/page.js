@@ -120,9 +120,9 @@
 
 "use client";
 
-import AboutSection from "../../components/sections/about-section";
-import ProjectsSection from "../../components/sections/projects-section";
-import ContactSection from "../../components/sections/contact-section";
+import AboutSection from "@/components/sections/about-section";
+import ProjectsSection from "@/components/sections/projects-section";
+import ContactSection from "@/components/sections/contact-section";
 import HeroSection from "@/components/sections/hero-section";
 import Background from "@/components/shared/background";
 import FaqSection from "@/components/sections/faq-section";
@@ -130,36 +130,14 @@ import Testimonials from "@/components/sections/testimonial-section";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Background />
-      <div>
-        <section className="relative w-screen h-dvh lg:h-screen">
-          <HeroSection />
-        </section>
-
-        <section
-          id="about"
-          className="w-screen  flex items-start lg:items-center justify-center"
-        >
-          <AboutSection />
-        </section>
-
-        <section id="projects" className="w-screen  lg:h-[600px] ">
-          <ProjectsSection />
-        </section>
-
-        <section id="testimonials" className="w-screen  ">
-          <Testimonials />
-        </section>
-
-        <section id="faq" className="w-screen">
-          <FaqSection />
-        </section>
-
-        <section id="contact" className="w-screen">
-          <ContactSection />
-        </section>
-      </div>
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <Testimonials />
+      <FaqSection />
+      <ContactSection />
     </div>
   );
 };

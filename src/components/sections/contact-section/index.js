@@ -1,50 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import toast, { Toaster } from "react-hot-toast";
 import Footer from "@/components/shared/footer";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 const EMAIL = "info@joannfrancisco.com";
 
 const ContactSection = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [copied, setCopied] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    // GSAP animation - converts Framer Motion's whileInView
-    gsap.fromTo(
-      section,
-      {
-        opacity: 0,
-        x: 80,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%", // When top of element hits 80% of viewport
-          once: true, // Only animate once (viewport: { once: true })
-        },
-      }
-    );
-
-    // Cleanup
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(EMAIL);
@@ -54,143 +18,146 @@ const ContactSection = () => {
 
   return (
     // <div ref={sectionRef} className=" flex flex-col">
-    <div className=" flex flex-col">
-      {/* Toast container */}
-      <Toaster position="bottom-center" reverseOrder={false} />
+    <section id="contact">
+      <div className="flex flex-col">
+        {/* Toast container */}
+        <Toaster position="bottom-center" reverseOrder={false} />
 
-      <div className="min-h-screen flex justify-center items-center ">
-        <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
-          <div className="max-w-4xl flex-1">
-            <h1 className="text-5xl md:text-6xl font-header chrome-text">
-              CO<span className="font-wide chrome-text">N</span>&nbsp;TACT
-            </h1>
-            <hr className="mt-2 mb-6 border-t-2 " />
+        <div className="flex justify-center items-center ">
+          <div className="max-w-screen-2xl mx-auto w-full px-6 md:px-10 py-16 lg:py-25 flex justify-center items-center">
+            <div className="max-w-4xl flex-1">
+              <h1 className="text-4xl md:text-6xl font-header chrome-text">
+                CO<span className="font-wide chrome-text">N</span>
+                &nbsp;&nbsp;&nbsp;TACT
+              </h1>
+              <hr className="mt-2 mb-6 border-t-2 " />
 
-            <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-15">
-              <div className="">
-                <h2
-                  className="text-xl md:text-2xl my-1 md:my-2 pl-1 font-bold"
-                  style={{ fontFamily: "var(--font-homemadeapple)" }}
-                >
-                  Let&apos;s Connect!
-                </h2>
-                <p className="text-base md:text-lg font-light text-left leading-relaxed text-(--foreground)/80">
-                  Make an unforgettable first impression. Just because your
-                  business is small doesn&apos;t mean your website should be. I
-                  design with purpose and performance to ensure you stand out.
-                  Ready to level up? Let&apos;s talk.
-                </p>
-              </div>
-
-              <div className="mt-2">
-                {/* Copy email */}
-                <div className="mb-6 flex items-center gap-3">
-                  <span className="font-bold text-sm">TO:</span>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      handleCopy();
-                      toast.success("Email copied!");
-                    }}
-                    className="relative group text-base font-light opacity-80"
+              <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-15">
+                <div className="">
+                  <h2
+                    className="text-xl md:text-2xl my-1 md:my-2 pl-1 font-bold"
+                    style={{ fontFamily: "var(--font-homemadeapple)" }}
                   >
-                    {EMAIL}
-                    <span className="absolute -top-6 left-0 text-xs opacity-0 group-hover:opacity-60 transition">
-                      {copied ? "Copied!" : "Click to copy"}
-                    </span>
-                  </button>
+                    Let&apos;s Connect!
+                  </h2>
+                  <p className="text-base md:text-lg font-light text-left leading-relaxed text-(--foreground)/80">
+                    Make an unforgettable first impression. Just because your
+                    business is small doesn&apos;t mean your website should be.
+                    I design with purpose and performance to ensure you stand
+                    out. Ready to level up? Let&apos;s talk.
+                  </p>
                 </div>
 
-                {/* Contact Form */}
-                <form
-                  className="flex flex-col gap-6 max-w-[600px]"
-                  onSubmit={async (e) => {
-                    e.preventDefault();
-                    setStatus("loading");
+                <div className="mt-2">
+                  {/* Copy email */}
+                  <div className="mb-6 flex items-center gap-3">
+                    <span className="font-bold text-sm">TO:</span>
 
-                    const form = e.currentTarget;
-                    const fromValue = form.from.value.trim();
-                    const messageValue = form.message.value.trim();
-
-                    // Simple client-side validation
-                    if (!fromValue || !messageValue) {
-                      toast.error("Please fill in all fields.");
-                      setStatus("idle");
-                      return;
-                    }
-
-                    try {
-                      const toastId = toast.loading("Sending message...");
-                      const res = await fetch("/api/contact", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                          from: fromValue,
-                          message: messageValue,
-                          company: form.company.value, // honeypot
-                        }),
-                      });
-
-                      toast.dismiss(toastId);
-
-                      if (!res.ok) throw new Error();
-
-                      toast.success("Message sent successfully ✓");
-                      setStatus("success");
-                      form.reset();
-                    } catch {
-                      toast.error("Something went wrong. Please try again.");
-                      setStatus("error");
-                    }
-                  }}
-                >
-                  {/* Honeypot (hidden) */}
-                  <input
-                    type="text"
-                    name="company"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    className="hidden"
-                  />
-
-                  {/* From */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-bold text-sm">FROM:</label>
-                    <input
-                      type="email"
-                      name="from"
-                      placeholder="your@email.com"
-                      className="border-b border-(--foreground)/30 bg-transparent py-2 outline-none focus:border-(--foreground) text-(--foreground)/80"
-                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleCopy();
+                        toast.success("Email copied!");
+                      }}
+                      className="relative group text-base font-light opacity-80"
+                    >
+                      {EMAIL}
+                      <span className="absolute -top-6 left-0 text-xs opacity-0 group-hover:opacity-60 transition">
+                        {copied ? "Copied!" : "Click to copy"}
+                      </span>
+                    </button>
                   </div>
 
-                  {/* Message */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-bold text-sm">MESSAGE:</label>
-                    <textarea
-                      name="message"
-                      rows={4}
-                      placeholder="your message..."
-                      className="border-b border-(--foreground)/30 bg-transparent py-2 outline-none resize-none focus:border-(--foreground) text-(--foreground)/80"
-                    />
-                  </div>
+                  {/* Contact Form */}
+                  <form
+                    className="flex flex-col gap-6 max-w-[600px]"
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      setStatus("loading");
 
-                  <button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="mt-4 mb-4 w-fit border border-(--foreground)] px-6 py-2 text-sm transition-all  hover:text-background disabled:opacity-50 shadow-[4px_4px_0_0_var(--foreground)] hover:shadow-[8px_8px_0_0_var(--foreground)] active:shadow-[2px_2px_0_0_var(--foreground)]"
+                      const form = e.currentTarget;
+                      const fromValue = form.from.value.trim();
+                      const messageValue = form.message.value.trim();
+
+                      // Simple client-side validation
+                      if (!fromValue || !messageValue) {
+                        toast.error("Please fill in all fields.");
+                        setStatus("idle");
+                        return;
+                      }
+
+                      try {
+                        const toastId = toast.loading("Sending message...");
+                        const res = await fetch("/api/contact", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            from: fromValue,
+                            message: messageValue,
+                            company: form.company.value, // honeypot
+                          }),
+                        });
+
+                        toast.dismiss(toastId);
+
+                        if (!res.ok) throw new Error();
+
+                        toast.success("Message sent successfully ✓");
+                        setStatus("success");
+                        form.reset();
+                      } catch {
+                        toast.error("Something went wrong. Please try again.");
+                        setStatus("error");
+                      }
+                    }}
                   >
-                    {status === "loading" ? "sending..." : "send message"}
-                  </button>
-                </form>
+                    {/* Honeypot (hidden) */}
+                    <input
+                      type="text"
+                      name="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      className="hidden"
+                    />
+
+                    {/* From */}
+                    <div className="flex flex-col gap-2">
+                      <label className="font-bold text-sm">FROM:</label>
+                      <input
+                        type="email"
+                        name="from"
+                        placeholder="your@email.com"
+                        className="border-b border-(--foreground)/30 bg-transparent py-2 outline-none focus:border-(--foreground) text-(--foreground)/80"
+                      />
+                    </div>
+
+                    {/* Message */}
+                    <div className="flex flex-col gap-2">
+                      <label className="font-bold text-sm">MESSAGE:</label>
+                      <textarea
+                        name="message"
+                        rows={4}
+                        placeholder="your message..."
+                        className="border-b border-(--foreground)/30 bg-transparent py-2 outline-none resize-none focus:border-(--foreground) text-(--foreground)/80"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={status === "loading"}
+                      className="mt-4 mb-4 w-fit border border-(--foreground)] px-6 py-2 text-sm transition-all  hover:text-background disabled:opacity-50 shadow-[4px_4px_0_0_var(--foreground)] hover:shadow-[8px_8px_0_0_var(--foreground)] active:shadow-[2px_2px_0_0_var(--foreground)]"
+                    >
+                      {status === "loading" ? "sending..." : "send message"}
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </section>
   );
 };
 

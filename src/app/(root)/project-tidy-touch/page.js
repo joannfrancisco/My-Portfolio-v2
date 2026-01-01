@@ -54,9 +54,10 @@ const ProjectTidyTouch = () => {
 
           {/* title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-header text-(--tidytouch)">
-              TI<span className="font-wide">D</span>&nbsp;Y&nbsp;T
-              <span className="font-wide">O</span>&nbsp;UCH
+            <h1 className="text-4xl lg:text-6xl font-header text-(--tidytouch)">
+              TI<span className="font-wide">D</span>
+              &nbsp;&nbsp;&nbsp;Y&nbsp; T<span className="font-wide">O</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;UCH
             </h1>
             <hr className="mt-2 mb-5 border-t-2" />
           </div>
@@ -66,10 +67,10 @@ const ProjectTidyTouch = () => {
             <div className="">
               <div className="flex mb-5">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--tidytouch) pr-1 md:pr-0"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--tidytouch) pr-1 md:pr-0"
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  CATEGO<span className="font-wide">R</span>&nbsp;Y
+                  CATEGO<span className="font-wide">R</span>&nbsp;&nbsp;&nbsp;Y
                 </h1>
                 <ul className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   <li>Webflow</li>
@@ -79,10 +80,10 @@ const ProjectTidyTouch = () => {
 
               <div className="flex mb-5 items-center">
                 <h1
-                  className="w-40 text-xl font-extrabold text-(--tidytouch) pr-1 md:pr-0 "
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  className="w-50 text-lg font-extrabold text-(--tidytouch) pr-1 md:pr-0 "
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  <span className="font-wide">T</span>&nbsp;OOLS
+                  <span className="font-wide">T</span>&nbsp;&nbsp;&nbsp;OOLS
                 </h1>
                 <h1 className="text-base pl-1 w-[75vw] lg:w-[250px]">
                   Webflow | Figma
@@ -113,11 +114,12 @@ const ProjectTidyTouch = () => {
           {/* figma files */}
           <div className="mt-5">
             <h1
-              className="w-[170px] mb-3 text-xl font-extrabold text-(--tidytouch)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 text-lg font-extrabold text-(--tidytouch)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">H</span>&nbsp;OME
-              <span className="font-wide">P</span>&nbsp;AGE
+              <span className="font-wide">H</span>
+              &nbsp;&nbsp;&nbsp;OME&nbsp;&nbsp;
+              <span className="font-wide">P</span>&nbsp;&nbsp;&nbsp;AGE
             </h1>
             <FigmaFiles
               src="/images/projects/tidy-touch/hero.png"
@@ -138,11 +140,11 @@ const ProjectTidyTouch = () => {
             />
 
             <h1
-              className="w-[170px] mb-3 mt-5 lg:mt-10 text-xl font-extrabold text-(--tidytouch)"
-              style={{ fontFamily: "var(--font-inconsolata)" }}
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-lg font-extrabold text-(--tidytouch)"
+              style={{ fontFamily: "var(--font-archivo)" }}
             >
-              <span className="font-wide">M</span>&nbsp;O
-              <span className="font-wide">B</span>&nbsp;ILE
+              <span className="font-wide">M</span>&nbsp;&nbsp;&nbsp;&nbsp;O
+              <span className="font-wide">B</span>&nbsp;&nbsp;&nbsp;ILE
             </h1>
             <FigmaFiles
               src="/images/projects/tidy-touch/mobile.png"
@@ -159,23 +161,26 @@ const ProjectTidyTouch = () => {
             >
               <h2
                 className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                style={{ fontFamily: "var(--font-inconsolata)" }}
+                style={{ fontFamily: "var(--font-archivo)" }}
               >
                 <ArrowRight className="w-0 h-5 opacity-0 group-hover:w-5 group-hover:mr-2 group-hover:opacity-100 transition-all duration-300 ease-out" />
                 <span className="inline-block transition-transform duration-300 ease-out">
-                  <span className="font-wide">n</span>&nbsp;ext&nbsp;
-                  <span className="font-wide">p</span>&nbsp;roject
+                  <span className="font-wide">n</span>
+                  &nbsp;&nbsp;&nbsp;ext&nbsp;
+                  <span className="font-wide">p</span>&nbsp;&nbsp;&nbsp;roject
                 </span>
               </h2>
               <div className="text-right">
                 <h2
                   className="font-black text-base md:text-2xl inline-flex items-center text-left"
-                  style={{ fontFamily: "var(--font-inconsolata)" }}
+                  style={{ fontFamily: "var(--font-archivo)" }}
                 >
-                  w<span className="font-wide">o</span>&nbsp;uld&nbsp;y
-                  <span className="font-wide">o</span>&nbsp;u&nbsp;r
-                  <span className="font-wide">a</span>&nbsp;th
-                  <span className="font-wide">e</span>&nbsp;r?
+                  w<span className="font-wide">o</span>
+                  &nbsp;&nbsp;&nbsp;uld&nbsp;&nbsp;&nbsp;y
+                  <span className="font-wide">o</span>
+                  &nbsp;&nbsp;&nbsp;u&nbsp;&nbsp;&nbsp;r
+                  <span className="font-wide">a</span>&nbsp;&nbsp;&nbsp;th
+                  <span className="font-wide">e</span>&nbsp;&nbsp;&nbsp;r?
                 </h2>
                 <p className="font-light text-xs md:text-base">
                   Web App Development
