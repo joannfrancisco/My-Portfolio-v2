@@ -64,7 +64,7 @@ const ProjectPawikan = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-10">
             {/* left grid */}
             <div className="">
-              <div className="flex items-center mb-5">
+              <div className="flex mb-5">
                 <h1
                   className="w-50 text-lg font-extrabold text-(--pawikan) pr-1 md:pr-0"
                   style={{ fontFamily: "var(--font-archivo)" }}
@@ -146,6 +146,18 @@ const ProjectPawikan = () => {
             <FigmaFiles
               src="/images/projects/pawikan/contact.png"
               alt="contact section"
+            />
+
+            <h1
+              className="w-[170px] mb-3 mt-5 lg:mt-10 text-lg font-extrabold text-(--pawikan)"
+              style={{ fontFamily: "var(--font-archivo)" }}
+            >
+              4<span className="font-wide">0</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;4
+            </h1>
+            <FigmaFiles
+              src="/images/projects/pawikan/404.png"
+              alt="not-found"
             />
 
             {/* <h1

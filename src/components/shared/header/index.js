@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ThemeToggle from "./theme-toggle";
 import Link from "next/link";
 import Background from "../background";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -12,8 +29,14 @@ const Menu = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-50 ">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-2 lg:py-3 flex items-center justify-between  backdrop-blur-xs">
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "backdrop-blur-xl bg-background/80 shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 py-2 lg:py-3 flex items-center justify-between">
           <Link
             href="/"
             className="text-2xl hover:opacity-80 transition-opacity font-logo "

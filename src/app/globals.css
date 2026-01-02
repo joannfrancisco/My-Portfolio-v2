@@ -47,7 +47,7 @@ body {
 
 .font-logo {
   font-family: var(--font-homemadeapple) !important;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .font-hero {
@@ -70,7 +70,7 @@ body {
   display: inline-block;
   transform: scaleX(2);
   transform-origin: left;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .font-parent:hover .font-wide {
@@ -228,7 +228,7 @@ body {
 .hero-stat-number {
   font-family: var(--font-inconsolata);
   font-weight: 700;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 2.8rem);
   background: var(--chrome-gradient);
   background-size: 300% 300%;
   animation: chromeMove 8s ease-in-out infinite;
@@ -239,7 +239,7 @@ body {
 }
 
 .hero-stat-label {
-  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+  font-size: clamp(0.8rem, 1.5vw, 0.8rem);
   color: var(--foreground);
   opacity: 0.7;
   font-weight: 500;

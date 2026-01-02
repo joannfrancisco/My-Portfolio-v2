@@ -1,122 +1,3 @@
-// import { Poppins, Archivo, Homemade_Apple } from "next/font/google";
-// import { ThemeProvider } from "next-themes";
-// import "./globals.css";
-// import { GoogleAnalytics } from "@next/third-parties/google";
-
-// const poppins = Poppins({
-//   weight: ["300", "400", "500", "600", "700", "900"],
-//   subsets: ["latin"],
-//   display: "swap",
-//   variable: "--font-poppins",
-// });
-
-// const archivo = Archivo({
-//   subsets: ["latin"],
-//   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-//   variable: "--font-archivo",
-//   display: "swap",
-// });
-
-// const homemadeapple = Homemade_Apple({
-//   subsets: ["latin"],
-//   weight: ["400"],
-//   variable: "--font-homemadeapple",
-//   display: "swap",
-// });
-
-// export const metadata = {
-//   title: "Web Design & Development | Jo Ann Francisco",
-//   description:
-//     "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
-//   metadataBase: new URL("https://joannfrancisco.com"),
-//   keywords: [
-//     "Freelance",
-//     "Web Developer",
-//     "Web Designer",
-//     "Full-Stack Developer",
-//     "Frontend Developer",
-//     "Philippines Web Developer",
-//     "Portfolio",
-//     "Next.js",
-//     "React",
-//     "TypeScript",
-//     "Tailwind CSS",
-//     "UI/UX Design",
-//     "Web Development",
-//     "Responsive Web Design",
-//   ],
-//   openGraph: {
-//     title: "Web Design & Development | Jo Ann Francisco",
-//     description:
-//       "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
-//     url: "https://joannfrancisco.com",
-//     siteName: "Jo Ann Francisco",
-//     images: [
-//       {
-//         url: "/og-image.png",
-//         width: 1200,
-//         height: 630,
-//       },
-//     ],
-//     type: "website",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Web Design & Development | Jo Ann Francisco",
-//     description:
-//       "Modern, high-performance websites designed to help small businesses grow. Freelance web designer and full-stack developer based in the Philippines.",
-//     images: ["/og-image.png"],
-//   },
-//   alternates: {
-//     canonical: "https://joannfrancisco.com",
-//   },
-// };
-
-// export default function RootLayout({ children }) {
-//   const schema = {
-//     "@context": "https://schema.org",
-//     "@type": "Person",
-//     name: "Jo Ann Francisco",
-//     jobTitle: "Web Designer & Developer",
-//     url: "https://joannfrancisco.com",
-//     sameAs: [
-//       "https://www.linkedin.com/in/joannfrancisco",
-//       "https://github.com/joannfrancisco",
-//       "https://www.instagram.com/joannfrancisco.dev/",
-//       "https://www.behance.net/joannvfrancisco",
-//     ],
-//   };
-
-//   return (
-//     <html lang="en" dir="ltr" suppressHydrationWarning>
-//       <head>
-//         <meta name="viewport" content="width=device-width, initial-scale=1" />
-//         <link rel="icon" href="/favicon.ico" />
-//         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-//       </head>
-//       <body
-//         className={`${poppins.variable} ${homemadeapple.variable} ${archivo.variable} antialiased`}
-//       >
-//         <script
-//           type="application/ld+json"
-//           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-//         />
-//         <ThemeProvider
-//           attribute="class"
-//           defaultTheme="dark"
-//           enableSystem={false}
-//           storageKey="theme"
-//           disableTransitionOnChange
-//         >
-//           {children}
-//         </ThemeProvider>
-//         {/* GA4 Script */}
-//         <GoogleAnalytics gaId="G-EB6GXHJXE5" />
-//       </body>
-//     </html>
-//   );
-// }
-
 import { Poppins, Archivo, Homemade_Apple } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -247,7 +128,7 @@ export const metadata = {
 
   // Verification (Add your codes)
   verification: {
-    google: "your-google-verification-code",
+    google: "W3noX_Wtgmscc2LQwuxEpoQypipHoCHfVSOr_TkrtnE",
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
@@ -282,7 +163,7 @@ export default function RootLayout({ children }) {
     name: "Jo Ann Francisco",
     alternateName: "Jo Ann V. Francisco",
     url: "https://joannfrancisco.com",
-    image: "https://joannfrancisco.com/profile-image.jpg",
+    image: "https://joannfrancisco.com/images/AboutImage.png",
     jobTitle: "Web Designer & Full-Stack Developer",
     description:
       "Freelance web designer and full-stack developer specializing in modern, high-performance websites using Next.js, React, and TypeScript.",
@@ -397,7 +278,7 @@ export default function RootLayout({ children }) {
 
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        {/* <link rel="icon" href="/icon.svg" type="image/svg+xml" /> */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
