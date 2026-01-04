@@ -89,15 +89,19 @@ export default function HeroSection() {
             <span>Transform Your Online Presence</span>
           </span>
         </div> */}
+
+        {/* Headline */}
         {/* Headline */}
         <h1 ref={headlineRef} className="hero-headline mb-6">
-          Small Business <br />
-          <span className="chrome-text">Web Designer</span>
+          <span className="hero-subtitle">Small Business</span>
+          <span className="chrome-text">
+            Web Designer <br /> & Developer
+          </span>
         </h1>
         {/* Subheadline */}
         <p
           ref={subheadlineRef}
-          className="hero-subheadline max-w-lg lg:max-w-3xl mx-auto mb-10 "
+          className="text-base lg:text-2xl max-w-lg lg:max-w-2xl mx-auto mb-10 text-(--foreground)/80"
         >
           Building high-performance websites that transform visitors into loyal
           customers.
@@ -126,6 +130,7 @@ export default function HeroSection() {
             <div className="hero-stat-label">Custom-Coded</div>
           </div>
         </div>
+
         {/* CTA */}
         <div ref={ctaRef} className="mb-4">
           <a href="#contact">
@@ -134,9 +139,6 @@ export default function HeroSection() {
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
           </a>
-          {/* <p className="hero-reassurance mt-5">
-            Free consultation • No commitments • Quick response
-          </p> */}
         </div>
 
         {/* Trust Indicators */}

@@ -27,6 +27,26 @@ const homemadeapple = Homemade_Apple({
 export const metadata = {
   metadataBase: new URL("https://joannfrancisco.com"),
 
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    // other: [
+    //   {
+    //     rel: 'mask-icon',
+    //     url: '/safari-pinned-tab.svg',
+    //     color: '#06b6d4',
+    //   },
+    // ],
+  },
+
+  manifest: "/manifest.json",
+
   // Primary Metadata
   title: {
     default: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
@@ -37,6 +57,8 @@ export const metadata = {
 
   keywords: [
     // Primary Services
+    "web developer",
+    "web designer",
     "freelance web developer",
     "freelance web designer",
     "full-stack developer",
@@ -107,8 +129,8 @@ export const metadata = {
     title: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
     description:
       "Modern, high-performance websites designed to help small businesses grow. Freelance web designer based in the Philippines.",
-    // images: ["/twitter-image.png"],
-    images: ["/og-image.png"],
+    images: ["/twitter-image.png"],
+
     creator: "@joannfrancisco",
     site: "@joannfrancisco",
   },
@@ -275,12 +297,6 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* <link rel="icon" href="/icon.svg" type="image/svg+xml" /> */}
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
 
         {/* Theme Color */}
         <meta name="theme-color" content="#000000" />

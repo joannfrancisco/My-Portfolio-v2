@@ -15,7 +15,7 @@ const accordionData = [
     id: 2,
     title: "How is custom-coded different from WordPress or Wix?",
     content:
-      "Custom-coded sites are built specifically for you with clean, lightweight code. This means faster loading times, better security, no monthly platform fees, and full ownership. Unlike WordPress or Wix, there are no plugins to update, no bloated code slowing you down, and no restrictions on what you can do with your site.",
+      "Custom-coded sites are built from scratch specifically for your business. This approach offers faster performance through optimized code, complete design flexibility, and full ownership without platform dependencies. While WordPress and Wix are great solutions for many use cases, custom development gives you maximum control over features, scalability, and performance—perfect for businesses with specific needs or those wanting a truly unique online presence.",
   },
   {
     id: 3,

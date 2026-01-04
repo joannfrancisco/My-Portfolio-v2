@@ -208,20 +208,23 @@ body {
 
 /* Hero Headlines - Responsive & Bold */
 .hero-headline {
-  font-size: clamp(2.7rem, 8vw, 5.5rem);
+  font-size: clamp(2.9rem, 8vw, 5.5rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--foreground);
   font-family: var(--font-poppins);
 }
 
-.hero-subheadline {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  line-height: 1.5;
-  color: var(--foreground);
-  opacity: 0.85;
-  font-weight: 400;
+.hero-subtitle {
+  display: block;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(var(--orb)); /* Your lavender accent */
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
 }
 
 /* Hero Stats - Chrome Gradient Numbers */
@@ -287,26 +290,6 @@ body {
 
 .hero-cta:active {
   transform: translateY(-1px);
-}
-
-/* Hero Badge - Subtle Glow */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid var(--foreground);
-  border-radius: 9999px;
-  opacity: 0.65;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.hero-badge:hover {
-  opacity: 1;
-  transform: scale(1.05);
 }
 
 /* Trust Indicators */
