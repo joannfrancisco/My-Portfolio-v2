@@ -3,7 +3,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://joannfrancisco.com</loc>
+    <loc>https://www.joannfrancisco.com</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
   
   <!-- About Page -->
   <url>
-    <loc>https://joannfrancisco.com/#about</loc>
+    <loc>https://www.joannfrancisco.com/#about</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
   
   <!-- Work/Projects Page -->
   <url>
-    <loc>https://joannfrancisco.com/#projects</loc>
+    <loc>https://www.joannfrancisco.com/#projects</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -35,7 +35,7 @@
   
   <!-- Contact Page -->
   <url>
-    <loc>https://joannfrancisco.com/#contact</loc>
+    <loc>https://www.joannfrancisco.com/#contact</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -43,7 +43,7 @@
   
   <!-- Add individual project pages here -->
   <url>
-    <loc>https://joannfrancisco.com/project-pawikan</loc>
+    <loc>https://www.joannfrancisco.com/project-pawikan</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -25,14 +25,16 @@ const homemadeapple = Homemade_Apple({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://joannfrancisco.com"),
+  metadataBase: new URL("https://www.joannfrancisco.com"),
 
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
+    shortcut: "/favicon.ico",
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
@@ -99,7 +101,9 @@ export const metadata = {
   ],
 
   // Authors & Creator
-  authors: [{ name: "Jo Ann Francisco", url: "https://joannfrancisco.com" }],
+  authors: [
+    { name: "Jo Ann Francisco", url: "https://www.joannfrancisco.com" },
+  ],
   creator: "Jo Ann Francisco",
   publisher: "Jo Ann Francisco",
 
@@ -107,7 +111,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://joannfrancisco.com",
+    url: "https://www.joannfrancisco.com",
     siteName: "Jo Ann Francisco - Web Designer & Developer",
     title: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
     description:
@@ -157,9 +161,9 @@ export const metadata = {
 
   // Alternate Languages
   alternates: {
-    canonical: "https://joannfrancisco.com",
+    canonical: "https://www.joannfrancisco.com",
     languages: {
-      "en-US": "https://joannfrancisco.com",
+      "en-US": "https://www.joannfrancisco.com",
     },
   },
 
@@ -181,11 +185,11 @@ export default function RootLayout({ children }) {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://joannfrancisco.com/#person",
+    "@id": "https://www.joannfrancisco.com/#person",
     name: "Jo Ann Francisco",
     alternateName: "Jo Ann V. Francisco",
-    url: "https://joannfrancisco.com",
-    image: "https://joannfrancisco.com/images/AboutImage.png",
+    url: "https://www.joannfrancisco.com",
+    image: "https://www.joannfrancisco.com/images/AboutImage.png",
     jobTitle: "Web Designer & Full-Stack Developer",
     description:
       "Freelance web designer and full-stack developer specializing in modern, high-performance websites using Next.js, React, and TypeScript.",
@@ -240,13 +244,13 @@ export default function RootLayout({ children }) {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://joannfrancisco.com/#website",
-    url: "https://joannfrancisco.com",
+    "@id": "https://www.joannfrancisco.com/#website",
+    url: "https://www.joannfrancisco.com",
     name: "Jo Ann Francisco - Web Designer & Developer",
     description:
       "Portfolio and services website for freelance web designer and full-stack developer Jo Ann Francisco",
     publisher: {
-      "@id": "https://joannfrancisco.com/#person",
+      "@id": "https://www.joannfrancisco.com/#person",
     },
     inLanguage: "en-US",
   };
@@ -255,13 +259,13 @@ export default function RootLayout({ children }) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://joannfrancisco.com/#service",
+    "@id": "https://www.joannfrancisco.com/#service",
     name: "Jo Ann Francisco Web Design & Development",
     description:
       "Professional web design and development services specializing in modern, high-performance websites for small businesses",
-    url: "https://joannfrancisco.com",
+    url: "https://www.joannfrancisco.com",
     provider: {
-      "@id": "https://joannfrancisco.com/#person",
+      "@id": "https://www.joannfrancisco.com/#person",
     },
     serviceType: [
       "Web Design",
@@ -288,7 +292,7 @@ export default function RootLayout({ children }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://joannfrancisco.com",
+        item: "https://www.joannfrancisco.com",
       },
     ],
   };
@@ -297,6 +301,25 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Favicons - PNG first (Google prefers this) */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="48x48"
+          href="/favicon-48x48.png"
+        />
+
+        {/* ICO for legacy support */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* Apple */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
 
         {/* Theme Color */}
         <meta name="theme-color" content="#000000" />
