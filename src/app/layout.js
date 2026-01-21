@@ -1,26 +1,54 @@
-import { Poppins, Archivo, Homemade_Apple } from "next/font/google";
+import localFont from "next/font/local";
+import { Homemade_Apple } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700", "900"],
+// Logo
+const homemadeApple = Homemade_Apple({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-});
-
-const archivo = Archivo({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-archivo",
+  weight: "400",
+  variable: "--font-homemade-apple",
   display: "swap",
 });
 
-const homemadeapple = Homemade_Apple({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-homemadeapple",
+// General Sans - Body Font
+const generalSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/GeneralSans-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Semibold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-general-sans",
+  display: "swap",
+});
+
+const getaiGrotesk = localFont({
+  src: [
+    {
+      path: "../../public/fonts/DTGetaiGroteskDisplay-Black.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-getai-grotesk",
   display: "swap",
 });
 
@@ -350,7 +378,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${poppins.variable} ${homemadeapple.variable} ${archivo.variable} antialiased`}
+        className={`${generalSans.variable} ${getaiGrotesk.variable} ${homemadeApple.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
