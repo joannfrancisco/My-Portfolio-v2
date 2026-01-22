@@ -92,8 +92,9 @@ export default function Hero() {
           ref={subheadlineRef}
           className="text-lg md:text-2xl max-w-2xl mx-auto mb-12 text-(--foreground)/80 leading-relaxed"
         >
-          Small business, big impression. I design websites with purpose and
-          performance so you stand out from the start.
+          Small business, big impression. <br className="sm:hidden" /> I design
+          with purpose and performance, so your website stands out from the
+          start.
         </p>
 
         {/* CTA */}
