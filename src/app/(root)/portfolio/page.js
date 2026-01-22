@@ -98,11 +98,11 @@ export default function PortfolioPage() {
             >
               <Label label="My Work" />
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-navy-50 leading-tight ">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-navy-50 leading-[1.1] ">
                 <HeaderSpan span="Portfolio" />
               </h1>
 
-              <p className="text-xl text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
+              <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
                 A collection of projects showcasing web development, UI/UX
                 design, and full-stack applications.
               </p>
@@ -135,7 +135,7 @@ export default function PortfolioPage() {
                       rel="noopener noreferrer"
                       className="block group relative"
                     >
-                      <div className="relative aspect-16/8 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
+                      <div className="relative aspect-17/9 sm:aspect-16/8 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
                         <Image
                           src={project.image}
                           alt={project.title}
@@ -162,11 +162,11 @@ export default function PortfolioPage() {
                   {/* Content - 35% width on desktop */}
                   <div className="w-full lg:w-[35%]">
                     <div className="space-y-5">
-                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-navy-50 leading-tight">
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold  leading-tight">
                         {project.title}
                       </h2>
 
-                      <p className="text-base lg:text-lg text-navy-600 dark:text-navy-300 leading-relaxed">
+                      <p className="text-base lg:text-lg text-(--foreground)/80 leading-relaxed">
                         {project.description}
                       </p>
 
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
                         {project.tech.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1.5 rounded-full bg-white dark:bg-navy-800 text-navy-700 dark:text-navy-300 text-sm font-medium border border-navy-100 dark:border-navy-700 shadow-sm"
+                            className="px-3 py-1.5 rounded-full bg-(--cyan)/5 text-(--foreground)/70 text-sm font-medium border "
                           >
                             {tech}
                           </span>
@@ -186,11 +186,11 @@ export default function PortfolioPage() {
                       <div className="pt-2">
                         <Link
                           href={project.detailsLink}
-                          className="inline-flex items-center gap-2 text-base font-semibold text-navy-900 dark:text-navy-50 group/link"
+                          className="inline-flex items-center gap-2 text-base font-semibold text-(--cyan) group/link"
                         >
                           <span className="relative">
                             Show More
-                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-cyan-500 group-hover/link:w-full transition-all duration-300" />
+                            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-(--cyan) group-hover/link:w-full transition-all duration-300" />
                           </span>
                           <ArrowRight className="w-5 h-5 group-hover/link:translate-x-2 transition-transform duration-300" />
                         </Link>
@@ -211,7 +211,7 @@ export default function PortfolioPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-8 md:p-12 rounded-2xl text-center relative overflow-hidden"
+              className="sm:p-8 md:p-12 rounded-2xl text-center relative overflow-hidden"
               // style={{
               //   background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
               // }}
@@ -226,7 +226,7 @@ export default function PortfolioPage() {
                 <h2 className="text-3xl md:text-4xl font-bold ">
                   Like What You See?
                 </h2>
-                <p className="text-xl text-navy-300 max-w-2xl mx-auto ">
+                <p className="text-xl text-navy-300 max-w-2xl mx-auto text-(--foreground)/80">
                   Let&apos;s work together to bring your project to life.
                 </p>
                 <div className="pt-2">

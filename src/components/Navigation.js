@@ -166,7 +166,7 @@ export default function Navigation() {
         ref={linkRef}
         href={href}
         onClick={onClick}
-        className={`text-sm font-bold text-foreground/70 hover:text-cyan-600 dark:hover:text-cyan-600 transition-colors relative inline-flex origin-center ${className}`}
+        className={`text-sm font-bold text-foreground/70 hover:text-(--cyan) transition-colors relative inline-flex origin-center ${className}`}
       >
         {letters.map((letter, index) => (
           <span
@@ -246,7 +246,7 @@ export default function Navigation() {
         ref={logoRef}
         href="/#hero"
         onClick={onClick}
-        className="text-2xl font-logo font-bold tracking-tight inline-flex overflow-hidden cursor-pointer text-foreground hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors origin-center"
+        className="text-2xl font-logo font-bold tracking-tight inline-flex overflow-hidden cursor-pointer text-foreground hover:text-(--cyan) transition-colors origin-center"
       >
         {logoText.split("").map((letter, index) => (
           <span
@@ -301,7 +301,7 @@ export default function Navigation() {
     return (
       <div
         ref={wrapperRef}
-        className="inline-block origin-center hover:text-cyan-600 dark:hover:text-cyan-500 transition-colors"
+        className="inline-block origin-center hover:text-(--cyan) transition-colors"
       >
         <ThemeToggle />
       </div>
@@ -425,7 +425,7 @@ export default function Navigation() {
             <div className="hidden xl:flex items-center gap-4 shrink-0">
               <RibbonThemeToggle />
               <ButtonContact onClick={handleContactClick}>
-                CONTACT
+                GET IN TOUCH
               </ButtonContact>
             </div>
 
@@ -462,7 +462,7 @@ export default function Navigation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-3xl navlink text-foreground hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                    className="text-3xl navlink text-foreground hover:text-(--cyan) transition-colors"
                   >
                     {link.name}
                   </motion.a>

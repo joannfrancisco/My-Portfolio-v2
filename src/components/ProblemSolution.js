@@ -28,9 +28,9 @@ export default function ProblemSolution() {
   ];
 
   return (
-    <section className="relative bg-background overflow-hidden">
+    <section className="relative bg-background max-w-screen-2xl mx-auto">
       {/* Large decorative number */}
-      <div className="absolute opacity-[0.03] dark:opacity-[0.08] top-[1.5rem] right-[4rem] text-[20rem] md:text-[30rem] font-black text-foreground leading-none select-none pointer-events-none -translate-y-1/4 translate-x-1/4">
+      <div className="absolute opacity-[0.03] dark:opacity-[0.08] top-6 right-16 text-[20rem] md:text-[30rem] font-black text-foreground leading-none select-none pointer-events-none -translate-y-1/4 translate-x-1/4">
         01
       </div>
 
@@ -38,7 +38,7 @@ export default function ProblemSolution() {
         {/* Top section - Header */}
         <div className="border-b border-foreground/10">
           <div className="max-w-7xl mx-auto px-6 py-20 md:py-32">
-            <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-end">
+            <div className="grid md:grid-cols-12 gap-1 md:gap-12 items-end">
               {/* Left - Label */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function ProblemSolution() {
                 className="md:col-span-3"
               >
                 <Label label="The Challenge" />
-                <div className="hidden md:block w-12 h-px bg-gradient-to-r from-cyan-500 to-transparent mt-6" />
+                <div className="hidden md:block w-12 h-px bg-linear-to-r from-cyan-500 to-transparent mt-6" />
               </motion.div>
 
               {/* Right - Content */}
@@ -57,10 +57,10 @@ export default function ProblemSolution() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="md:col-span-9"
               >
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
                   Your Website Should Be Your{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 text-cyan-500 dark:text-cyan-700">
+                    <span className="relative z-10 text-(--cyan)">
                       Best Salesperson
                     </span>
                     {/* <motion.span
@@ -71,7 +71,7 @@ export default function ProblemSolution() {
                     /> */}
                   </span>
                 </h2>
-                <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl leading-relaxed">
+                <p className="text-xl md:text-2xl text-(--foreground)/80 max-w-3xl leading-relaxed">
                   Most small business websites are outdated, slow, and lose
                   customers before they even engage. Custom-coded solutions
                   eliminate these obstacles and turn visitors into revenue.
@@ -95,13 +95,13 @@ export default function ProblemSolution() {
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-300 border border-cyan-500/20">
-                      <item.icon className="w-6 h-6 text-cyan-500 dark:text-cyan-700" />
+                      <item.icon className="w-6 h-6 text-(--cyan)" />
                     </div>
-                    <span className="text-4xl md:text-5xl font-black text-cyan-500 dark:text-cyan-700 group-hover:scale-110 transition-transform duration-300 origin-left">
+                    <span className="text-4xl md:text-5xl font-black text-(--cyan) group-hover:scale-110 transition-transform duration-300 origin-left">
                       {item.stat}
                     </span>
                   </div>
-                  <p className="text-foreground/70 text-lg leading-relaxed">
+                  <p className="text-(--foreground)/80 text-lg leading-relaxed">
                     {item.text}
                   </p>
                 </motion.div>
@@ -113,7 +113,7 @@ export default function ProblemSolution() {
         {/* Bottom section - The Solution */}
         <div className="relative">
           {/* Decorative number */}
-          <div className="absolute opacity-[0.03] dark:opacity-[0.08] bottom-[4rem] left-0 text-[20rem] md:text-[30rem] font-black text-foreground leading-none select-none pointer-events-none translate-y-1/4 -translate-x-1/4">
+          <div className="absolute opacity-[0.03] dark:opacity-[0.08] bottom-16 left-0 text-[20rem] md:text-[30rem] font-black text-foreground leading-none select-none pointer-events-none translate-y-1/4 -translate-x-1/4">
             02
           </div>
 
@@ -127,11 +127,9 @@ export default function ProblemSolution() {
                 className="md:col-span-7"
               >
                 <Label label="The Solution" />
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold  leading-[1.1]">
                   That&apos;s where{" "}
-                  <span className="text-cyan-500 dark:text-cyan-700">
-                    custom development
-                  </span>{" "}
+                  <span className="text-(--cyan)">custom development</span>{" "}
                   transforms everything.
                 </h3>
               </motion.div>
@@ -143,7 +141,7 @@ export default function ProblemSolution() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="md:col-span-5 flex flex-col justify-end"
               >
-                <p className="text-xl text-foreground/70 leading-relaxed mb-8">
+                <p className="text-xl text-(--foreground)/80 leading-relaxed mb-8">
                   Hand-crafted code. Blazing performance. Designed to convert
                   casual browsers into loyal customers—all while you focus on
                   growing your business.
@@ -151,13 +149,13 @@ export default function ProblemSolution() {
                 <div className="flex items-center gap-4">
                   <a
                     href="#services"
-                    className="group inline-flex items-center gap-3 text-foreground font-semibold hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                    className="group inline-flex items-center gap-3 text-foreground font-semibold hover:text-(--cyan) transition-colors"
                   >
                     <span className="relative">
                       See how it works
-                      <span className="absolute bottom-0 left-0 w-full h-px bg-cyan-600 dark:bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <span className="absolute bottom-0 left-0 w-full h-px bg-(--cyan) scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </span>
-                    <span className="w-8 h-8 rounded-full border border-foreground/20 flex items-center justify-center group-hover:bg-cyan-600 dark:group-hover:bg-cyan-500 group-hover:border-cyan-600 dark:group-hover:border-cyan-500 transition-all duration-300">
+                    <span className="w-8 h-8 rounded-full border border-foreground/20 flex items-center justify-center group-hover:bg-(--cyan) group-hover:border-(--cyan) transition-all duration-300">
                       <svg
                         className="w-4 h-4 group-hover:translate-x-0.5 group-hover:text-white transition-all"
                         fill="none"

@@ -53,7 +53,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-dvh flex items-center justify-center px-6 py-32 overflow-hidden"
+      className="max-w-screen-2xl mx-auto relative min-h-dvh flex items-center justify-center px-6 py-32 overflow-hidden"
     >
       {/* PixelSnow Background - Fixed position covering entire section */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -72,7 +72,7 @@ export default function Hero() {
             <span className="inline-flex items-baseline">
               <RotatingText
                 texts={["Designer", "Developer", "Alchemist"]}
-                mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-500 overflow-hidden pt-1.5 md:pt-5 justify-center rounded-xl"
+                mainClassName="px-2 sm:px-2 md:px-3 bg-(--cyan) text-(--background) overflow-hidden pt-1.5 md:pt-5 justify-center rounded-md"
                 staggerFrom={"last"}
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -90,7 +90,7 @@ export default function Hero() {
         {/* Subheadline */}
         <p
           ref={subheadlineRef}
-          className="text-lg md:text-2xl max-w-2xl mx-auto mb-12 text-navy-600 dark:text-navy-300 leading-relaxed"
+          className="text-lg md:text-2xl max-w-2xl mx-auto mb-12 text-(--foreground)/80 leading-relaxed"
         >
           Small business, big impression. I design websites with purpose and
           performance so you stand out from the start.
@@ -103,11 +103,11 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
+      {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-navy-300 dark:border-navy-600 rounded-full flex items-start justify-center p-2">
           <div className="w-1.5 h-3 bg-cyan-500 rounded-full animate-pulse" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

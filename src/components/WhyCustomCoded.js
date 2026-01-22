@@ -52,13 +52,13 @@ export default function WhyCustomCoded() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-left sm:text-center mb-16"
         >
           <Label label="The Custom-Coded Difference" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  leading-snug">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  leading-[1.1]">
             Why <HeaderSpan span="Custom Development" />?
           </h2>
-          <p className="text-xl text-navy-600 dark:text-navy-300 max-w-3xl mx-auto">
+          <p className="text-xl text-(--foreground)/80 max-w-3xl mx-auto">
             No-code platforms are great for quick starts, but custom development
             gives you maximum control, performance, and long-term value.
           </p>
@@ -75,15 +75,15 @@ export default function WhyCustomCoded() {
               className="p-8 rounded-2xl bg-white dark:bg-navy-900 border border-navy-200 dark:border-navy-700 hover:border-cyan-500 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-12 h-12 mb-6 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                <benefit.icon className="w-6 h-6 text-cyan-600" />
+                <benefit.icon className="w-6 h-6 text-(--cyan)" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-navy-900 dark:text-navy-50">
+              <h3 className="text-xl font-bold mb-3 text-(--foreground)">
                 {benefit.title}
               </h3>
-              <p className="text-navy-600 dark:text-navy-300 leading-relaxed mb-4">
+              <p className="text-(--foreground)/80 leading-relaxed mb-4">
                 {benefit.description}
               </p>
-              <div className="inline-block px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 text-sm font-semibold">
+              <div className="inline-block px-4 py-2 rounded-lg bg-cyan-500/10 text-(--cyan) text-sm font-semibold">
                 {benefit.stat}
               </div>
             </motion.div>
@@ -103,7 +103,7 @@ export default function WhyCustomCoded() {
                 <tr className="bg-navy-900 dark:bg-navy-950 ">
                   <th className="text-left p-6 font-bold text-lg">Feature</th>
                   <th className="text-center p-6 font-bold text-lg">
-                    <span className="text-cyan-400">Custom-Coded</span>
+                    <span className="text-(--cyan)">Custom-Coded</span>
                   </th>
                   <th className="text-center p-6 font-semibold">
                     No-Code Platforms
@@ -123,17 +123,17 @@ export default function WhyCustomCoded() {
                         : "bg-white dark:bg-navy-950"
                     }`}
                   >
-                    <td className="p-6 font-medium text-navy-900 dark:text-navy-50">
+                    <td className="p-6 font-medium text-(--foreground)/80">
                       {row.feature}
                     </td>
                     <td className="text-center p-6">
                       {row.custom ? (
-                        <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cyan-500">
+                        <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-(--cyan)">
                           <Check className="w-5 h-5 text-white" />
                         </div>
                       ) : (
                         <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-navy-200 dark:bg-navy-700">
-                          <X className="w-5 h-5 text-navy-500 dark:text-navy-400" />
+                          <X className="w-5 h-5 text-(--foreground)/80" />
                         </div>
                       )}
                     </td>
@@ -159,13 +159,13 @@ export default function WhyCustomCoded() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
+          className="mt-12 text-left sm:text-center"
         >
-          <p className="text-navy-600 dark:text-navy-300 text-lg max-w-3xl mx-auto">
+          <p className=" text-lg max-w-3xl mx-auto text-(--foreground)/80">
             <strong>Bottom line:</strong> Custom development is the best choice
             when you want maximum performance, complete design control, and a
             website that truly stands out. For businesses serious about their
-            online presence, it's the smartest investment.
+            online presence, it&apos;s the smartest investment.
           </p>
         </motion.div>
       </div>

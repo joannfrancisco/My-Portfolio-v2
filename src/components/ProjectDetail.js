@@ -38,7 +38,7 @@ export default function ProjectDetail({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-16/8 rounded-2xl overflow-hidden shadow-2xl"
+              className="relative aspect-17/9 sm:aspect-16/8 rounded-2xl overflow-hidden shadow-2xl"
             >
               <Image
                 src={heroImage}
@@ -64,10 +64,10 @@ export default function ProjectDetail({
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <span className="inline-block px-3 py-1 text-xs font-mono uppercase tracking-widest text-cyan-800 dark:text-cyan-400 border border-cyan-600/30 dark:border-cyan-400/30 rounded-full mb-4">
+              <span className="inline-block px-3 py-1 text-xs font-mono uppercase tracking-widest text-(--cyan) border border-cyan-600/30 dark:border-cyan-400/30 rounded-full mb-4">
                 {badge}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-navy-50 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]">
                 {title}
               </h1>
             </motion.div>
@@ -89,10 +89,7 @@ export default function ProjectDetail({
                     </h3>
                     <div className="space-y-1">
                       {categories.map((category, idx) => (
-                        <p
-                          key={idx}
-                          className="text-lg text-navy-900 dark:text-navy-50"
-                        >
+                        <p key={idx} className="text-lg text-(--foreground)/80">
                           {category}
                         </p>
                       ))}
@@ -110,7 +107,7 @@ export default function ProjectDetail({
                       {techStack.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-4 py-2 rounded-full bg-white dark:bg-navy-800 text-navy-700 dark:text-navy-300 text-sm font-medium border border-navy-100 dark:border-navy-700 shadow-sm"
+                          className="px-3 py-1.5 rounded-full bg-(--cyan)/5 text-(--foreground)/70 text-sm font-medium border "
                         >
                           {tech}
                         </span>
@@ -126,7 +123,7 @@ export default function ProjectDetail({
                       href={liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-lg font-semibold text-cyan-600 hover:text-cyan-500 transition-colors group"
+                      className="inline-flex items-center gap-2 text-lg font-semibold text-(--cyan) transition-colors group"
                     >
                       <span>View Live Site</span>
                       <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -142,7 +139,7 @@ export default function ProjectDetail({
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="lg:col-span-2"
               >
-                <div className="space-y-6 text-lg text-navy-600 dark:text-navy-300 leading-relaxed">
+                <div className="space-y-6 text-lg text-(--foreground)/80 leading-relaxed">
                   {description.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -163,7 +160,7 @@ export default function ProjectDetail({
                 transition={{ duration: 0.6 }}
                 className="mb-12"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-navy-50">
+                <h2 className="text-3xl md:text-4xl font-bold ">
                   Project Showcase
                 </h2>
               </motion.div>
@@ -215,17 +212,17 @@ export default function ProjectDetail({
                   <Link href={nextProject.href} className="group block">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <span className="text-sm font-medium text-navy-500 dark:text-navy-400 uppercase tracking-wide">
+                        <span className="text-sm font-medium text-(--foreground)/80 uppercase tracking-tight">
                           Next Project
                         </span>
-                        <ArrowRight className="w-4 h-4 text-navy-400 group-hover:translate-x-2 transition-transform" />
+                        <ArrowRight className="w-4 h-4 text-(--foreground)/80 group-hover:translate-x-2 transition-transform" />
                       </div>
 
                       <div className="text-right">
-                        <h3 className="text-2xl md:text-3xl font-bold text-navy-900 dark:text-navy-50 group-hover:text-cyan-500 transition-colors">
+                        <h3 className="text-2xl md:text-3xl font-bold  group-hover:text-(--cyan) transition-colors">
                           {nextProject.title}
                         </h3>
-                        <p className="text-navy-500 dark:text-navy-400">
+                        <p className="text-(--foreground)/80">
                           {nextProject.category}
                         </p>
                       </div>
@@ -245,19 +242,19 @@ export default function ProjectDetail({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-8 md:p-12 rounded-2xl bg-linear-to-br from-navy-900 to-navy-800 dark:from-navy-950 dark:to-navy-900 text-center relative overflow-hidden"
+              className="sm:p-8 md:p-12 rounded-2xl bg-linear-to-br from-navy-900 to-navy-800 dark:from-navy-950 dark:to-navy-900 text-center relative overflow-hidden"
             >
               {/* Background decoration */}
-              <div className="absolute inset-0 opacity-10 pointer-events-none">
+              {/* <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/30 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl" />
-              </div>
+              </div> */}
 
               <div className="relative z-10 space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold ">
+                <h2 className="text-3xl md:text-4xl font-bold leading-[1.1]">
                   Want Something Similar?
                 </h2>
-                <p className="text-xl text-navy-300 max-w-2xl mx-auto">
+                <p className="text-xl text-navy-300 max-w-2xl mx-auto text-(--foreground)/80 ">
                   Let&apos;s discuss how I can help bring your project to life.
                 </p>
                 <div className="pt-2">

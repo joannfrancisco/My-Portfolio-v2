@@ -34,7 +34,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-navy-900 dark:bg-navy-950  relative overflow-hidden">
+    <section className="py-24 md:py-32 px-6 bg-white dark:bg-navy-900  relative overflow-hidden">
       {/* Background decoration */}
       {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl" />
@@ -50,12 +50,12 @@ export default function Testimonials() {
           className="text-left sm:text-center mb-16"
         >
           <Label label="Client Success Stories" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  leading-snug">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  leading-[1.1]">
             What <HeaderSpan span="Clients Say" />
           </h2>
-          <p className="text-xl text-navy-300 max-w-2xl mx-auto">
-            Don't just take my word for it. Hear from small business owners
-            who've transformed their online presence.
+          <p className="text-xl text-navy-300 max-w-2xl mx-auto text-(--foreground)/80">
+            Don&apos;t just take my word for it. Hear from small business owners
+            who&apos;ve transformed their online presence.
           </p>
         </motion.div>
 
@@ -70,9 +70,9 @@ export default function Testimonials() {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative p-8 rounded-2xl bg-navy-800/50 dark:bg-navy-900/50 backdrop-blur-sm border border-navy-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1">
+              <div className="relative p-8 rounded-2xl bg-white dark:bg-navy-900 backdrop-blur-xl border border-navy-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-1">
                 {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center shadow-xl shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-(--cyan) flex items-center justify-center shadow-xl shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-6 h-6 text-white" />
                 </div>
 
@@ -81,14 +81,14 @@ export default function Testimonials() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-cyan-400 text-cyan-400"
+                      className="w-5 h-5 fill-(--cyan) text-(--cyan)"
                     />
                   ))}
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-navy-100 leading-relaxed mb-6 text-lg italic">
-                  "{testimonial.text}"
+                <p className="text-navy-100 leading-relaxed mb-6 text-lg italic text-(--foreground)/80">
+                  &quot;{testimonial.text}&quot;
                 </p>
 
                 {/* Author Info */}
@@ -106,18 +106,20 @@ export default function Testimonials() {
 
                   {/* Details */}
                   <div>
-                    <p className="font-bold text-lg">{testimonial.author}</p>
-                    <p className="text-sm text-navy-400">
+                    <p className="font-bold text-lg text-(--foreground)/80">
+                      {testimonial.author}
+                    </p>
+                    <p className="text-sm text-(--foreground)/80">
                       {testimonial.position}
                     </p>
-                    <p className="text-sm text-cyan-400 font-medium">
+                    <p className="text-sm text-(--foreground)/80 font-medium">
                       {testimonial.company}
                     </p>
                   </div>
                 </div>
 
                 {/* Decorative corner accent */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-linear-to-tl from-cyan-500/5 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-linear-to-tl from-(--cyan)/5 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}
@@ -130,8 +132,12 @@ export default function Testimonials() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-navy-300 text-lg mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-[1.1]">
             Ready to join these successful businesses?
+          </h3>
+          <p className="text-(--foreground)/80 text-lg mb-6 max-w-2xl mx-auto">
+            Let&apos;s build a website that reflects your brand and supports
+            your business goals.
           </p>
 
           <Button href="#contact" icon={null}>

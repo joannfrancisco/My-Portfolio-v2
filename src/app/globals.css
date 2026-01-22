@@ -31,8 +31,9 @@
   --muted-foreground: var(--navy-600);
   --accent: var(--cyan-500);
   --accent-hover: var(--cyan-600);
-  --button: var(--cyan-500);
-  --button-hover: var(--navy-900);
+  --button: var(--navy-50);
+  --button-hover: var(--cyan-600);
+  --cyan: var(--cyan-600);
 
   /* Font fallbacks */
   --font-display: ui-sans-serif, system-ui, sans-serif;
@@ -48,6 +49,7 @@
   --muted-foreground: var(--navy-400);
   --button: var(--navy-50);
   --button-hover: var(--cyan-500);
+  --cyan: var(--cyan-500);
 
   /* Important: Override Tailwind's default colors for dark mode */
   color-scheme: dark;
@@ -75,11 +77,6 @@ h5,
 h6,
 .navlink {
   font-family: var(--font-getai-grotesk), var(--font-display);
-}
-
-p {
-  color: var(--foreground);
-  opacity: 0.9;
 }
 
 /* .font-logo {

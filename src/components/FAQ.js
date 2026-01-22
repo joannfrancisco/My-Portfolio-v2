@@ -17,92 +17,67 @@ export default function FAQ() {
       id: 1,
       title: "What kind of websites do you build?",
       content:
-        "I specialize in custom-coded websites, portfolios, and landing pages for small business owners. Every site is hand-built from scratch - no templates, no page builders - just clean, fast code designed specifically for your business goals.",
+        "Custom-coded websites for small businesses like yours. Think portfolios, business sites, and landing pages. No templates or page builders, just clean code built specifically for your needs.",
     },
     {
       id: 3,
       title: "How much does a website cost?",
       content:
-        "Every project is unique, so pricing depends on your specific needs, goals, and features. I work with various budgets and can create a custom package that fits your business. After our initial conversation, I'll provide a transparent quote with no hidden fees. Most small business websites range from $800 to $5,000, but I'm happy to discuss budget-friendly options.",
+        "It really depends on what you need. Most small business websites run between $800 and $5,000, but I offer budget-friendly rates and can work with different budgets. After we chat, I'll give you a clear quote with no hidden fees.",
     },
     {
       id: 4,
       title: "Do you offer payment plans?",
       content:
-        "Yes! I understand cash flow matters for small businesses. I typically work with a 50% deposit to start and 50% upon completion, but I'm open to discussing flexible payment arrangements that work for your budget.",
+        "Yes! I usually do 50% to start and 50% when we're done, but I'm flexible. We can work out a payment plan that fits your budget.",
     },
     {
       id: 5,
-      title: "How long does it take to build a website?",
+      title: "How long does it take?",
       content:
-        "Most projects take 2-4 weeks from start to launch, depending on complexity and how quickly you can provide content and feedback. I'll give you a clear timeline during our initial consultation and keep you updated throughout the process.",
+        "Most sites go live in 1 to 4 weeks, depending on how complex your project is and how quickly you can give feedback. I'll give you a realistic timeline upfront and keep you updated along the way.",
     },
     {
       id: 6,
-      title: "What do I need to provide?",
+      title: "What do you need from me?",
       content:
-        "I'll need your branding materials (logo, colors, fonts if you have them), any text content you want on the site, and high-quality images or photos. If you don't have everything ready, no problem - I can guide you through the process and even help with content recommendations.",
+        "Your logo, brand colors, any text you want on the site, and some quality images. Don't have everything ready? That's totally fine. I'll walk you through what we need.",
     },
-    // {
-    //   id: 7,
-    //   title: "Will my website work on mobile phones?",
-    //   content:
-    //     "Absolutely! Every website I build is fully responsive, meaning it looks great and functions perfectly on phones, tablets, and desktops. With most people browsing on mobile, this isn't optional - it's standard.",
-    // },
-    // {
-    //   id: 8,
-    //   title: "Can I update the website myself?",
-    //   content:
-    //     "Yes! For simple content updates like text and images, I can set you up with an easy-to-use content management system. I'll also provide clear documentation and a quick training session so you feel confident making changes. For anything more complex, I'm always available to help.",
-    // },
     {
       id: 9,
-      title: "Do you provide hosting and domain setup?",
+      title: "Do you handle hosting and domains?",
       content:
-        "I can help you choose the right hosting provider and guide you through domain registration. While you'll own and pay for these separately (usually $10-30/month for hosting), I'll handle all the technical setup and make sure everything runs smoothly.",
+        "I can help you pick the right hosting and get your domain set up. You'll own it and pay for it directly (usually $10 to $30 a month), but I'll take care of all the technical setup.",
     },
     {
       id: 10,
-      title: "What happens after the website launches?",
+      title: "What happens after launch?",
       content:
-        "You get 30 days of free support for any bugs or technical issues. After that, I offer ongoing maintenance packages starting at $50/month, which includes updates, backups, security monitoring, and minor content changes. Many clients prefer this peace of mind, but it's completely optional.",
+        "You get 30 days of free support for any bugs or issues. After that, I offer maintenance packages starting at $50 a month if you want help with updates, backups, and peace of mind. Totally optional though.",
     },
     {
       id: 11,
-      title: "Will my website be optimized for search engines (SEO)?",
+      title: "Will my site be SEO-friendly?",
       content:
-        "Yes! Every site I build includes fundamental SEO best practices: fast loading speeds, mobile optimization, clean code, proper heading structure, and meta tags. This gives you a strong foundation. For advanced SEO services like keyword research or ongoing optimization, I can recommend trusted specialists.",
+        "Absolutely! Every site I build includes SEO basics like fast loading, mobile optimization, clean code, and proper structure. For advanced SEO stuff, I can connect you with trusted specialists.",
     },
-    // {
-    //   id: 12,
-    //   title: "Do you redesign existing websites?",
-    //   content:
-    //     "Absolutely! If your current website is outdated, slow, or not converting visitors into customers, I can rebuild it from the ground up with modern design and performance in mind. I'll keep what's working and improve everything else.",
-    // },
     {
       id: 13,
-      title: "What makes you different from other web designers?",
+      title: "What makes you different?",
       content:
-        "I focus exclusively on small businesses and understand the challenges you face. Every site I build is custom-coded for speed and performance, not just aesthetics. I'm also transparent about pricing, timelines, and what you're getting. You're not just another client - you're a business I want to see succeed.",
+        "I focus on small businesses and actually understand the challenges you're dealing with. Every site is custom-coded for speed and performance, not just pretty design. Plus, I'm upfront about pricing and timelines. I genuinely want to see your business succeed.",
     },
-    // {
-    //   id: 14,
-    //   title: "Can you integrate forms, booking systems, or e-commerce?",
-    //   content:
-    //     "Yes! I can add contact forms, appointment booking, payment processing, email marketing integration, and basic e-commerce functionality. If you need advanced features, I'll let you know upfront whether it's within scope or if you'd need a specialized platform.",
-    // },
     {
       id: 15,
       title: "How do we get started?",
       content:
-        "Simple! Send me a message or email describing your project. We'll schedule a free consultation call to discuss your goals, timeline, and budget. From there, I'll send you a proposal, and if it's a good fit, we'll get started right away.",
+        "Just send me a message telling me about your project! We'll jump on a free call to talk about your goals and budget. If it feels like a good fit, I'll send over a proposal and we can get started.",
     },
-
     {
       id: 17,
-      title: "What if I need help after my website is live?",
+      title: "Need help after launch?",
       content:
-        "I'm here for you! The first 30 days after launch include free support for any bugs or issues. After that, you can reach out anytime for help - either as a one-time service or through a monthly maintenance plan. I want to make sure you always feel supported.",
+        "I've got you! The first 30 days are free for any bugs or issues. After that, you can always reach out. I offer one-time fixes or monthly plans, whatever works best for you.",
     },
   ];
 
@@ -120,12 +95,12 @@ export default function FAQ() {
           className="text-left sm:text-center mb-16"
         >
           <Label label="Questions & Answers" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
             Frequently Asked <HeaderSpan span="Questions" />
           </h2>
-          <p className="text-xl text-navy-600">
-            Everything you need to know about working together. Don't see your
-            question? Just ask!
+          <p className="text-xl text-(--foreground)/80">
+            Everything you need to know about working together. Don&apos;t see
+            your question? Just ask!
           </p>
         </motion.div>
 
@@ -136,20 +111,20 @@ export default function FAQ() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="rounded-2xl bg-white border border-navy-200 overflow-hidden hover:border-cyan-500 transition-colors"
+              className="rounded-2xl bg-white border  overflow-hidden transition-colors"
             >
               <button
                 onClick={() => toggleAccordion(item.id)}
                 className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-warm-50 transition-colors"
               >
-                <span className="text-lg md:text-xl font-semibold text-navy-900 pr-4">
+                <span className="text-lg md:text-xl font-semibold text-(--foreground)/90 pr-4">
                   {item.title}
                 </span>
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center">
+                <div className="shrink-0 w-8 h-8 rounded-full bg-cyan-500/10 flex items-center justify-center">
                   {openId === item.id ? (
-                    <Minus className="w-5 h-5 text-cyan-600" />
+                    <Minus className="w-5 h-5 text-(--cyan)" />
                   ) : (
-                    <Plus className="w-5 h-5 text-cyan-600" />
+                    <Plus className="w-5 h-5 text-(--cyan)" />
                   )}
                 </div>
               </button>
@@ -163,7 +138,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-6 text-navy-600 leading-relaxed">
+                    <div className="px-8 pb-6 text-navy-600 leading-relaxed text-(--foreground)/80">
                       {item.content}
                     </div>
                   </motion.div>
@@ -177,10 +152,12 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center p-8 rounded-2xl bg-white border border-navy-200"
+          className="mt-12 text-center sm:p-8 rounded-2xl"
         >
-          <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
-          <p className="text-navy-600 mb-6">
+          <h3 className="text-2xl font-bold mb-3 leading-[1.1]">
+            Still have questions?
+          </h3>
+          <p className="text-(--foreground)/80 mb-6">
             Im here to help. Reach out and Ill get back to you within 24 hours.
           </p>
 

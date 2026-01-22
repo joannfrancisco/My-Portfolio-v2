@@ -86,13 +86,13 @@ export default function Process() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-left sm:text-center mb-16"
         >
           <Label label="How It Works" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-snug">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
             Simple, Transparent <HeaderSpan span="Process" />
           </h2>
-          <p className="text-xl text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
+          <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
             From first conversation to launch, here&apos;s exactly what to
             expect when working together.
           </p>
@@ -130,7 +130,7 @@ export default function Process() {
                         {step.number}
                       </span>
                       <div className={index % 2 === 0 ? "lg:text-right" : ""}>
-                        <h3 className="text-2xl font-bold mb-1 text-navy-900 dark:text-navy-50">
+                        <h3 className="text-2xl font-bold mb-1 text-(--foreground)">
                           {step.title}
                         </h3>
                         <span className="text-sm text-cyan-600 font-semibold">
@@ -141,7 +141,7 @@ export default function Process() {
 
                     {/* Description - Right aligned for even indices (01, 03) */}
                     <p
-                      className={`text-navy-600 dark:text-navy-300 leading-relaxed mb-6 ${
+                      className={`text-(--foreground)/80 leading-relaxed mb-6 ${
                         index % 2 === 0 ? "lg:text-right" : ""
                       }`}
                     >
@@ -160,7 +160,7 @@ export default function Process() {
                           }`}
                         >
                           <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0" />
-                          <span className="text-sm text-navy-700 dark:text-navy-300">
+                          <span className="text-sm text-(--foreground)/80">
                             {detail}
                           </span>
                         </li>
@@ -187,12 +187,12 @@ export default function Process() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-16 text-center p-8 rounded-2xl bg-linear-to-br from-navy-900 to-navy-800 dark:from-navy-800 dark:to-navy-700 "
+          className="mt-16 text-center sm:p-8 rounded-2xl bg-linear-to-br from-navy-900 to-navy-800 dark:from-navy-800 dark:to-navy-700 "
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-[1.1]">
             Timeline: 2-3 Weeks Start to Finish
           </h3>
-          <p className="text-navy-300 dark:text-navy-400 text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-(--foreground)/80 text-lg mb-6 max-w-2xl mx-auto">
             Most projects launch within a month. Complex projects may take
             longer, but I&apos;ll give you a clear timeline upfront.
           </p>

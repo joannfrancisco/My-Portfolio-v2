@@ -16,26 +16,26 @@ export default function Footer() {
       { name: "Contact", href: "/#contact" },
     ],
     Services: [
-      { name: "Website Design", href: "/#services" },
+      { name: "UI/UX Design", href: "/#services" },
       { name: "Website Development", href: "/#services" },
-      { name: "Performance & SEO", href: "/#services" },
-      { name: "Integrations", href: "/#services" },
+      { name: "E-Commerce Websites", href: "/#services" },
+      { name: "Landing Pages", href: "/#services" },
     ],
   };
 
   return (
-    <footer className="bg-navy-500 dark:bg-navy-950 pt-20 pb-8 px-6">
+    <footer className="bg-white dark:bg-navy-900 pt-20 pb-8 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Main footer content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-bold mb-4">
-              <span className="font-logo text-cyan-600 dark:text-cyan-600">
+              <span className="font-logo text-(--cyan) dark:text-(--cyan)">
                 {"< ann />"}
               </span>
             </h3>
-            <p className="text-navy-300 dark:text-navy-400 leading-relaxed mb-6 max-w-md">
+            <p className="text-(--foreground)/80 leading-relaxed mb-6 max-w-md">
               Full-stack developer specializing in custom websites for small
               businesses. Building digital success stories, one project at a
               time.
@@ -54,7 +54,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="inline-block opacity-80 text-navy-300 dark:text-navy-400 hover:text-cyan-400 dark:hover:text-cyan-400 hover:translate-x-1 transition-all duration-300"
+                      className="inline-block opacity-80 text-navy-300 dark:text-navy-400 hover:text-(--cyan) dark:hover:text-(--cyan) hover:translate-x-1 transition-all duration-300"
                     >
                       {link.name}
                     </a>

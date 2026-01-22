@@ -83,10 +83,10 @@ export default function FinalCTA() {
           className="text-left sm:text-center mb-16"
         >
           <Label label="Get in Touch" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-snug">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
             Ready to Elevate <HeaderSpan span="Your Online Presence" /> ?
           </h2>
-          <p className="text-xl text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
+          <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
             Let&apos;s discuss your goals and build a website that helps your
             business grow.
           </p>
@@ -101,10 +101,10 @@ export default function FinalCTA() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-navy-900 dark:text-navy-50">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-(--foreground)">
                 Let&apos;s Build Something Amazing
               </h3>
-              <p className="text-lg text-navy-600 dark:text-navy-300 leading-relaxed mb-8">
+              <p className="text-lg text-(--foreground)/80 leading-relaxed mb-8">
                 Whether you have a detailed plan or just an idea, I&apos;d love
                 to hear about it. Send me a message and I&apos;ll get back to
                 you within 24 hours.
@@ -113,16 +113,14 @@ export default function FinalCTA() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-cyan-600" />
+                <div className="w-12 h-12 rounded-xl bg-(--cyan)/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-6 h-6 text-(--cyan)" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-navy-900 dark:text-navy-50 mb-1">
-                    Email
-                  </h4>
+                  <h4 className="font-semibold  mb-1">Email</h4>
                   <a
                     href="mailto:info@joannfrancisco.com"
-                    className="text-navy-600 dark:text-navy-300 hover:text-cyan-600 transition-colors"
+                    className="text-(--foreground)/80 hover:text-(--cyan) transition-colors"
                   >
                     info@joannfrancisco.com
                   </a>
@@ -130,17 +128,15 @@ export default function FinalCTA() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-cyan-600" />
+                <div className="w-12 h-12 rounded-xl bg-(--cyan)/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-(--cyan)" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-navy-900 dark:text-navy-50 mb-1">
-                    Location
-                  </h4>
-                  <p className="text-navy-600 dark:text-navy-300">
+                  <h4 className="font-semibold  mb-1">Location</h4>
+                  <p className="text-(--foreground)/80">
                     San Carlos City, Philippines
                   </p>
-                  <p className="text-sm text-navy-500 dark:text-navy-400 mt-1">
+                  <p className="text-sm text-(--foreground)/80 mt-1">
                     Available for remote projects worldwide
                   </p>
                 </div>
@@ -153,35 +149,35 @@ export default function FinalCTA() {
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-(--cyan) flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">1</span>
                   </div>
-                  <span className="text-navy-600 dark:text-navy-300">
+                  <span className="text-(--foreground)/80">
                     I&apos;ll review your message and respond within 24 hours
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-(--cyan) flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">2</span>
                   </div>
-                  <span className="text-navy-600 dark:text-navy-300">
+                  <span className="text-(--foreground)/80">
                     I&apos;ll send you a questionnaire to understand your
                     business and provide an estimated price
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-(--cyan) flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">3</span>
                   </div>
-                  <span className="text-navy-600 dark:text-navy-300">
+                  <span className="text-(--foreground)/80">
                     We&apos;ll schedule a free consultation call
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-(--cyan) flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-white text-xs font-bold">4</span>
                   </div>
-                  <span className="text-navy-600 dark:text-navy-300">
+                  <span className="text-(--foreground)/80">
                     I&apos;ll send you a detailed proposal with pricing and
                     timeline
                   </span>
@@ -284,22 +280,6 @@ export default function FinalCTA() {
                     placeholder="What kind of website do you need? What are your main goals?"
                   />
                 </div>
-                {/* 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-navy-900 dark:bg-cyan-500 text-white rounded-full font-semibold hover:bg-cyan-500 dark:hover:bg-cyan-600 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group"
-                >
-                  {isSubmitting ? (
-                    <span>Sending...</span>
-                  ) : (
-                    <>
-                      <span>Send Message</span>
-                      <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                    </>
-                  )}
-                    
-                </button> */}
 
                 <ButtonContact
                   onClick={(e) => {}}
@@ -316,7 +296,7 @@ export default function FinalCTA() {
                   )}
                 </ButtonContact>
 
-                <p className="text-sm text-navy-500 dark:text-navy-400 text-center">
+                <p className="text-sm text-(--foreground)/50 text-center">
                   By submitting this form, you agree to receive email
                   communication from me.
                 </p>

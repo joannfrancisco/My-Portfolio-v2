@@ -46,7 +46,7 @@ export default function FeaturedWork() {
   return (
     <section
       id="work"
-      className="py-24 md:py-32 px-6 bg-warm-50 dark:bg-navy-800"
+      className="py-24 md:py-32 px-6 bg-white dark:bg-navy-900"
     >
       <div ref={ref} className="max-w-7xl mx-auto ">
         <motion.div
@@ -56,11 +56,11 @@ export default function FeaturedWork() {
           className="text-left sm:text-center mb-16 md:mb-24"
         >
           <Label label="Featured Work" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-snug">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
             Building <HeaderSpan span="Digital Experiences" />
           </h2>
 
-          <p className="text-xl text-navy-600 dark:text-navy-300 max-w-2xl mx-auto">
+          <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
             From client projects to personal explorations - here&apos;s some of
             my recent work.
           </p>
@@ -89,7 +89,7 @@ export default function FeaturedWork() {
                     rel="noopener noreferrer"
                     className="block group"
                   >
-                    <div className="relative aspect-16/8 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
+                    <div className="relative aspect-17/9 sm:aspect-16/8 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -112,11 +112,11 @@ export default function FeaturedWork() {
                 {/* Content - 35% width on desktop */}
                 <div className="w-full lg:w-[35%]">
                   <div className="space-y-5">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy-900 dark:text-navy-50">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-(--foreground) leading-[1.1]">
                       {project.title}
                     </h3>
 
-                    <p className="text-base lg:text-lg text-navy-600 dark:text-navy-400 leading-relaxed">
+                    <p className="text-base lg:text-lg text-(--foreground)/85 leading-relaxed">
                       {project.description}
                     </p>
 
@@ -125,7 +125,7 @@ export default function FeaturedWork() {
                       {project.tech.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1.5 rounded-full bg-navy-100 dark:bg-navy-700 text-navy-700 dark:text-navy-300 text-sm font-medium border border-navy-200 dark:border-navy-600"
+                          className="px-3 py-1.5 rounded-full bg-(--cyan)/5 text-(--foreground)/70 text-sm font-medium border "
                         >
                           {tech}
                         </span>
@@ -137,13 +137,13 @@ export default function FeaturedWork() {
                       <Link
                         href={project.detailsLink}
                         className="inline-flex items-center gap-2 text-base font-semibold group/link"
-                        style={{ color: "var(--foreground)" }}
+                        style={{ color: "var(--cyan)" }}
                       >
                         <span className="relative">
                           Show More
                           <span
                             className="absolute left-0 -bottom-1 w-0 h-0.5 group-hover/link:w-full transition-all duration-300"
-                            style={{ backgroundColor: "var(--foreground)" }}
+                            style={{ backgroundColor: "var(--cyan)" }}
                           />
                         </span>
                         <ArrowRight className="w-5 h-5 group-hover/link:translate-x-2 transition-transform duration-300" />
@@ -161,7 +161,7 @@ export default function FeaturedWork() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="p-8 md:p-12 rounded-2xl text-center relative overflow-hidden"
+          className="sm:p-8 md:p-12 rounded-2xl text-center relative overflow-hidden"
           // style={{
           //   background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
           // }}
@@ -173,10 +173,10 @@ export default function FeaturedWork() {
           </div> */}
 
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-[1.1]">
               Want to See More of My Work?
             </h3>
-            <p className="text-navy-300 text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-navy-300 text-lg mb-6 max-w-2xl mx-auto text-(--foreground)/80">
               Explore my full portfolio including web development projects,
               UI/UX designs, and web applications.
             </p>
