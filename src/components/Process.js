@@ -58,7 +58,7 @@ export default function Process() {
       number: "04",
       icon: Rocket,
       title: "Launch & Support",
-      duration: "Week 2-3",
+      duration: "Week 2-4",
       description:
         "Final testing, deployment, and 30 days of free support. Your site goes live and starts working for you.",
       details: [

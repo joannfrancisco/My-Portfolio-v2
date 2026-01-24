@@ -1,21 +1,21 @@
 {
   "name": "Jo Ann Francisco - Web Designer & Developer",
   "short_name": "Jo Ann Francisco",
-  "description": "Portfolio and services website for freelance web designer and full-stack developer Jo Ann Francisco",
+  "description": "Portfolio and services website for freelance web designer and full-stack developer Jo Ann Francisco specializing in custom-coded websites for small businesses",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -24,10 +24,34 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
     }
   ],
-  "categories": ["portfolio", "design", "development"],
+  "categories": ["portfolio", "design", "development", "business"],
   "lang": "en-US",
   "dir": "ltr",
-  "scope": "/"
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
 }

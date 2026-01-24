@@ -36,9 +36,9 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: "PORTFOLIO", href: "/portfolio", isPage: true },
     { name: "SERVICES", href: "/#services", isPage: false },
     { name: "PROCESS", href: "/process", isPage: true },
+    { name: "PORTFOLIO", href: "/portfolio", isPage: true },
     { name: "FAQ", href: "/#faq", isPage: false },
     { name: "ABOUT", href: "/#about", isPage: false },
   ];
@@ -301,7 +301,7 @@ export default function Navigation() {
     return (
       <div
         ref={wrapperRef}
-        className="inline-block origin-center hover:text-(--cyan) transition-colors"
+        className="inline-block origin-center text-(--foreground)/85 hover:text-(--cyan) transition-colors"
       >
         <ThemeToggle />
       </div>
@@ -393,7 +393,7 @@ export default function Navigation() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/5 dark:bg-navy-900/5 backdrop-blur-xl   shadow-sm py-2"
+            ? "bg-white/5 dark:bg-navy-900/5 backdrop-blur-lg   shadow-sm py-2"
             : "bg-transparent py-4"
         }`}
       >
@@ -409,7 +409,7 @@ export default function Navigation() {
             </div>
 
             {/* Desktop Navigation - Center (xl screens only) */}
-            <div className="hidden xl:flex items-center justify-center gap-8 flex-1">
+            <div className="hidden xl:flex items-center justify-center gap-8 flex-1 text-(--foreground)/85">
               {navLinks.map((link) => (
                 <RibbonLink
                   key={link.name}
@@ -449,7 +449,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 xl:hidden bg-white"
+            className="fixed inset-0 z-40 xl:hidden bg-(--background)"
           >
             <div className="flex flex-col h-full pt-24 pb-8 px-8">
               {/* Navigation Links - Left Aligned */}
@@ -462,7 +462,7 @@ export default function Navigation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-3xl navlink text-foreground hover:text-(--cyan) transition-colors"
+                    className="text-3xl navlink text-(--foreground) hover:text-(--cyan) transition-colors"
                   >
                     {link.name}
                   </motion.a>

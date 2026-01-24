@@ -16,22 +16,6 @@ export default function About() {
       id="about"
       className="py-24 md:py-32 px-6 bg-white dark:bg-navy-900"
     >
-      {/* <div ref={ref} className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-600 text-sm font-semibold mb-4">
-            About Me
-          </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 chrome-text leading-snug">
-            Building Digital Success Stories
-          </h2>
-        </motion.div>
-      </div> */}
-
       <div ref={ref} className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}

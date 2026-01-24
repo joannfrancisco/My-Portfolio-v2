@@ -16,12 +16,12 @@ export default function Services() {
       icon: Paintbrush,
       title: "UI/UX Design",
       description:
-        "Your website looks outdated and visitors leave within seconds? Beautiful, intuitive interfaces that guide users naturally toward taking action—because first impressions matter.",
+        "Beautiful, intuitive interfaces that guide users naturally toward taking action. First impressions matter—make yours count with design that converts.",
       forYouIf: [
-        "Your current site feels unprofessional",
-        "Users can't find what they need",
-        "Mobile experience is broken or clunky",
-        "Competitors' sites look better than yours",
+        "Your website looks outdated and unprofessional",
+        "You're starting from scratch and need a design that stands out",
+        "Visitors leave within seconds without engaging",
+        "Your mobile experience is broken or non-existent",
       ],
       features: [
         "User research & wireframing",
@@ -34,54 +34,54 @@ export default function Services() {
       icon: Code,
       title: "Web Development",
       description:
-        "Tired of slow, buggy websites that don't work right? Lightning-fast, custom-coded solutions built with modern technology that actually perform under pressure.",
+        "Lightning-fast, custom-coded websites built with modern technology. No templates. No limitations. Just clean, performant code designed for your business.",
       forYouIf: [
-        "Your site takes forever to load",
-        "You're stuck with a limited template",
-        "You need custom features no plugin offers",
-        "Your current site breaks on updates",
+        "Your current site is painfully slow and loses customers",
+        "You don't have a website yet and want to do it right",
+        "You're stuck with a template that can't do what you need",
+        "You need custom features that plugins can't deliver",
       ],
       features: [
         "Next.js & React development",
         "Custom web applications",
         "API integration & backend",
-        "SEO optimization built-in",
+        "Progressive Web Apps (PWA)",
       ],
     },
     {
       icon: ShoppingCart,
       title: "E-Commerce",
       description:
-        "Ready to sell online but overwhelmed by the options? Complete online store solutions combining custom design with Shopify's powerful backend—get selling fast without sacrificing quality.",
+        "Complete online store solutions that actually convert. Custom design meets Shopify's powerful backend—professional, scalable, and ready to make money.",
       forYouIf: [
-        "You want to start selling online now",
-        "Generic store templates aren't cutting it",
-        "You need inventory management that works",
-        "Cart abandonment is killing your sales",
+        "You're ready to start selling online but don't know where to begin",
+        "Your current store looks generic and doesn't match your brand",
+        "Cart abandonment is costing you sales every day",
+        "You need a store that scales as you grow",
       ],
       features: [
         "Custom Next.js + Shopify integration",
         "Headless commerce architecture",
-        "Secure payment processing",
-        "Product & inventory management",
+        "Secure payment & checkout optimization",
+        "Inventory & order management",
       ],
     },
     {
       icon: FileText,
-      title: "Landing Pages",
+      title: "Landing Page",
       description:
-        "Running ads but getting zero results? High-converting landing pages laser-focused on one goal: turning visitors into customers with compelling copy and strategic design.",
+        "High-converting landing pages laser-focused on one goal: turning visitors into customers. Perfect for campaigns, product launches, and lead generation.",
       forYouIf: [
-        "Your ads send traffic but no one converts",
-        "You're launching a new product or service",
-        "You need to capture leads fast",
-        "Your homepage is too cluttered for campaigns",
+        "You're running ads but getting terrible conversion rates",
+        "You're launching a new product and need a dedicated page",
+        "Your homepage is too cluttered for focused campaigns",
+        "You need to capture leads fast without a full website rebuild",
       ],
       features: [
-        "Conversion-focused design",
+        "Conversion-focused design & copy",
         "A/B testing ready structure",
         "Lead capture forms & CTAs",
-        "Analytics & tracking integration",
+        "Analytics & performance tracking",
       ],
     },
   ];
@@ -131,7 +131,7 @@ export default function Services() {
                 </p>
 
                 {/* Is This For You Section */}
-                <div className="mb-6 p-4 rounded-xl bg-(--background)/40 border border-gray-200 dark:border-navy-700">
+                <div className="mb-6 p-4 rounded-xl bg-(--background)/20 border border-gray-200 dark:border-navy-700">
                   <h4 className="text-sm font-bold text-(--cyan) mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-(--cyan)" />
                     Is this for you?
@@ -150,14 +150,14 @@ export default function Services() {
 
                 {/* What You Get */}
                 <div className="pt-4 border-t border-gray-200 dark:border-navy-700">
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-(--foreground)/50 mb-3">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-(--foreground)/80 mb-3">
                     What&apos;s included:
                   </h4>
                   <ul className="grid grid-cols-2 gap-2">
                     {service.features.map((feature, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2 text-xs text-(--foreground)/60"
+                        className="flex items-start gap-2 text-xs text-(--foreground)/65"
                       >
                         <span className="text-(--cyan)">•</span>
                         <span>{feature}</span>

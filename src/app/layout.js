@@ -57,22 +57,18 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
     ],
     shortcut: "/favicon.ico",
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    // other: [
-    //   {
-    //     rel: 'mask-icon',
-    //     url: '/safari-pinned-tab.svg',
-    //     color: '#06b6d4',
-    //   },
-    // ],
+    other: [
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
 
   manifest: "/manifest.json",
@@ -98,6 +94,7 @@ export const metadata = {
     // Location-based
     "web developer Philippines",
     "web designer Philippines",
+    "Cebu web developer",
     "Bacolod web developer",
     "Filipino web developer",
 
@@ -116,6 +113,7 @@ export const metadata = {
     "business website design",
     "e-commerce development",
     "landing page design",
+    "custom coded websites",
 
     // Target Clients
     "small business websites",
@@ -163,8 +161,8 @@ export const metadata = {
       "Modern, high-performance websites designed to help small businesses grow. Freelance web designer based in the Philippines.",
     images: ["/twitter-image.png"],
 
-    creator: "@joannfrancisco",
-    site: "@joannfrancisco",
+    creator: "@joannvfrancisco",
+    site: "@joannvfrancisco",
   },
 
   // Robots & Indexing
@@ -237,11 +235,15 @@ export default function RootLayout({ children }) {
       "https://github.com/joannfrancisco",
       "https://www.instagram.com/joannfrancisco.dev/",
       "https://www.behance.net/joannvfrancisco",
-      "https://twitter.com/joannfrancisco",
+      "https://twitter.com/joannvfrancisco",
+      "https://threads.com/annf.dev",
     ],
 
     // Skills & Expertise
     knowsAbout: [
+      "Website",
+      "E-Commerce",
+      "Landing Page",
       "Web Development",
       "Web Design",
       "Frontend Development",
@@ -254,6 +256,7 @@ export default function RootLayout({ children }) {
       "UI/UX Design",
       "Responsive Design",
       "Performance Optimization",
+      "Custom Web Development",
     ],
 
     // Work
@@ -264,7 +267,8 @@ export default function RootLayout({ children }) {
         "@type": "Country",
         name: "Philippines",
       },
-      skills: "Next.js, React, TypeScript, Tailwind CSS, UI/UX Design",
+      skills:
+        "Next.js, React, TypeScript, Tailwind CSS, UI/UX Design, Custom Web Development",
     },
   };
 
@@ -281,6 +285,15 @@ export default function RootLayout({ children }) {
       "@id": "https://www.joannfrancisco.com/#person",
     },
     inLanguage: "en-US",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          "https://www.joannfrancisco.com/portfolio?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   // Professional Service Schema
@@ -303,12 +316,14 @@ export default function RootLayout({ children }) {
       "UI/UX Design",
       "Responsive Web Design",
       "Website Optimization",
+      "Custom Web Development",
     ],
     areaServed: {
       "@type": "Country",
       name: "Philippines",
     },
     availableLanguage: ["English", "Filipino"],
+    priceRange: "$800 - $5000",
   };
 
   // Breadcrumb Schema (base)
@@ -328,31 +343,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Favicons - PNG first (Google prefers this) */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="48x48"
-          href="/favicon-48x48.png"
-        />
-
-        {/* ICO for legacy support */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-
-        {/* Apple */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-
-        {/* Theme Color */}
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-
         {/* Structured Data - Person */}
         <script
           type="application/ld+json"

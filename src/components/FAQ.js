@@ -57,9 +57,9 @@ export default function FAQ() {
     },
     {
       id: 11,
-      title: "Will my site be SEO-friendly?",
+      title: "Will my website rank on Google?",
       content:
-        "Absolutely! Every site I build includes SEO basics like fast loading, mobile optimization, clean code, and proper structure. For advanced SEO stuff, I can connect you with trusted specialists.",
+        "Your website will be built with all the technical SEO essentials Google requires: lightning-fast load speeds, mobile-first design, clean code, optimized images, proper meta tags, XML sitemaps, and structured data markup. These fundamentals are included in every build at no extra cost and give you a competitive foundation for ranking. However, reaching page one requires ongoing work—quality content, keyword targeting, backlinks, and regular updates. I make sure your site has the perfect technical foundation. For ongoing SEO (content creation, keyword research, monthly optimization), I offer optional monthly packages starting at $200/month, or I can connect you with trusted SEO specialists.",
     },
     {
       id: 13,
