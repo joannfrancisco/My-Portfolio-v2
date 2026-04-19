@@ -20,6 +20,26 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
+      title: "NB Auto Trading",
+      description:
+        "A 4-in-1 car dealership management system with public inventory, admin dashboard, financial reports, and automated Facebook posting — built mobile-first for a Cebu-based secondhand car dealer.",
+      image: "/images/projects/nbauto/homepage.png",
+      tech: ["Next.js", "Supabase", "Facebook Graph API"],
+      liveLink: "https://nbauto.ph",
+      detailsLink: "/portfolio/nb-auto",
+    },
+    {
+      id: 2,
+      title: "B Digital Media",
+      description:
+        "A full brand identity and website build for a Dubai-based influencer marketing agency. Features GSAP scroll animations, campaign detail pages with social embeds, live commerce integration, and a dual-form contact system.",
+      image: "/images/projects/bdigital/hero.jpg",
+      tech: ["Next.js 16", "Tailwind CSS", "GSAP", "Google Forms"],
+      liveLink: "https://thebdigitalmedia.com",
+      detailsLink: "/portfolio/b-digital-media",
+    },
+    {
+      id: 3,
       title: "Pawikan Divers",
       description:
         "A dive center website featuring immersive GSAP animations, booking system, gallery, blog, and trust-building design that guides visitors from curiosity to confident booking.",
@@ -29,7 +49,7 @@ export default function PortfolioPage() {
       detailsLink: "/portfolio/pawikan-divers",
     },
     {
-      id: 2,
+      id: 4,
       title: "Marci Metzger",
       description:
         "A real estate homepage redesign with a modern, lead-converting layout built with HTML, CSS, and JavaScript with subtle micro-interactions.",
@@ -40,7 +60,7 @@ export default function PortfolioPage() {
     },
 
     {
-      id: 3,
+      id: 5,
       title: "Gr8nola",
       description:
         "Homepage redesign for a health food brand with refined parallax effects, smooth animations, and a modern layout that highlights their brand story.",
@@ -50,7 +70,7 @@ export default function PortfolioPage() {
       detailsLink: "/portfolio/granola",
     },
     {
-      id: 4,
+      id: 6,
       title: "Moviedux",
       description:
         "A movie discovery app with TMDb API integration, allowing users to explore trending films, search the catalog, and build personal watchlists.",
@@ -59,26 +79,16 @@ export default function PortfolioPage() {
       liveLink: "https://joannfrancisco.github.io/moviedux/",
       detailsLink: "/portfolio/moviedux",
     },
-    {
-      id: 5,
-      title: "Tidy Touch",
-      description:
-        "A Webflow cleaning service site with CMS-powered blog, polished UI/UX, and a cohesive design that highlights services and builds credibility.",
-      image: "/images/projects/tidy-touch/hero.png",
-      tech: ["Webflow"],
-      liveLink: "https://tidy-touch.webflow.io/",
-      detailsLink: "/portfolio/tidy-touch",
-    },
-    {
-      id: 6,
-      title: "Would You Rather?",
-      description:
-        "An interactive polling app with Firebase real-time updates, Google sign-in, and anonymous voting for quick, frictionless participation.",
-      image: "/images/projects/wyr/home.png",
-      tech: ["React.js", "Express.js", "Node.js", "CSS", "Firebase"],
-      liveLink: "https://joannfrancisco.github.io/would-you-rather/",
-      detailsLink: "/portfolio/would-you-rather",
-    },
+    // {
+    //   id: 6,
+    //   title: "Would You Rather?",
+    //   description:
+    //     "An interactive polling app with Firebase real-time updates, Google sign-in, and anonymous voting for quick, frictionless participation.",
+    //   image: "/images/projects/wyr/home.png",
+    //   tech: ["React.js", "Express.js", "Node.js", "CSS", "Firebase"],
+    //   liveLink: "https://joannfrancisco.github.io/would-you-rather/",
+    //   detailsLink: "/portfolio/would-you-rather",
+    // },
   ];
 
   return (

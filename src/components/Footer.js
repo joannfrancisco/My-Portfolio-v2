@@ -10,7 +10,7 @@ export default function Footer() {
     Navigation: [
       { name: "Work", href: "/portfolio" },
       { name: "Services", href: "/#services" },
-      { name: "Process", href: "/#process" },
+      { name: "Process", href: "/process" },
       { name: "FAQ", href: "/#faq" },
       { name: "About", href: "/#about" },
       { name: "Contact", href: "/#contact" },

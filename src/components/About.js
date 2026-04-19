@@ -59,9 +59,11 @@ export default function About() {
 
             <div className="space-y-4 text-lg text-(--foreground)/80 leading-relaxed">
               <p>
-                I&apos;m a full-stack developer who builds clean, modern
-                websites that actually help businesses grow. No fluff, no
-                unnecessary complexity, just thoughtful work that gets results.
+                I&apos;m a software engineer who builds things businesses
+                actually use. Websites that earn their keep, web and mobile apps
+                that feel good to open, and custom software that quietly handles
+                the heavy lifting. I&apos;m not just interested in the code;
+                I&apos;m interested in the results.
               </p>
 
               <p>
@@ -72,9 +74,10 @@ export default function About() {
               </p>
 
               <p>
-                I believe good design should feel effortless. Simple layouts.
-                Clear navigation. Fast performance. When users get it right
-                away, your business wins.
+                I call myself an alchemist because the best software feels a
+                little like magic. Clean design, fast performance, thoughtful
+                details. You shouldn&apos;t have to think about how it works,
+                only about what it frees you up to do.
               </p>
             </div>
 

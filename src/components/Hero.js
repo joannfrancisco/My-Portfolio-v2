@@ -53,7 +53,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="max-w-screen-2xl mx-auto relative min-h-dvh flex items-center justify-center px-6 py-32 overflow-hidden"
+      className="max-w-7xl mx-auto relative min-h-dvh flex items-center justify-start px-6 py-32 overflow-hidden"
     >
       {/* PixelSnow Background - Fixed position covering entire section */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -61,14 +61,14 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto text-left sm:text-center relative z-10">
+      <div className="max-w-7xl text-left relative z-10 ">
         {/* Headline */}
         <h1 ref={headlineRef} className="mb-6">
-          <span className="block text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
+          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
             Hi, I&apos;m Ann.
           </span>
-          <span className="block text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight mt-1">
-            A Web{" "}
+          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] md:leading-snug tracking-tight">
+            A Web & App{" "}
             <span className="inline-flex items-baseline">
               <RotatingText
                 texts={["Designer", "Developer", "Alchemist"]}
@@ -90,11 +90,10 @@ export default function Hero() {
         {/* Subheadline */}
         <p
           ref={subheadlineRef}
-          className="text-lg md:text-2xl max-w-2xl mx-auto mb-12 text-(--foreground)/80 leading-relaxed"
+          className="text-lg md:text-2xl max-w-2xl mb-12 text-(--foreground)/80 leading-relaxed"
         >
-          Small business, big impression. <br className="sm:hidden" /> I design
-          with purpose and performance, so your website stands out from the
-          start.
+          I build custom web and mobile apps, internal tools, and AI automations
+          for businesses ready to leave spreadsheets and manual work behind.
         </p>
 
         {/* CTA */}

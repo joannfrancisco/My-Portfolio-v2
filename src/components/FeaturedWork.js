@@ -15,6 +15,24 @@ export default function FeaturedWork() {
 
   const featuredProjects = [
     {
+      title: "NB Auto Trading",
+      description:
+        "A 4-in-1 car dealership management system with public inventory, admin dashboard, financial reports, and automated Facebook posting — built mobile-first for a Cebu-based secondhand car dealer.",
+      image: "/images/projects/nbauto/homepage.png",
+      tech: ["Next.js", "Supabase", "Facebook Graph API"],
+      liveLink: "https://nbauto.ph",
+      detailsLink: "/portfolio/nb-auto",
+    },
+    {
+      title: "B Digital Media",
+      description:
+        "A full brand identity and website build for a Dubai-based influencer marketing agency. Features GSAP scroll animations, campaign detail pages with social embeds, live commerce integration, and a dual-form contact system.",
+      image: "/images/projects/bdigital/hero.jpg",
+      tech: ["Next.js 16", "Tailwind CSS", "GSAP", "Google Forms"],
+      liveLink: "https://thebdigitalmedia.com",
+      detailsLink: "/portfolio/b-digital-media",
+    },
+    {
       title: "Pawikan Divers",
       description:
         "A dive center website featuring immersive GSAP animations, booking system, gallery, blog, and trust-building design that guides visitors from curiosity to confident booking.",
@@ -22,24 +40,6 @@ export default function FeaturedWork() {
       tech: ["Next.js", "Tailwind CSS", "GSAP"],
       liveLink: "https://pawikandivers.com",
       detailsLink: "/portfolio/pawikan-divers",
-    },
-    {
-      title: "Marci Metzger",
-      description:
-        "A real estate homepage redesign with a modern, lead-converting layout built with HTML, CSS, and JavaScript with subtle micro-interactions.",
-      image: "/images/projects/marci/marci-hero.png",
-      tech: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://marci-metzger-six.vercel.app/",
-      detailsLink: "/portfolio/marci-metzger",
-    },
-    {
-      title: "Gr8nola",
-      description:
-        "Homepage redesign for a health food brand with refined parallax effects, smooth animations, and a modern layout that highlights their brand story.",
-      image: "/images/projects/granola/hero.png",
-      tech: ["React.js", "Tailwind CSS", "GSAP", "ShadCN"],
-      liveLink: "https://project-granola.vercel.app/",
-      detailsLink: "/portfolio/granola",
     },
   ];
 

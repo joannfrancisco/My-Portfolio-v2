@@ -28,9 +28,9 @@ export default function ProjectMoviedux() {
       },
     ],
     nextProject: {
-      title: "Tidy Touch",
-      category: "Webflow",
-      href: "/portfolio/tidy-touch",
+      title: "NB Auto",
+      category: "Business System",
+      href: "/portfolio/nb-auto",
     },
   };
 
