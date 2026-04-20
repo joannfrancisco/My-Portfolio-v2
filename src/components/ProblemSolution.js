@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Target, TrendingUp, Zap, ArrowRight } from "lucide-react";
+import { Layers, TrendingUp, Zap } from "lucide-react";
 import Label from "./shared/Label";
 
 export default function ProblemSolution() {
@@ -11,19 +11,19 @@ export default function ProblemSolution() {
 
   const problems = [
     {
-      icon: Target,
-      stat: "24/7",
-      text: "Your digital storefront never sleeps—shouldn't it work tirelessly for you?",
+      icon: Layers,
+      stat: "7+",
+      text: "Disconnected tools most growing teams juggle before the workarounds start breaking things.",
     },
     {
       icon: TrendingUp,
-      stat: "100%",
-      text: "Turn every single visitor into a meaningful opportunity with optimized conversion",
+      stat: "Per Seat",
+      text: "SaaS pricing scales with your team. Grow faster, pay more. Custom software doesn't punish success.",
     },
     {
       icon: Zap,
-      stat: "<3s",
-      text: "Users abandon slow sites. Every second of load time costs you revenue",
+      stat: "24/7",
+      text: "Automation that handles the boring, repetitive work while your team focuses on what actually matters.",
     },
   ];
 
@@ -33,20 +33,18 @@ export default function ProblemSolution() {
         ref={ref}
         className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32"
       >
-        {/* PROBLEM SECTION - Z Pattern Part 1 (Top Left to Right) */}
+        {/* PROBLEM SECTION */}
         <div className="relative mb-24 md:mb-32">
-          {/* Decorative 01 - Top Right */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 0.05, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
-            className="absolute -top-20 -right-10 md:-right-20 text-[12rem] md:text-[20rem] lg:text-[25rem] font-black  leading-none select-none pointer-events-none"
+            className="absolute -top-20 -right-10 md:-right-20 text-[12rem] md:text-[20rem] lg:text-[25rem] font-black leading-none select-none pointer-events-none"
           >
             01
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Left - Problem Header */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -54,18 +52,17 @@ export default function ProblemSolution() {
               className="relative z-10"
             >
               <Label label="The Challenge" />
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 ">
-                Your Website Should Be Your{" "}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
+                Your Business Runs On Software.{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 text-(--cyan)">
-                    Best Salesperson
+                    Is It Working For You?
                   </span>
                 </span>
               </h2>
               <div className="w-24 h-1 bg-linear-to-r from-(--cyan) to-transparent" />
             </motion.div>
 
-            {/* Right - Problem Description */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -73,15 +70,15 @@ export default function ProblemSolution() {
               className="relative z-10"
             >
               <p className="text-xl md:text-2xl text-(--foreground)/80 leading-relaxed">
-                Most small business websites are outdated, slow, and lose
-                customers before they even engage. Custom-coded solutions
-                eliminate these obstacles and turn visitors into revenue.
+                Most teams are duct-taping together SaaS tools, spreadsheets,
+                and manual workflows. Custom software replaces the chaos with
+                one system built around how you actually work.
               </p>
             </motion.div>
           </div>
         </div>
 
-        {/* Middle section - Stats/Features */}
+        {/* Stats */}
         <div className="border-b border-t border-foreground/10">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-foreground/10">
@@ -110,20 +107,18 @@ export default function ProblemSolution() {
           </div>
         </div>
 
-        {/* SOLUTION SECTION - Z Pattern Part 3 (Bottom Right to Left) */}
+        {/* SOLUTION SECTION */}
         <div className="relative mt-24 md:mt-32">
-          {/* Decorative 02 - Bottom Left */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 0.05, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.8 }}
-            className="absolute -bottom-20 -left-10 md:-left-20 text-[12rem] md:text-[20rem] lg:text-[25rem] font-black  leading-none select-none pointer-events-none"
+            className="absolute -bottom-20 -left-10 md:-left-20 text-[12rem] md:text-[20rem] lg:text-[25rem] font-black leading-none select-none pointer-events-none"
           >
             02
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Left - Solution Description (comes second visually, but first in code for mobile) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -131,12 +126,11 @@ export default function ProblemSolution() {
               className="relative z-10 order-2 md:order-1"
             >
               <p className="text-xl md:text-2xl text-(--foreground)/80 leading-relaxed mb-8">
-                Hand-crafted code. Blazing performance. Designed to convert
-                casual browsers into loyal customers—all while you focus on
-                growing your business.
+                One system, designed for how your business actually works.
+                Automates the boring, connects the disconnected, and scales
+                without the per-seat tax.
               </p>
 
-              {/* CTA */}
               <div className="flex items-center gap-4">
                 <a
                   href="#services"
@@ -165,7 +159,6 @@ export default function ProblemSolution() {
               </div>
             </motion.div>
 
-            {/* Right - Solution Header (comes first visually) */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -173,14 +166,14 @@ export default function ProblemSolution() {
               className="relative z-10 order-1 md:order-2"
             >
               <Label label="The Solution" />
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] ">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]">
                 That&apos;s where{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 text-(--cyan)">
-                    custom development
+                    custom software
                   </span>
                 </span>{" "}
-                transforms everything.
+                changes everything.
               </h3>
               <div className="w-24 h-1 bg-linear-to-r from-(--cyan) to-transparent mt-6" />
             </motion.div>

@@ -16,18 +16,16 @@ export default function Footer() {
       { name: "Contact", href: "/#contact" },
     ],
     Services: [
-      { name: "UI/UX Design", href: "/#services" },
-      { name: "Website Development", href: "/#services" },
-      { name: "E-Commerce Website", href: "/#services" },
-      { name: "Landing Page", href: "/#services" },
+      { name: "Websites & Landing Pages", href: "/#services" },
+      { name: "Web & Mobile Apps", href: "/#services" },
+      { name: "Custom Business Software", href: "/#services" },
+      { name: "AI & Automation", href: "/#services" },
     ],
   };
 
   return (
     <footer className="relative bg-white dark:bg-navy-900 pt-20 pb-8 px-6 overflow-hidden">
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Animated Dots */}
         <div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/30 rounded-full animate-ping"
           style={{ animationDuration: "3s", animationDelay: "1s" }}
@@ -43,27 +41,22 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Main footer content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand */}
           <div className="lg:col-span-2">
             <h3 className="text-3xl font-bold mb-4">
               <span className="font-logo text-(--cyan)">{"< ann />"}</span>
             </h3>
             <p className="text-(--foreground)/80 leading-relaxed mb-6 max-w-md">
-              Full-stack developer specializing in custom websites for small
-              businesses. Building digital success stories, one project at a
-              time.
+              Software engineer building websites, apps, and custom systems for
+              businesses ready to leave spreadsheets and manual work behind.
             </p>
 
-            {/* Social Icons */}
             <SocialIcons />
           </div>
 
-          {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-lg font-semibold mb-4 ">{category}</h4>
+              <h4 className="text-lg font-semibold mb-4">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
@@ -80,7 +73,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
         <div className="pt-8 border-t border-navy-800 dark:border-navy-900">
           <div className="flex flex-col md:flex-row justify-between items-center gap-1">
             <p className="text-sm text-center md:text-left text-(--foreground)/70">

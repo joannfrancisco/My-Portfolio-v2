@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check, X, Zap, Palette, Shield } from "lucide-react";
+import { Check, X, Zap, Wrench, Shield } from "lucide-react";
 import Label from "./shared/Label";
 import HeaderSpan from "./shared/HeaderSpan";
 
@@ -12,37 +12,37 @@ export default function WhyCustomCoded() {
 
   const benefits = [
     {
-      icon: Zap,
-      title: "Lightning-Fast Performance",
+      icon: Wrench,
+      title: "Built Around Your Workflow",
       description:
-        "Custom code is optimized specifically for your needs—no bloated templates or unnecessary features slowing you down.",
-      stat: "3x faster load times",
+        "Off-the-shelf software makes you adapt to it. Custom software adapts to how your business actually runs, no workarounds, no duct tape.",
+      stat: "Fits your process, not the other way around",
     },
     {
-      icon: Palette,
-      title: "Complete Design Freedom",
+      icon: Zap,
+      title: "Automate the Busywork",
       description:
-        "Not limited by templates or drag-and-drop constraints. Every element is designed and coded exactly as you envision it.",
-      stat: "100% unique to your brand",
+        "Repetitive tasks, manual data entry, copy-pasting between tools. I build systems that handle the boring stuff quietly in the background.",
+      stat: "Hours back in your week",
     },
     {
       icon: Shield,
-      title: "Full Ownership & Control",
+      title: "Full Ownership, No Lock-In",
       description:
-        "You own everything—the code, the design, the hosting. No monthly platform fees or vendor lock-in.",
+        "You own the code, the data, and the infrastructure. No per-seat fees that scale with your team, no vendor holding your business hostage.",
       stat: "Zero platform dependencies",
     },
   ];
 
   const comparison = [
-    { feature: "Page Load Speed", custom: true, nocode: false },
-    { feature: "Unique Design", custom: true, nocode: false },
-    { feature: "SEO Performance", custom: true, nocode: false },
-    { feature: "Scalability", custom: true, nocode: false },
-    { feature: "Full Code Ownership", custom: true, nocode: false },
-    { feature: "No Monthly Platform Fees", custom: true, nocode: false },
-    { feature: "Advanced Animations", custom: true, nocode: false },
-    { feature: "Mobile Optimization", custom: true, nocode: true },
+    { feature: "Fits Your Exact Workflow", custom: true, saas: false },
+    { feature: "Custom Business Logic", custom: true, saas: false },
+    { feature: "AI & Automation Built In", custom: true, saas: false },
+    { feature: "Scales Without Per-Seat Fees", custom: true, saas: false },
+    { feature: "Full Data Ownership", custom: true, saas: false },
+    { feature: "Integrates With Anything", custom: true, saas: false },
+    { feature: "No Vendor Lock-In", custom: true, saas: false },
+    { feature: "Quick to Launch", custom: true, saas: true },
   ];
 
   return (
@@ -54,13 +54,14 @@ export default function WhyCustomCoded() {
           transition={{ duration: 0.6 }}
           className="text-left sm:text-center mb-16"
         >
-          <Label label="The Custom-Coded Difference" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6  leading-[1.1]">
-            Why <HeaderSpan span="Custom Development" />?
+          <Label label="The Custom Software Difference" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
+            Why <HeaderSpan span="Build Custom" />?
           </h2>
           <p className="text-xl text-(--foreground)/80 max-w-3xl mx-auto">
-            No-code platforms are great for quick starts, but custom development
-            gives you maximum control, performance, and long-term value.
+            Off-the-shelf tools are great for getting started. But as your
+            business grows, generic software starts to cost you time, money, and
+            flexibility. Custom is how you take that back.
           </p>
         </motion.div>
 
@@ -100,15 +101,15 @@ export default function WhyCustomCoded() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-navy-900 dark:bg-navy-950 ">
+                <tr className="bg-navy-900 dark:bg-navy-950">
                   <th className="text-left p-6 font-bold text-lg">Feature</th>
                   <th className="text-center p-6 font-bold text-lg">
-                    <span className="text-(--cyan)">Custom-Coded</span>
+                    <span className="text-(--cyan)">Custom Software</span>
                   </th>
                   <th className="text-center p-6 font-semibold">
-                    No-Code Platforms
+                    Off-the-Shelf SaaS
                     <div className="text-xs font-normal text-navy-400 mt-1">
-                      (Wix, Squarespace, etc.)
+                      (Salesforce, Monday, etc.)
                     </div>
                   </th>
                 </tr>
@@ -138,7 +139,7 @@ export default function WhyCustomCoded() {
                       )}
                     </td>
                     <td className="text-center p-6">
-                      {row.nocode ? (
+                      {row.saas ? (
                         <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-navy-300 dark:bg-navy-700">
                           <Check className="w-5 h-5 text-navy-700 dark:text-navy-300" />
                         </div>
@@ -161,11 +162,11 @@ export default function WhyCustomCoded() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-left sm:text-center"
         >
-          <p className=" text-lg max-w-3xl mx-auto text-(--foreground)/80">
-            <strong>Bottom line:</strong> Custom development is the best choice
-            when you want maximum performance, complete design control, and a
-            website that truly stands out. For businesses serious about their
-            online presence, it&apos;s the smartest investment.
+          <p className="text-lg max-w-3xl mx-auto text-(--foreground)/80">
+            <strong>Bottom line:</strong> If your business has outgrown generic
+            tools, or you need software that actually matches how your team
+            works, custom is the answer. Built once, owned forever, shaped
+            around you.
           </p>
         </motion.div>
       </div>

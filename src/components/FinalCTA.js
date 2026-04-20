@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import toast from "react-hot-toast";
 import Label from "./shared/Label";
 import HeaderSpan from "./shared/HeaderSpan";
@@ -34,7 +34,7 @@ export default function FinalCTA() {
           email: formData.email,
           business: formData.business,
           message: formData.message,
-          company: e.target.honeypot.value, // honeypot field
+          company: e.target.honeypot.value,
         }),
       });
 
@@ -46,9 +46,7 @@ export default function FinalCTA() {
         throw new Error(data.error || "Failed to send message");
       }
 
-      toast.success(
-        "Message sent successfully! I'll get back to you within 24 hours.",
-      );
+      toast.success("Message sent! I'll get back to you within 24 hours.");
       setFormData({ name: "", email: "", business: "", message: "" });
     } catch (error) {
       toast.error(
@@ -69,12 +67,6 @@ export default function FinalCTA() {
       id="contact"
       className="py-24 md:py-32 px-6 bg-warm-50 dark:bg-navy-800 relative overflow-hidden"
     >
-      {/* Background decoration */}
-      {/* <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-navy-500/10 rounded-full blur-3xl" />
-      </div> */}
-
       <div ref={ref} className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,11 +76,11 @@ export default function FinalCTA() {
         >
           <Label label="Get in Touch" />
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
-            Ready to Elevate <HeaderSpan span="Your Online Presence" /> ?
+            Let&apos;s Build <HeaderSpan span="Something Better" />.
           </h2>
           <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
-            Let&apos;s discuss your goals and build a website that helps your
-            business grow.
+            Tell me what&apos;s slowing your business down. We&apos;ll figure
+            out the right shape together.
           </p>
         </motion.div>
 
@@ -102,12 +94,12 @@ export default function FinalCTA() {
           >
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-6 text-(--foreground)">
-                Let&apos;s Build Something Amazing
+                Got a problem? Let&apos;s solve it.
               </h3>
               <p className="text-lg text-(--foreground)/80 leading-relaxed mb-8">
-                Whether you have a detailed plan or just an idea, I&apos;d love
-                to hear about it. Send me a message and I&apos;ll get back to
-                you within 24 hours.
+                Whether you have a clear spec or just a rough idea of what needs
+                fixing, I&apos;d love to hear it. Drop me a message and
+                I&apos;ll get back to you within 24 hours.
               </p>
             </div>
 
@@ -117,7 +109,7 @@ export default function FinalCTA() {
                   <Mail className="w-6 h-6 text-(--cyan)" />
                 </div>
                 <div>
-                  <h4 className="font-semibold  mb-1">Email</h4>
+                  <h4 className="font-semibold mb-1">Email</h4>
                   <a
                     href="mailto:info@joannfrancisco.com"
                     className="text-(--foreground)/80 hover:text-(--cyan) transition-colors"
@@ -132,12 +124,12 @@ export default function FinalCTA() {
                   <MapPin className="w-6 h-6 text-(--cyan)" />
                 </div>
                 <div>
-                  <h4 className="font-semibold  mb-1">Location</h4>
+                  <h4 className="font-semibold mb-1">Location</h4>
                   <p className="text-(--foreground)/80">
                     San Carlos City, Philippines
                   </p>
                   <p className="text-sm text-(--foreground)/80 mt-1">
-                    Available for remote projects worldwide
+                    Working with clients worldwide
                   </p>
                 </div>
               </div>
@@ -145,7 +137,7 @@ export default function FinalCTA() {
 
             <div className="pt-6 border-t border-navy-200 dark:border-navy-700">
               <h4 className="font-semibold text-navy-900 dark:text-navy-50 mb-4">
-                What to expect next:
+                What happens next:
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -153,7 +145,7 @@ export default function FinalCTA() {
                     <span className="text-white text-xs font-bold">1</span>
                   </div>
                   <span className="text-(--foreground)/80">
-                    I&apos;ll review your message and respond within 24 hours
+                    I&apos;ll review your message and reply within 24 hours
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -161,8 +153,8 @@ export default function FinalCTA() {
                     <span className="text-white text-xs font-bold">2</span>
                   </div>
                   <span className="text-(--foreground)/80">
-                    I&apos;ll send you a questionnaire to understand your
-                    business and provide an estimated price
+                    We&apos;ll hop on a free discovery call to map out your
+                    problem and what a solution could look like
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -170,7 +162,8 @@ export default function FinalCTA() {
                     <span className="text-white text-xs font-bold">3</span>
                   </div>
                   <span className="text-(--foreground)/80">
-                    We&apos;ll schedule a free consultation call
+                    You&apos;ll get a detailed proposal with scope, timeline,
+                    and fixed pricing
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -178,8 +171,7 @@ export default function FinalCTA() {
                     <span className="text-white text-xs font-bold">4</span>
                   </div>
                   <span className="text-(--foreground)/80">
-                    I&apos;ll send you a detailed proposal with pricing and
-                    timeline
+                    Once we&apos;re aligned, we kick off and start building
                   </span>
                 </li>
               </ul>
@@ -197,7 +189,7 @@ export default function FinalCTA() {
               className="p-8 rounded-2xl bg-white dark:bg-navy-900 border border-navy-200 dark:border-navy-700 shadow-xl"
             >
               <div className="space-y-6">
-                {/* Honeypot field (hidden from users, catches bots) */}
+                {/* Honeypot */}
                 <input
                   type="text"
                   name="honeypot"
@@ -221,7 +213,7 @@ export default function FinalCTA() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-xl border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-950 text-navy-900 dark:text-navy-50 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
-                    placeholder="John Doe"
+                    placeholder="Jane Doe"
                   />
                 </div>
 
@@ -240,7 +232,7 @@ export default function FinalCTA() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-xl border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-950 text-navy-900 dark:text-navy-50 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="jane@yourbusiness.com"
                   />
                 </div>
 
@@ -258,7 +250,7 @@ export default function FinalCTA() {
                     value={formData.business}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-950 text-navy-900 dark:text-navy-50 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
-                    placeholder="Your Business"
+                    placeholder="Your Company"
                   />
                 </div>
 
@@ -267,7 +259,7 @@ export default function FinalCTA() {
                     htmlFor="message"
                     className="block text-sm font-semibold text-navy-900 dark:text-navy-50 mb-2"
                   >
-                    Tell me about your project *
+                    What are you trying to build or fix? *
                   </label>
                   <textarea
                     id="message"
@@ -277,23 +269,16 @@ export default function FinalCTA() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-xl border border-navy-200 dark:border-navy-700 bg-white dark:bg-navy-950 text-navy-900 dark:text-navy-50 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all resize-none"
-                    placeholder="What kind of website do you need? What are your main goals?"
+                    placeholder="A website? An internal tool your team is tired of working around? An MVP? Tell me what's on your mind. Rough ideas are fine."
                   />
                 </div>
 
                 <ButtonContact
                   onClick={(e) => {}}
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4  font-semibold disabled:opacity-50 disabled:cursor-not-allowed  flex items-center justify-center gap-3 group"
+                  className="w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? (
-                    <span>Sending...</span>
-                  ) : (
-                    <>
-                      <span>SEND MESSAGE</span>
-                      {/* <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" /> */}
-                    </>
-                  )}
+                  {isSubmitting ? "Sending..." : "SEND MESSAGE"}
                 </ButtonContact>
 
                 <p className="text-sm text-(--foreground)/50 text-center">

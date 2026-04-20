@@ -64,7 +64,7 @@ export default function ProjectNBAuto() {
     ],
     nextProject: {
       title: "B Digital Media",
-      category: "Influencer Marketing Agency",
+      category: "Web Development",
       href: "/portfolio/b-digital-media",
     },
   };

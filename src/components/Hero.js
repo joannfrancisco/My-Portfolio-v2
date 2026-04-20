@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { Button } from "./shared/Button";
 import RotatingText from "./shared/RotatingText";
 import PixelSnow from "./shared/PixelSnow";
+import ButtonContact from "./shared/ButtonContact";
 
 export default function Hero() {
   const headlineRef = useRef(null);
@@ -67,12 +68,12 @@ export default function Hero() {
           <span className="block text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
             Hi, I&apos;m Ann.
           </span>
-          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] md:leading-snug tracking-tight">
-            A Web & App{" "}
+          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+            A Software{" "}
             <span className="inline-flex items-baseline">
               <RotatingText
-                texts={["Designer", "Developer", "Alchemist"]}
-                mainClassName="px-2 sm:px-2 md:px-3 bg-(--cyan) text-(--background) overflow-hidden pt-1.5 md:pt-5 justify-center rounded-md"
+                texts={["Developer", "Engineer", "Alchemist"]}
+                mainClassName="px-1 sm:px-1.5 md:px-2 bg-(--cyan) text-(--background) overflow-hidden pt-1.5 md:pt-5 justify-center rounded-md"
                 staggerFrom={"last"}
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -90,15 +91,21 @@ export default function Hero() {
         {/* Subheadline */}
         <p
           ref={subheadlineRef}
-          className="text-lg md:text-2xl max-w-2xl mb-12 text-(--foreground)/80 leading-relaxed"
+          className="text-lg md:text-2xl mb-12 text-(--foreground)/80 leading-relaxed max-w-[600px]"
         >
-          I build custom web and mobile apps, internal tools, and AI automations
-          for businesses ready to leave spreadsheets and manual work behind.
+          I build custom websites, apps, systems, and AI automation for
+          businesses ready to move beyond spreadsheets and manual work.
         </p>
 
         {/* CTA */}
-        <div ref={ctaRef}>
-          <Button href="#contact">Start Your Project</Button>
+        <div
+          ref={ctaRef}
+          className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+        >
+          <ButtonContact size="lg" href="#contact">
+            Start Your Project
+          </ButtonContact>
+          <Button href="/portfolio">See My Work</Button>
         </div>
       </div>
 

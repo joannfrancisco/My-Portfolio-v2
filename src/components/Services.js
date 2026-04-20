@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Paintbrush, Code, ShoppingCart, FileText, Check } from "lucide-react";
+import { Globe, Smartphone, Cog, Sparkles, Check } from "lucide-react";
 import Button from "./shared/Button";
 import Label from "./shared/Label";
 import HeaderSpan from "./shared/HeaderSpan";
@@ -13,81 +13,73 @@ export default function Services() {
 
   const services = [
     {
-      icon: Paintbrush,
-      title: "UI/UX Design",
+      icon: Globe,
+      title: "Websites & Landing Pages",
       description:
-        "Beautiful, intuitive interfaces that guide users naturally toward taking action. First impressions matter—make yours count with design that converts.",
+        "Fast, beautiful sites that actually convert. Built to rank, built to sell, built around your brand.",
       forYouIf: [
-        "Your website looks outdated and unprofessional",
-        "You're starting from scratch and need a design that stands out",
-        "Visitors leave within seconds without engaging",
-        "Your mobile experience is broken or non-existent",
+        "You want a site that stands out, not a template",
+        "Your current site is slow or losing leads",
+        "You need landing pages that match your ad spend",
       ],
       features: [
-        "User research & wireframing",
-        "Interactive prototypes & mockups",
-        "Design systems & style guides",
-        "Mobile-first responsive layouts",
+        "Next.js & modern stack",
+        "SEO optimized",
+        "Conversion focused",
       ],
     },
     {
-      icon: Code,
-      title: "Web Development",
+      icon: Smartphone,
+      title: "Web & Mobile Apps",
       description:
-        "Lightning-fast, custom-coded websites built with modern technology. No templates. No limitations. Just clean, performant code designed for your business.",
+        "Full applications for customers, teams, or both. One codebase, every device, zero compromises on performance.",
       forYouIf: [
-        "Your current site is painfully slow and loses customers",
-        "You don't have a website yet and want to do it right",
-        "You're stuck with a template that can't do what you need",
-        "You need custom features that plugins can't deliver",
+        "You have an idea and need an MVP fast",
+        "You're ready to launch something real",
+        "Your users expect a proper app, not a clunky web page",
       ],
       features: [
-        "Next.js & React development",
-        "Custom web applications",
-        "API integration & backend",
-        "Progressive Web Apps (PWA)",
+        "iOS, Android & web from one codebase",
+        "Secure auth & payments",
+        "Scales with your users",
       ],
     },
     {
-      icon: ShoppingCart,
-      title: "E-Commerce",
+      icon: Cog,
+      title: "Custom Business Software",
       description:
-        "Complete online store solutions that actually convert. Custom design meets Shopify's powerful backend—professional, scalable, and ready to make money.",
+        "CRMs, dashboards, internal tools, and SaaS products built around how your business actually works. No more workarounds.",
       forYouIf: [
-        "You're ready to start selling online but don't know where to begin",
-        "Your current store looks generic and doesn't match your brand",
-        "Cart abandonment is costing you sales every day",
-        "You need a store that scales as you grow",
+        "You've outgrown spreadsheets and generic SaaS",
+        "Your team juggles too many disconnected tools",
+        "You need software that fits your workflow exactly",
       ],
       features: [
-        "Custom Next.js + Shopify integration",
-        "Headless commerce architecture",
-        "Secure payment & checkout optimization",
-        "Inventory & order management",
+        "Custom dashboards & admin panels",
+        "Integrates with your existing stack",
+        "You own the code and data",
       ],
     },
     {
-      icon: FileText,
-      title: "Landing Page",
+      icon: Sparkles,
+      title: "AI & Automation",
       description:
-        "High-converting landing pages laser-focused on one goal: turning visitors into customers. Perfect for campaigns, product launches, and lead generation.",
+        "AI agents, smart workflows, and automations that quietly do the repetitive work so your team can focus on what matters.",
       forYouIf: [
-        "You're running ads but getting terrible conversion rates",
-        "You're launching a new product and need a dedicated page",
-        "Your homepage is too cluttered for focused campaigns",
-        "You need to capture leads fast without a full website rebuild",
+        "Your team loses hours to manual, repetitive work",
+        "You want AI that actually solves problems, not gimmicks",
+        "You have data sitting idle that could be working for you",
       ],
       features: [
-        "Conversion-focused design & copy",
-        "A/B testing ready structure",
-        "Lead capture forms & CTAs",
-        "Analytics & performance tracking",
+        "AI-powered workflows",
+        "Auto-reporting & data sync",
+        "Custom GPT integrations",
       ],
     },
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 px-6 ">
+    <section id="services" className="py-24 md:py-32 px-6">
       <div ref={ref} className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -95,13 +87,13 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-left sm:text-center mb-16"
         >
-          <Label label="What I Do" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] ">
+          <Label label="What I Build" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1]">
             <HeaderSpan span="Full-Stack" /> Solutions
           </h2>
           <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
-            Everything you need to establish a powerful online presence that
-            works for your business 24/7.
+            From a simple landing page to a full business system, everything I
+            build is made to run fast, scale with you, and actually get used.
           </p>
         </motion.div>
 
@@ -114,15 +106,12 @@ export default function Services() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group relative p-8 rounded-2xl bg-white dark:bg-navy-900 border-2 border-gray-200 dark:border-navy-700 hover:border-(--cyan) hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-cyan-400/10 transition-all duration-300 overflow-hidden"
             >
-              {/* Subtle gradient overlay on hover */}
-              <div className="absolute inset-0 " />
-
               <div className="relative z-10">
                 <div className="w-14 h-14 mb-6 rounded-xl bg-(--cyan) flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
 
-                <h3 className="text-2xl md:text-3xl font-bold mb-4  group-hover:text-(--cyan) transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-(--cyan) transition-colors">
                   {service.title}
                 </h3>
 
@@ -130,7 +119,6 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                {/* Is This For You Section */}
                 <div className="mb-6 p-4 rounded-xl bg-(--background)/20 border border-gray-200 dark:border-navy-700">
                   <h4 className="text-sm font-bold text-(--cyan) mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-(--cyan)" />
@@ -148,12 +136,11 @@ export default function Services() {
                   </ul>
                 </div>
 
-                {/* What You Get */}
                 <div className="pt-4 border-t border-gray-200 dark:border-navy-700">
                   <h4 className="text-xs font-semibold uppercase tracking-wider text-(--foreground)/80 mb-3">
-                    What&apos;s included:
+                    What&apos;s included
                   </h4>
-                  <ul className="grid grid-cols-2 gap-2">
+                  <ul className="grid grid-cols-1 gap-2">
                     {service.features.map((feature, idx) => (
                       <li
                         key={idx}
@@ -174,19 +161,19 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16  sm:p-10 rounded-2xl text-center relative overflow-hidden"
+          className="mt-16 sm:p-10 rounded-2xl text-center relative overflow-hidden"
         >
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-[1.1]">
               Not sure what you need?
             </h3>
             <p className="text-(--foreground)/80 text-lg mb-6 max-w-2xl mx-auto">
-              I&apos;ll help you figure out the best solution for your business
-              goals and budget. Every project starts with a conversation.
+              Tell me the problem, not the solution. We&apos;ll figure out the
+              right shape together.
             </p>
 
             <Button href="#contact" icon={null}>
-              Schedule a Free Consultation
+              Book a Free Call
             </Button>
           </div>
         </motion.div>

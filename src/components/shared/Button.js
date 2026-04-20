@@ -9,6 +9,7 @@ const Button = ({
   href = "#contact",
   icon: Icon = ArrowRight,
   onClick,
+  variant = "primary", // "primary" | "secondary" | "ghost"
 }) => {
   const buttonRef = useRef(null);
   const [circleStyle, setCircleStyle] = useState({
@@ -19,63 +20,63 @@ const Button = ({
   });
   const [isHovered, setIsHovered] = useState(false);
 
+  // Variant styles — border color, default text color, and fill color on hover
+  const variantStyles = {
+    primary: {
+      borderColor: "var(--button-hover)",
+      defaultColor: "var(--button-hover)",
+      hoverFillColor: "var(--button-hover)",
+      hoverTextColor: "var(--button)",
+    },
+    secondary: {
+      borderColor: "var(--foreground)",
+      defaultColor: "var(--foreground)",
+      hoverFillColor: "var(--foreground)",
+      hoverTextColor: "var(--background)",
+    },
+    ghost: {
+      borderColor: "transparent",
+      defaultColor: "var(--foreground)",
+      hoverFillColor: "var(--foreground)/10",
+      hoverTextColor: "var(--foreground)",
+    },
+  };
+
+  const styles = variantStyles[variant] || variantStyles.primary;
+
   const handleMouseEnter = (e) => {
     const rect = buttonRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    setCircleStyle({
-      left: x,
-      top: y,
-      scale: 0,
-      opacity: 1,
-    });
+    setCircleStyle({ left: x, top: y, scale: 0, opacity: 1 });
     setIsHovered(true);
 
     requestAnimationFrame(() => {
-      setCircleStyle((prev) => ({
-        ...prev,
-        scale: 1.5,
-      }));
+      setCircleStyle((prev) => ({ ...prev, scale: 1.5 }));
     });
   };
 
   const handleMouseMove = (e) => {
     if (!isHovered) return;
-
     const rect = buttonRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
-    setCircleStyle((prev) => ({
-      ...prev,
-      left: x,
-      top: y,
-    }));
+    setCircleStyle((prev) => ({ ...prev, left: x, top: y }));
   };
 
   const handleMouseLeave = (e) => {
     const rect = buttonRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
-    setCircleStyle({
-      left: x,
-      top: y,
-      scale: 0,
-      opacity: 0,
-    });
+    setCircleStyle({ left: x, top: y, scale: 0, opacity: 0 });
     setIsHovered(false);
   };
 
   const handleClick = (e) => {
-    if (onClick) {
-      onClick(e);
-    }
+    if (onClick) onClick(e);
   };
 
-  // Check if href is a hash link or internal route
-  const isHashLink = href.startsWith("#");
   const isInternalLink = href.startsWith("/");
 
   const buttonElement = (
@@ -84,13 +85,13 @@ const Button = ({
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative px-8 py-4 bg-transparent rounded-full text-base md:text-lg font-semibold overflow-hidden transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
+      className="group relative px-6 py-3 md:px-8 md:py-4 bg-transparent rounded-full text-sm md:text-lg font-semibold overflow-hidden transition-all duration-300 inline-flex items-center gap-2 md:gap-3 cursor-pointer whitespace-nowrap"
       style={{
         isolation: "isolate",
         borderWidth: "2px",
         borderStyle: "solid",
-        borderColor: "var(--button-hover)",
-        color: isHovered ? "var(--button)" : "var(--button-hover)",
+        borderColor: styles.borderColor,
+        color: isHovered ? styles.hoverTextColor : styles.defaultColor,
       }}
     >
       {/* Magnetic circle background */}
@@ -103,7 +104,7 @@ const Button = ({
           top: circleStyle.top,
           transform: `translate(-50%, -50%) scale(${circleStyle.scale})`,
           opacity: circleStyle.opacity,
-          backgroundColor: "var(--button-hover)",
+          backgroundColor: styles.hoverFillColor,
           transition: isHovered
             ? "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease"
             : "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease",
@@ -111,27 +112,25 @@ const Button = ({
         }}
       />
 
-      {/* Button content */}
       <span
         className="relative z-10 transition-colors duration-300"
         style={{
-          color: isHovered ? "var(--button)" : "var(--button-hover)",
+          color: isHovered ? styles.hoverTextColor : styles.defaultColor,
         }}
       >
         {children}
       </span>
       {Icon && (
         <Icon
-          className="relative z-10 w-5 h-5 transition-all duration-300 group-hover:translate-x-1"
+          className="relative z-10 w-4 h-4 md:w-5 md:h-5 transition-all duration-300 group-hover:translate-x-1"
           style={{
-            color: isHovered ? "var(--button)" : "var(--button-hover)",
+            color: isHovered ? styles.hoverTextColor : styles.defaultColor,
           }}
         />
       )}
     </span>
   );
 
-  // If onClick is provided without href navigation
   if (onClick && !href) {
     return (
       <button type="button" onClick={handleClick} className="inline-block">
@@ -140,7 +139,6 @@ const Button = ({
     );
   }
 
-  // Internal routes use Next.js Link for client-side navigation
   if (isInternalLink) {
     return (
       <Link
@@ -153,7 +151,6 @@ const Button = ({
     );
   }
 
-  // Hash links and external links use regular anchor
   return (
     <a
       href={href}

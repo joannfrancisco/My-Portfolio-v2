@@ -113,8 +113,9 @@ export default function PortfolioPage() {
               </h1>
 
               <p className="text-xl text-(--foreground)/80 max-w-2xl mx-auto">
-                A collection of projects showcasing web development, UI/UX
-                design, and full-stack applications.
+                A collection of things I&apos;ve built from scratch. Websites,
+                web and mobile apps, and custom business systems built for
+                clients across industries. Each one solved a real problem.
               </p>
             </motion.div>
           </div>

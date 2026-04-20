@@ -15,69 +15,57 @@ export default function FAQ() {
   const accordionData = [
     {
       id: 1,
-      title: "What kind of websites do you build?",
+      title: "What do you build?",
       content:
-        "Custom-coded websites for small businesses like yours. Think portfolios, business sites, and landing pages. No templates or page builders, just clean code built specifically for your needs.",
+        "Custom software that solves real business problems. Internal tools like CRMs and dashboards, web and mobile apps, websites, and AI automations. Whether it's an MVP for a new idea or a system to replace your team's spreadsheet chaos, I build it from scratch. No templates.",
     },
     {
       id: 3,
-      title: "How much does a website cost?",
+      title: "How much does it cost?",
       content:
-        "It really depends on what you need. Most small business websites run between $800 and $5,000, but I offer budget-friendly rates and can work with different budgets. After we chat, I'll give you a clear quote with no hidden fees.",
+        "Smaller projects and MVPs start around $2,500. Larger systems with integrations and custom logic go up from there. After a quick discovery call, I'll send a fixed-price proposal so there are no surprises.",
     },
     {
       id: 4,
-      title: "Do you offer payment plans?",
+      title: "How can AI automation help my business?",
       content:
-        "Yes! I usually do 50% to start and 50% when we're done, but I'm flexible. We can work out a payment plan that fits your budget.",
+        "AI is a practical way to take boring, repetitive tasks off your team's plate. Think auto-posting to social media, sorting leads automatically, generating reports, or handling data entry in the background. If your team is losing hours to busywork, there's probably a way to automate it.",
     },
     {
       id: 5,
       title: "How long does it take?",
       content:
-        "Most sites go live in 1 to 4 weeks, depending on how complex your project is and how quickly you can give feedback. I'll give you a realistic timeline upfront and keep you updated along the way.",
+        "Depends on scope. An MVP or landing system usually takes 2 to 4 weeks. A full business management system is more like 2 to 3 months. I work in short sprints and give you a staging link, so you can watch it come together instead of waiting for a big reveal.",
     },
     {
       id: 6,
-      title: "What do you need from me?",
+      title: "Do you offer payment plans?",
       content:
-        "Your logo, brand colors, any text you want on the site, and some quality images. Don't have everything ready? That's totally fine. I'll walk you through what we need.",
+        "Yes. For bigger projects, I split payments into milestones (usually Discovery, Beta, and Launch). You only pay as we hit each stage, and we can shape the schedule around your cash flow.",
+    },
+    {
+      id: 7,
+      title: "What happens after launch?",
+      content:
+        "I don't disappear. You get 30 days of priority support to make sure everything runs smoothly. After that, I offer maintenance and scaling plans to keep things secure, updated, and ready to grow with you.",
+    },
+    {
+      id: 8,
+      title: "Can you work with my existing tools?",
+      content:
+        "Yes. I can plug into what you already use: Google Workspace, Stripe, Meta APIs, industry-specific platforms, whatever fits. The goal is one connected system, not another app to babysit.",
     },
     {
       id: 9,
-      title: "Do you handle hosting and domains?",
+      title: "What's your process?",
       content:
-        "I can help you pick the right hosting and get your domain set up. You'll own it and pay for it directly (usually $10 to $30 a month), but I'll take care of all the technical setup.",
+        "We start with a Discovery call to map out how your business actually works. Then Design and Prototyping, so the UX feels right before any code gets written. After that, I handle development, testing, and launch. You're part of the process the whole way through.",
     },
     {
       id: 10,
-      title: "What happens after launch?",
-      content:
-        "You get 30 days of free support for any bugs or issues. After that, I offer maintenance packages starting at $50 a month if you want help with updates, backups, and peace of mind. Totally optional though.",
-    },
-    {
-      id: 11,
-      title: "Will my website rank on Google?",
-      content:
-        "Your website will be built with all the technical SEO essentials Google requires: lightning-fast load speeds, mobile-first design, clean code, optimized images, proper meta tags, XML sitemaps, and structured data markup. These fundamentals are included in every build at no extra cost and give you a competitive foundation for ranking. However, reaching page one requires ongoing work—quality content, keyword targeting, backlinks, and regular updates. I make sure your site has the perfect technical foundation. For ongoing SEO (content creation, keyword research, monthly optimization), I offer optional monthly packages starting at $200/month, or I can connect you with trusted SEO specialists.",
-    },
-    {
-      id: 13,
-      title: "What makes you different?",
-      content:
-        "I focus on small businesses and actually understand the challenges you're dealing with. Every site is custom-coded for speed and performance, not just pretty design. Plus, I'm upfront about pricing and timelines. I genuinely want to see your business succeed.",
-    },
-    {
-      id: 15,
       title: "How do we get started?",
       content:
-        "Just send me a message telling me about your project! We'll jump on a free call to talk about your goals and budget. If it feels like a good fit, I'll send over a proposal and we can get started.",
-    },
-    {
-      id: 17,
-      title: "Need help after launch?",
-      content:
-        "I've got you! The first 30 days are free for any bugs or issues. After that, you can always reach out. I offer one-time fixes or monthly plans, whatever works best for you.",
+        "Hit the 'Start a Project' button and tell me a bit about what you need. We'll hop on a free strategy call to see if we're a good fit. If we are, I'll send a detailed proposal and we can start building.",
     },
   ];
 
