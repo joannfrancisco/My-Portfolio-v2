@@ -1,7 +1,7 @@
 {
-  "name": "Jo Ann Francisco - Web Designer & Developer",
+  "name": "Jo Ann Francisco - Software Engineer",
   "short_name": "Jo Ann Francisco",
-  "description": "Portfolio and services website for freelance web designer and full-stack developer Jo Ann Francisco specializing in custom-coded websites for small businesses",
+  "description": "Independent software engineer building custom websites, apps, internal tools, and AI automations for growing businesses.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -36,7 +36,7 @@
       "type": "image/png"
     }
   ],
-  "categories": ["portfolio", "design", "development", "business"],
+  "categories": ["portfolio", "productivity", "developer-tools", "business"],
   "lang": "en-US",
   "dir": "ltr",
   "scope": "/",

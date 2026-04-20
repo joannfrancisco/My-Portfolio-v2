@@ -75,55 +75,67 @@ export const metadata = {
 
   // Primary Metadata
   title: {
-    default: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
+    default: "Jo Ann Francisco | Software Engineer for Growing Businesses",
     template: "%s | Jo Ann Francisco",
   },
   description:
-    "Freelance web designer and full-stack developer specializing in modern, high-performance websites for small businesses. Expert in Next.js, React, TypeScript, and responsive design. Based in the Philippines.",
+    "Independent software engineer building custom websites, web and mobile apps, internal tools, and AI automations. Full-stack development with Next.js, React, and TypeScript. Based in the Philippines, working worldwide.",
 
   keywords: [
-    // Primary Services
-    "web developer",
-    "web designer",
-    "freelance web developer",
-    "freelance web designer",
+    // Primary Positioning
+    "software engineer",
     "full-stack developer",
-    "frontend developer",
-    "web development services",
+    "freelance software engineer",
+    "custom software developer",
+    "full-stack engineer",
+
+    // Core Services
+    "web app development",
+    "mobile app development",
+    "custom business software",
+    "SaaS development",
+    "MVP development",
+    "internal tools development",
+    "CRM development",
+    "dashboard development",
+    "AI automation",
+    "AI integration",
+    "workflow automation",
+    "business process automation",
+
+    // Secondary Services (still offered)
+    "web developer",
+    "website development",
+    "landing page development",
+    "e-commerce development",
 
     // Location-based
+    "software engineer Philippines",
     "web developer Philippines",
-    "web designer Philippines",
-    "Cebu web developer",
-    "Bacolod web developer",
-    "Filipino web developer",
+    "Filipino software engineer",
+    "remote software engineer",
+    "freelance developer Philippines",
 
     // Skills & Technologies
     "Next.js developer",
     "React developer",
+    "React Native developer",
     "TypeScript developer",
+    "Node.js developer",
     "Tailwind CSS expert",
-    "responsive web design",
-    "UI/UX designer",
-
-    // Services
-    "website design",
-    "web application development",
-    "portfolio website",
-    "business website design",
-    "e-commerce development",
-    "landing page design",
-    "custom coded websites",
+    "API integration",
+    "full-stack Next.js",
 
     // Target Clients
-    "small business websites",
-    "startup web development",
-    "custom web solutions",
+    "software for small business",
+    "startup MVP development",
+    "custom SaaS for startups",
+    "business automation solutions",
+    "small business software",
 
     // Professional
     "Jo Ann Francisco",
     "joannfrancisco",
-    "web developer portfolio",
   ],
 
   // Authors & Creator
@@ -138,16 +150,16 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.joannfrancisco.com",
-    siteName: "Jo Ann Francisco - Web Designer & Developer",
-    title: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
+    siteName: "Jo Ann Francisco - Software Engineer",
+    title: "Jo Ann Francisco | Software Engineer for Growing Businesses",
     description:
-      "Transform your vision into a high-performance website that converts visitors into customers. Freelance web designer specializing in Next.js, React, and modern web technologies.",
+      "I build custom websites, apps, internal tools, and AI automations for businesses ready to move beyond spreadsheets and manual work. Full-stack engineer based in the Philippines.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jo Ann Francisco - Web Designer & Full-Stack Developer",
+        alt: "Jo Ann Francisco - Software Engineer",
         type: "image/png",
       },
     ],
@@ -156,11 +168,10 @@ export const metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Jo Ann Francisco | Web Designer & Full-Stack Developer",
+    title: "Jo Ann Francisco | Software Engineer",
     description:
-      "Modern, high-performance websites designed to help small businesses grow. Freelance web designer based in the Philippines.",
+      "Custom websites, web and mobile apps, internal tools, and AI automations for businesses ready to scale. Full-stack engineer based in the Philippines.",
     images: ["/twitter-image.png"],
-
     creator: "@joannvfrancisco",
     site: "@joannvfrancisco",
   },
@@ -178,11 +189,9 @@ export const metadata = {
     },
   },
 
-  // Verification (Add your codes)
+  // Verification
   verification: {
     google: "W3noX_Wtgmscc2LQwuxEpoQypipHoCHfVSOr_TkrtnE",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
   },
 
   // Alternate Languages
@@ -216,9 +225,9 @@ export default function RootLayout({ children }) {
     alternateName: "Jo Ann V. Francisco",
     url: "https://www.joannfrancisco.com",
     image: "https://www.joannfrancisco.com/images/AboutImage.png",
-    jobTitle: "Web Designer & Full-Stack Developer",
+    jobTitle: "Software Engineer",
     description:
-      "Freelance web designer and full-stack developer specializing in modern, high-performance websites using Next.js, React, and TypeScript.",
+      "Independent software engineer building custom websites, web and mobile apps, internal tools, and AI automations for growing businesses. Specializes in Next.js, React, TypeScript, and full-stack development.",
 
     // Contact & Location
     email: "info@joannfrancisco.com",
@@ -241,34 +250,44 @@ export default function RootLayout({ children }) {
 
     // Skills & Expertise
     knowsAbout: [
-      "Website",
-      "E-Commerce",
-      "Landing Page",
-      "Web Development",
-      "Web Design",
-      "Frontend Development",
+      "Software Engineering",
       "Full-Stack Development",
+      "Web Application Development",
+      "Mobile App Development",
+      "Custom Business Software",
+      "SaaS Development",
+      "MVP Development",
+      "Internal Tools",
+      "CRM Development",
+      "AI Automation",
+      "Workflow Automation",
+      "API Development",
+      "API Integration",
       "Next.js",
       "React",
+      "React Native",
       "TypeScript",
       "JavaScript",
+      "Node.js",
       "Tailwind CSS",
-      "UI/UX Design",
       "Responsive Design",
       "Performance Optimization",
-      "Custom Web Development",
+      "Database Design",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development",
     ],
 
     // Work
     hasOccupation: {
       "@type": "Occupation",
-      name: "Web Designer & Developer",
+      name: "Software Engineer",
       occupationLocation: {
         "@type": "Country",
         name: "Philippines",
       },
       skills:
-        "Next.js, React, TypeScript, Tailwind CSS, UI/UX Design, Custom Web Development",
+        "Next.js, React, React Native, TypeScript, Node.js, Tailwind CSS, Full-Stack Development, AI Integration, Custom Business Software",
     },
   };
 
@@ -278,9 +297,9 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     "@id": "https://www.joannfrancisco.com/#website",
     url: "https://www.joannfrancisco.com",
-    name: "Jo Ann Francisco - Web Designer & Developer",
+    name: "Jo Ann Francisco - Software Engineer",
     description:
-      "Portfolio and services website for freelance web designer and full-stack developer Jo Ann Francisco",
+      "Portfolio and services website for independent software engineer Jo Ann Francisco, specializing in custom software for growing businesses",
     publisher: {
       "@id": "https://www.joannfrancisco.com/#person",
     },
@@ -301,29 +320,33 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://www.joannfrancisco.com/#service",
-    name: "Jo Ann Francisco Web Design & Development",
+    name: "Jo Ann Francisco Software Engineering Services",
     description:
-      "Professional web design and development services specializing in modern, high-performance websites for small businesses",
+      "Custom software engineering services specializing in websites, web and mobile apps, internal business tools, SaaS products, and AI automation for growing businesses",
     url: "https://www.joannfrancisco.com",
     provider: {
       "@id": "https://www.joannfrancisco.com/#person",
     },
     serviceType: [
-      "Web Design",
-      "Web Development",
-      "Frontend Development",
+      "Custom Software Development",
+      "Web Application Development",
+      "Mobile App Development",
       "Full-Stack Development",
-      "UI/UX Design",
-      "Responsive Web Design",
-      "Website Optimization",
-      "Custom Web Development",
+      "SaaS Development",
+      "MVP Development",
+      "Internal Business Tools",
+      "CRM & Dashboard Development",
+      "AI Automation",
+      "Workflow Automation",
+      "Website Development",
+      "API Integration",
     ],
     areaServed: {
       "@type": "Country",
-      name: "Philippines",
+      name: "Worldwide",
     },
     availableLanguage: ["English", "Filipino"],
-    priceRange: "$800 - $5000",
+    priceRange: "$2,500 - $50,000+",
   };
 
   // Breadcrumb Schema (base)
@@ -343,25 +366,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        {/* Structured Data - Person */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-
-        {/* Structured Data - Website */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-
-        {/* Structured Data - Professional Service */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
-
-        {/* Structured Data - Breadcrumb */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -380,7 +396,6 @@ export default function RootLayout({ children }) {
           {children}
         </ThemeProvider>
 
-        {/* Google Analytics */}
         <GoogleAnalytics gaId="G-EB6GXHJXE5" />
       </body>
     </html>
