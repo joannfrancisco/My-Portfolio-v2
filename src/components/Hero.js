@@ -7,6 +7,7 @@ import { Button } from "./shared/Button";
 import RotatingText from "./shared/RotatingText";
 import PixelSnow from "./shared/PixelSnow";
 import ButtonContact from "./shared/ButtonContact";
+import Link from "next/link";
 
 export default function Hero() {
   const headlineRef = useRef(null);
@@ -65,10 +66,10 @@ export default function Hero() {
       <div className="max-w-7xl text-left relative z-10 ">
         {/* Headline */}
         <h1 ref={headlineRef} className="mb-6">
-          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+          <span className="block text-5xl md:text-8xl font-bold leading-[1.1] tracking-tight">
             Hi, I&apos;m Ann.
           </span>
-          <span className="block text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+          <span className="block text-5xl md:text-8xl font-bold leading-[1.1] md:mt-[-30px] tracking-tight">
             A Software{" "}
             <span className="inline-flex items-baseline">
               <RotatingText
@@ -102,9 +103,9 @@ export default function Hero() {
           ref={ctaRef}
           className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
         >
-          <ButtonContact size="lg" href="#contact">
-            Start Your Project
-          </ButtonContact>
+          <Link href="/#contact">
+            <ButtonContact size="lg">Start Your Project</ButtonContact>
+          </Link>
           <Button href="/portfolio">See My Work</Button>
         </div>
       </div>

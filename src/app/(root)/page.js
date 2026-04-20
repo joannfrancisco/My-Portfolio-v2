@@ -16,7 +16,7 @@ export default function Home() {
     <main className="relative">
       <Navigation />
       <Hero />
-      <ProblemSolution />
+      {/* <ProblemSolution /> */}
       <FeaturedWork />
       <Services />
       <Testimonials />
